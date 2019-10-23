@@ -1,5 +1,7 @@
 import { combineReducers } from "redux";
 import updateTheme from "./updateTheme";
+import login from "./login";
+import memberInfo from "./memberInfo";
 
 const initialState = {
   active: true
@@ -20,7 +22,9 @@ const index = (state = initialState, action) => {
 
 const reducers = combineReducers({
   index,
-  updateTheme
+  updateTheme,
+  login,
+  memberInfo
 });
 
 export default reducers;

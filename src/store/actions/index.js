@@ -74,3 +74,36 @@ export const updateTheme = (themeName, themeColors) => {
     themeColors
   };
 };
+
+export const login = bool => {
+  return { type: "LOGIN", bool };
+};
+
+export const updateMemberInfo = data => async dispatch => {
+  // 1.登入成功
+  dispatch(login(true));
+  // 2.儲存會員資料
+  dispatch(saveMemberInfo(data));
+};
+
+export const saveMemberInfo = data => {
+  return { type: "SAVE_MEMBER_INFO", data };
+};
+
+export const fetchMember = memberID => async dispatch => {
+  const url = `https://spreadsheets.google.com/feeds/list/1frbwI55o0vd9Sj5kROoG_Wagntqjc_gy7kNZFL2buKo/1/public/values?alt=json&sq=id=${memberID}`;
+  try {
+    await fetch(url)
+      .then(respone => respone.json())
+      .then(data => {
+        if (data.feed.entry) {
+          const memberInfo = data.feed.entry[0];
+          dispatch(updateMemberInfo(memberInfo));
+        } else {
+          throw new Error("無此會員資料");
+        }
+      });
+  } catch (error) {
+    console.log(error);
+  }
+};
