@@ -1,23 +1,24 @@
 {
   "files": {
     "main.css": "/react-hotel/static/css/main.0af39a14.chunk.css",
-    "main.js": "/react-hotel/static/js/main.da578c7b.chunk.js",
-    "main.js.map": "/react-hotel/static/js/main.da578c7b.chunk.js.map",
+    "main.js": "/react-hotel/static/js/main.27b6502d.chunk.js",
+    "main.js.map": "/react-hotel/static/js/main.27b6502d.chunk.js.map",
     "runtime-main.js": "/react-hotel/static/js/runtime-main.552c6706.js",
     "runtime-main.js.map": "/react-hotel/static/js/runtime-main.552c6706.js.map",
-    "static/js/2.8a470970.chunk.js": "/react-hotel/static/js/2.8a470970.chunk.js",
-    "static/js/2.8a470970.chunk.js.map": "/react-hotel/static/js/2.8a470970.chunk.js.map",
+    "static/js/2.556a302c.chunk.js": "/react-hotel/static/js/2.556a302c.chunk.js",
+    "static/js/2.556a302c.chunk.js.map": "/react-hotel/static/js/2.556a302c.chunk.js.map",
     "index.html": "/react-hotel/index.html",
-    "precache-manifest.eabd9dd46b09591bbe00d2a181a0ccab.js": "/react-hotel/precache-manifest.eabd9dd46b09591bbe00d2a181a0ccab.js",
+    "precache-manifest.b814fd5f4bb25035274305e71b4af3b0.js": "/react-hotel/precache-manifest.b814fd5f4bb25035274305e71b4af3b0.js",
     "service-worker.js": "/react-hotel/service-worker.js",
     "static/css/main.0af39a14.chunk.css.map": "/react-hotel/static/css/main.0af39a14.chunk.css.map",
     "static/media/index_pic_7.jfif": "/react-hotel/static/media/index_pic_7.4d5752d0.jfif",
-    "static/media/logo-black.25b6dfd5.svg": "/react-hotel/static/media/logo-black.25b6dfd5.25b6dfd5.svg"
+    "static/media/logo-black.25b6dfd5.svg": "/react-hotel/static/media/logo-black.25b6dfd5.25b6dfd5.svg",
+    "static/media/logo-site.png": "/react-hotel/static/media/logo-site.bb4f4c34.png"
   },
   "entrypoints": [
     "static/js/runtime-main.552c6706.js",
-    "static/js/2.8a470970.chunk.js",
+    "static/js/2.556a302c.chunk.js",
     "static/css/main.0af39a14.chunk.css",
-    "static/js/main.da578c7b.chunk.js"
+    "static/js/main.27b6502d.chunk.js"
   ]
 }
