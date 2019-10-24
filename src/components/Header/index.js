@@ -1,18 +1,28 @@
 import React, { Component } from "react";
-import { Content, Left, Right, Center, Buttom, Item } from "./Header-css";
+import {
+  Content,
+  Left,
+  Right,
+  Center,
+  Buttom,
+  Item,
+  SubItem
+} from "./Header-css";
 import logoImage from "../../images/logo-black.25b6dfd5.svg";
 import { Link } from "react-router-dom";
 import { withRouter } from "react-router-dom";
 import { connect } from "react-redux";
-import { login } from "../../store/actions";
+import { login, changeLanguage } from "../../store/actions";
 import { Translation } from "react-i18next";
 import i18n from "i18next";
+import writeCookie from "../../function/writeCookie";
+import MiniBag from "../MiniBag";
 
 class Header extends Component {
   logout = () => {
-    window.location = "./";
     localStorage.removeItem("user");
     this.props.login(false);
+    this.props.history.push("/");
   };
 
   goHomePage = () => {
@@ -20,11 +30,28 @@ class Header extends Component {
   };
 
   changeLanguage = () => {
-    i18n.changeLanguage("en");
+    // 判斷目前的語系
+    const { language, changeLanguage } = this.props;
+    if (language === "zhTW") {
+      // 切換為英文
+      writeCookie("language", "en");
+      i18n.changeLanguage("en");
+      changeLanguage("en");
+    } else {
+      // 切換為中文
+      writeCookie("language", "zhTW");
+      i18n.changeLanguage("zhTW");
+      changeLanguage("zhTW");
+    }
   };
 
   render() {
-    const { isLogin, memberInfo, getMemberInfoSuccessfully } = this.props;
+    const {
+      isLogin,
+      memberInfo,
+      getMemberInfoSuccessfully,
+      language
+    } = this.props;
     return (
       <Content>
         <Left>
@@ -36,18 +63,21 @@ class Header extends Component {
         <Right>
           {isLogin ? (
             <Item>
-              你好,
+              <Translation>{t => <>{t("header.hello")}</>}</Translation>,
               {getMemberInfoSuccessfully && memberInfo.gsx$name.$t}
-              {console.log(memberInfo, getMemberInfoSuccessfully)}
             </Item>
           ) : (
             <Item>
               <Link to="/login">
-                <span>登入</span>
+                <span>
+                  <Translation>{t => <>{t("header.login")}</>}</Translation>
+                </span>
               </Link>
               /
               <Link to="/register">
-                <span>註冊</span>
+                <span>
+                  <Translation>{t => <>{t("header.register")}</>}</Translation>
+                </span>
               </Link>
             </Item>
           )}
@@ -55,12 +85,31 @@ class Header extends Component {
             <i className="fas fa-heart" />
           </Item>
           <Item>
-            <i className="fas fa-shopping-bag" />
+            <MiniBag />
           </Item>
-          <Item onClick={this.changeLanguage}>繁</Item>
-          {isLogin && <Item onClick={this.logout}>登出</Item>}
+          <Item onClick={this.changeLanguage}>
+            {language === "zhTW" ? "繁" : "EN"}
+          </Item>
+          {isLogin && (
+            <Item onClick={this.logout}>
+              <Translation>{t => <>{t("header.logout")}</>}</Translation>
+            </Item>
+          )}
         </Right>
-        <Buttom>品牌概念 產品系列 珠寶產品 購物體驗</Buttom>
+        <Buttom>
+          <SubItem>
+            <Translation>{t => <>{t("header.spotlight")}</>}</Translation>
+          </SubItem>
+          <SubItem>
+            <Translation>{t => <>{t("header.collections")}</>}</Translation>
+          </SubItem>
+          <SubItem>
+            <Translation>{t => <>{t("header.jewellery")}</>}</Translation>
+          </SubItem>
+          <SubItem>
+            <Translation>{t => <>{t("header.services")}</>}</Translation>
+          </SubItem>
+        </Buttom>
       </Content>
     );
   }
@@ -72,13 +121,17 @@ const mapStateToProps = state => ({
   isLogin: state.app.login.isLogin,
   getLoginSuccessfully: state.app.login.getLoginSuccessfully,
   memberInfo: state.app.memberInfo.memberInfo,
-  getMemberInfoSuccessfully: state.app.memberInfo.getMemberInfoSuccessfully
+  getMemberInfoSuccessfully: state.app.memberInfo.getMemberInfoSuccessfully,
+  language: state.app.language.language
 });
 
 const mapDispatchToProps = dispatch => {
   return {
     login: bool => {
       dispatch(login(bool));
+    },
+    changeLanguage: language => {
+      dispatch(changeLanguage(language));
     }
   };
 };

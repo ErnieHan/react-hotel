@@ -1,15 +1,13 @@
 import React, { Component } from "react";
-import {
-  Content,
-  Title,
-  Grid,
-  ResignButton,
-  LoginButton
-} from "../Register/Register-css.js";
+import { Grid, ResignButton, LoginButton } from "../Register/Register-css.js";
+import { Content, Title, ImageDiv } from "./Login-css";
 import base64 from "base-64";
 import { withRouter } from "react-router-dom";
 import { connect } from "react-redux";
-import { login, updateMemberInfo } from "../../store/actions";
+import { login, updateMemberInfo, showLoading } from "../../store/actions";
+import { Translation } from "react-i18next";
+import { withTranslation } from "react-i18next";
+import image from "../../images/logo-site.png";
 
 class Login extends Component {
   state = {
@@ -28,6 +26,7 @@ class Login extends Component {
     const { phoneNumber, password } = this.state;
     const securityPassword = base64.encode(password);
     if (phoneNumber && password) {
+      this.props.showLoading(true);
       const url = encodeURI(
         `https://spreadsheets.google.com/feeds/list/1frbwI55o0vd9Sj5kROoG_Wagntqjc_gy7kNZFL2buKo/1/public/values?alt=json&sq=password=${securityPassword} and phonenumber="${phoneNumber}"`
       );
@@ -52,6 +51,8 @@ class Login extends Component {
       } catch (error) {
         console.log(error);
         alert("登入失敗");
+      } finally {
+        this.props.showLoading(false);
       }
     } else {
       alert("請填寫完整的資料");
@@ -60,30 +61,49 @@ class Login extends Component {
 
   render() {
     const { phoneNumber, password } = this.state;
+    const { t } = this.props;
     return (
-      <Content>
-        <Title>登入</Title>
-        <form onChange={this.handleChange}>
-          <Grid>
-            <div>手機號碼</div>
-            <input name="phoneNumber" value={phoneNumber} />
-            <div>密碼</div>
-            <input
-              placeholder="6 - 15個字符"
-              name="password"
-              type="password"
-              value={password}
-            ></input>
-          </Grid>
-        </form>
-        <LoginButton onClick={this.login}>登入</LoginButton>
-        <ResignButton>立即註冊</ResignButton>
-      </Content>
+      <>
+        <ImageDiv>
+          <img src={image} alt="" />
+        </ImageDiv>
+        <Content>
+          <Title>
+            <Translation>{t => <>{t("signInPage.title")}</>}</Translation>
+          </Title>
+          <form onChange={this.handleChange}>
+            <Grid>
+              <div>
+                <Translation>{t => <>{t("signInPage.mobile")}</>}</Translation>
+              </div>
+              <input name="phoneNumber" value={phoneNumber} />
+              <div>
+                <Translation>
+                  {t => <>{t("signInPage.password")}</>}
+                </Translation>
+              </div>
+              <input
+                placeholder={t("signInPage.format")}
+                name="password"
+                type="password"
+                value={password}
+              ></input>
+            </Grid>
+          </form>
+          <LoginButton onClick={this.login}>
+            <Translation>{t => <>{t("signInPage.loginButton")}</>}</Translation>
+          </LoginButton>
+          <ResignButton>
+            <Translation>{t => <>{t("signInPage.registerNow")}</>}</Translation>
+          </ResignButton>
+        </Content>
+      </>
     );
   }
 }
 
-const withRouterLogin = withRouter(Login);
+const withLang = withTranslation()(Login);
+const withRouterLogin = withRouter(withLang);
 
 const mapStateToProps = state => ({
   isLogin: state.app.login.isLogin,
@@ -97,6 +117,9 @@ const mapDispatchToProps = dispatch => {
     },
     updateMemberInfo: data => {
       dispatch(updateMemberInfo(data));
+    },
+    showLoading: bool => {
+      dispatch(showLoading(bool));
     }
   };
 };

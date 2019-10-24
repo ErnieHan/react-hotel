@@ -15,6 +15,9 @@ export const Left = styled.div`
   i {
     font-size: 18px;
   }
+  @media screen and (max-width: 991px) {
+    width: 100%;
+  }
 `;
 export const Center = styled.div`
   order: 2;
@@ -23,6 +26,9 @@ export const Center = styled.div`
   cursor: pointer;
   img {
     max-width: 285px;
+  }
+  @media screen and (max-width: 991px) {
+    width: 100%;
   }
 `;
 export const Right = styled.div`
@@ -40,12 +46,17 @@ export const Right = styled.div`
       opacity: 0.7;
     }
   }
+  @media screen and (max-width: 991px) {
+    width: 100%;
+  }
 `;
 export const Buttom = styled.div`
   order: 4;
   width: 100%;
   text-align: center;
   margin-top: 1rem;
+  display: flex;
+  justify-content: center;
 `;
 
 export const Item = styled.div`
@@ -67,4 +78,9 @@ export const Item = styled.div`
       display: none;
     }
   }
+`;
+
+export const SubItem = styled.div`
+  margin: 0 10px;
+  cursor: pointer;
 `;

@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 // Redux
 import { connect } from "react-redux";
-import { login, fetchMember } from "./store/actions";
+import { login, fetchMember, changeLanguage } from "./store/actions";
 // i18n
 // import { Translation } from "react-i18next";
 // import i18n from "i18next";
@@ -17,9 +17,16 @@ import RegisterPage from "./pages/RegisterPage";
 // Components
 import Header from "./components/Header";
 import styled from "styled-components";
+import i18n from "i18next";
+import getCookie from "./function/getCookie";
+import writeCookie from "./function/writeCookie";
+import Loading from "./components/Loading";
 
 const Content = styled.div`
   padding: 0 40px;
+  @media screen and (max-width: 991px) {
+    padding: 0 15px;
+  }
 `;
 
 class App extends React.Component {
@@ -32,15 +39,31 @@ class App extends React.Component {
       // 沒有則 執行未登入
       this.props.login(false);
     }
+    const cookie_language = getCookie("language");
+    const { changeLanguage } = this.props;
+    if (!cookie_language) {
+      // 初始時先預設語系為中文
+      writeCookie("language", "zhTW");
+    } else {
+      // 如果Cookie有語系的話 則判斷要切換為哪一個語系
+      if (cookie_language === "zhTW") {
+        i18n.changeLanguage("zhTW");
+        changeLanguage("zhTW");
+      } else {
+        i18n.changeLanguage("en");
+        changeLanguage("en");
+      }
+    }
   }
   render() {
-    const { getLoginSuccessfully } = this.props;
+    const { getLoginSuccessfully, isLoading } = this.props;
     return (
       <div>
         {getLoginSuccessfully && (
           <Router>
             <Content>
               <Header />
+              {isLoading && <Loading />}
               <Switch>
                 <Route exact path="/">
                   <HomePage />
@@ -72,7 +95,8 @@ App.propTypes = {
 
 const mapStateToProps = state => ({
   isLogin: state.app.login.isLogin,
-  getLoginSuccessfully: state.app.login.getLoginSuccessfully
+  getLoginSuccessfully: state.app.login.getLoginSuccessfully,
+  isLoading: state.app.loading.isLoading
 });
 
 const mapDispatchToProps = dispatch => {
@@ -82,6 +106,9 @@ const mapDispatchToProps = dispatch => {
     },
     fetchMember: memberID => {
       dispatch(fetchMember(memberID));
+    },
+    changeLanguage: language => {
+      dispatch(changeLanguage(language));
     }
   };
 };

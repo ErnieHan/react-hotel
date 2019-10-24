@@ -2,6 +2,9 @@ import { combineReducers } from "redux";
 import updateTheme from "./updateTheme";
 import login from "./login";
 import memberInfo from "./memberInfo";
+import language from "./language";
+import loading from "./loading";
+import miniBag from "./miniBag";
 
 const initialState = {
   active: true
@@ -24,7 +27,10 @@ const reducers = combineReducers({
   index,
   updateTheme,
   login,
-  memberInfo
+  memberInfo,
+  language,
+  loading,
+  miniBag
 });
 
 export default reducers;

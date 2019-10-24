@@ -4,5 +4,37 @@
     "home": "Home",
     "about": "About",
     "users": "Users"
+  },
+  "header": {
+    "hello": "Hello",
+    "login": "Login",
+    "register": "Register",
+    "logout": "Logout",
+    "spotlight": "Spotlight",
+    "collections": "Collections",
+    "jewellery": "Jewellery",
+    "services": "Services"
+  },
+  "signInPage": {
+    "title": "Sign In",
+    "mobile": "Mobile",
+    "password": "Password",
+    "loginButton": "Login",
+    "registerNow": "Register Now",
+    "format": "6 - 15 characters long"
+  },
+  "signUpPage": {
+    "title": "Register as Star Shopper",
+    "subtitle": "Starting today, you'll relish a host of exclusive savings and be rewarded with Star Dollars when you shop our range of exquisite jewellery.",
+    "salutation": "Salutation",
+    "miss": "Miss",
+    "mr": "Mr.",
+    "name": "Name",
+    "mobile": "Mobile",
+    "email": "Email",
+    "password": "Create Password",
+    "submit": "submit",
+    "profile": "As shown in the ID proof document",
+    "format": "6 - 15 characters long"
   }
 }

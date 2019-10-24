@@ -9,6 +9,12 @@ html {
   font-size: 16px;
 }
 
+@media (max-width: 991px) {
+  html {
+    font-size: 13px;
+  }
+}
+
 body {
   margin: 0;
   font-family: -apple-system, "Montserrat", BlinkMacSystemFont, "微軟正黑體",
@@ -31,6 +37,9 @@ input,
 select {
   outline: 0;
   font-family: inherit;
+  border-radius: 0;
+  box-shadow: none;
+  max-width: 100%;
 }
 
 html,

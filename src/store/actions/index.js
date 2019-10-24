@@ -107,3 +107,15 @@ export const fetchMember = memberID => async dispatch => {
     console.log(error);
   }
 };
+
+export const changeLanguage = language => {
+  return { type: "CHANGE_LANGUAGE", language };
+};
+
+export const showLoading = bool => {
+  return { type: "SHOW_LOADING", bool };
+};
+
+export const showMiniBag = bool => {
+  return { type: "SHOW_MINI_BAG", bool };
+};

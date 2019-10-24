@@ -5,10 +5,12 @@ import {
   SubTitle,
   Grid,
   ResignButton,
-  LoginButton
+  LoginButton,
+  SignupButton
 } from "./Register-css";
-import { Link } from "react-router-dom";
 import base64 from "base-64";
+import { Translation } from "react-i18next";
+import { withTranslation } from "react-i18next";
 
 class Register extends Component {
   state = {
@@ -77,41 +79,59 @@ class Register extends Component {
 
   render() {
     const { gender, name, phoneNumber, password, mail } = this.state.memberData;
+    const { t } = this.props;
     return (
       <Content>
-        <Title>登記成為會員</Title>
+        <Title>
+          <Translation>{t => <>{t("signUpPage.title")}</>}</Translation>
+        </Title>
         <SubTitle>
-          由這一刻開始，盡情享受會員尊尚折扣優惠及「悦享錢」購物獎賞，同時體驗個人化禮遇及貼心服務。
+          <Translation>{t => <>{t("signUpPage.subtitle")}</>}</Translation>
         </SubTitle>
         <form onChange={this.handleChangeMemberData}>
           <Grid>
-            <div>稱謂</div>
+            <div>
+              <Translation>
+                {t => <>{t("signUpPage.salutation")}</>}
+              </Translation>
+            </div>
             <select name="gender" value={gender}>
-              <option value="female">女士</option>
-              <option value="male">先生</option>
+              <option value="female">{t("signUpPage.miss")}</option>
+              <option value="male">{t("signUpPage.mr")}</option>
             </select>
-            <div>姓名</div>
-            <input placeholder="須與身分證件相同" name="name" value={name} />
-            <div>手機號碼</div>
-            <input name="phoneNumber" value={phoneNumber} />
-            <div>電子信箱</div>
-            <input name="mail" value={mail} />
-            <div>密碼</div>
+            <div>
+              <Translation>{t => <>{t("signUpPage.name")}</>}</Translation>
+            </div>
             <input
-              placeholder="6 - 15個字符"
+              placeholder={t("signUpPage.profile")}
+              name="name"
+              value={name}
+            />
+            <div>
+              <Translation>{t => <>{t("signUpPage.mobile")}</>}</Translation>
+            </div>
+            <input name="phoneNumber" value={phoneNumber} />
+            <div>
+              <Translation>{t => <>{t("signUpPage.email")}</>}</Translation>
+            </div>
+            <input name="mail" value={mail} />
+            <div>
+              <Translation>{t => <>{t("signUpPage.password")}</>}</Translation>
+            </div>
+            <input
+              placeholder={t("signUpPage.format")}
               name="password"
               type="password"
               value={password}
             ></input>
           </Grid>
         </form>
-        <ResignButton onClick={this.submitMemberData}>註冊</ResignButton>
-        <Link to="/login">
-          <LoginButton>立即登入</LoginButton>
-        </Link>
+        <SignupButton onClick={this.submitMemberData}>
+          <Translation>{t => <>{t("signUpPage.submit")}</>}</Translation>
+        </SignupButton>
       </Content>
     );
   }
 }
 
-export default Register;
+export default withTranslation()(Register);

@@ -1,10 +1,9 @@
 import styled from "styled-components";
 
 export const Content = styled.div`
-  max-width: 480px;
+  max-width: 680px;
   margin: 35px auto;
   padding: 20px;
-  background: #f4f4f4;
 `;
 
 export const Title = styled.h2`
@@ -48,10 +47,25 @@ export const Grid = styled.div`
     background: transparent;
     border-radius: 0;
   }
+  @media screen and (max-width: 991px) {
+    grid-template-columns: 1fr;
+  }
 `;
 
 export const ResignButton = styled.button`
   background: #4a5c68;
+  color: white;
+  width: 100%;
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  border: 0;
+  &:hover {
+    opacity: 0.8;
+  }
+`;
+
+export const SignupButton = styled.button`
+  background: #111111;
   color: white;
   width: 100%;
   padding: 0.75rem;
