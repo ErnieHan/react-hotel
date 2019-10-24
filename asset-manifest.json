@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/react-hotel/static/css/main.202be4a1.chunk.css",
-    "main.js": "/react-hotel/static/js/main.14f0ffa9.chunk.js",
-    "main.js.map": "/react-hotel/static/js/main.14f0ffa9.chunk.js.map",
+    "main.js": "/react-hotel/static/js/main.2d8cce7d.chunk.js",
+    "main.js.map": "/react-hotel/static/js/main.2d8cce7d.chunk.js.map",
     "runtime-main.js": "/react-hotel/static/js/runtime-main.552c6706.js",
     "runtime-main.js.map": "/react-hotel/static/js/runtime-main.552c6706.js.map",
-    "static/js/2.ee955c5a.chunk.js": "/react-hotel/static/js/2.ee955c5a.chunk.js",
-    "static/js/2.ee955c5a.chunk.js.map": "/react-hotel/static/js/2.ee955c5a.chunk.js.map",
+    "static/js/2.20f74f8c.chunk.js": "/react-hotel/static/js/2.20f74f8c.chunk.js",
+    "static/js/2.20f74f8c.chunk.js.map": "/react-hotel/static/js/2.20f74f8c.chunk.js.map",
     "index.html": "/react-hotel/index.html",
-    "precache-manifest.214537dae9a838355205d203329c625f.js": "/react-hotel/precache-manifest.214537dae9a838355205d203329c625f.js",
+    "precache-manifest.a1bffe211fb7f38c4e15397a98c1c133.js": "/react-hotel/precache-manifest.a1bffe211fb7f38c4e15397a98c1c133.js",
     "service-worker.js": "/react-hotel/service-worker.js",
     "static/css/main.202be4a1.chunk.css.map": "/react-hotel/static/css/main.202be4a1.chunk.css.map",
     "static/media/close.png": "/react-hotel/static/media/close.4618bc82.png",
@@ -18,8 +18,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.552c6706.js",
-    "static/js/2.ee955c5a.chunk.js",
+    "static/js/2.20f74f8c.chunk.js",
     "static/css/main.202be4a1.chunk.css",
-    "static/js/main.14f0ffa9.chunk.js"
+    "static/js/main.2d8cce7d.chunk.js"
   ]
 }
