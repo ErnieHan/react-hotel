@@ -10,10 +10,10 @@ import { login, fetchMember, changeLanguage } from "./store/actions";
 import { HashRouter as Router, Switch, Route } from "react-router-dom";
 // Pages
 import HomePage from "./pages/HomePage";
-import AboutPage from "./pages/AboutPage";
 import Page404 from "./pages/Page404";
 import LoginPage from "./pages/LoginPage";
 import RegisterPage from "./pages/RegisterPage";
+import MyAccountPage from "./pages/MyAccountPage";
 // Components
 import Header from "./components/Header";
 import styled from "styled-components";
@@ -49,6 +49,9 @@ class App extends React.Component {
       if (cookie_language === "zhTW") {
         i18n.changeLanguage("zhTW");
         changeLanguage("zhTW");
+      } else if (cookie_language === "jp") {
+        i18n.changeLanguage("jp");
+        changeLanguage("jp");
       } else {
         i18n.changeLanguage("en");
         changeLanguage("en");
@@ -74,8 +77,8 @@ class App extends React.Component {
                 <Route path="/register">
                   <RegisterPage />
                 </Route>
-                <Route path="/about">
-                  <AboutPage />
+                <Route path="/my-account">
+                  <MyAccountPage />
                 </Route>
                 <Route path="*">
                   <Page404 />

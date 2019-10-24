@@ -7,7 +7,7 @@ export const Content = styled.div`
 export const Bag = styled.div`
   width: 350px;
   position: absolute;
-  top: 30px;
+  /* top: 0px; */
   right: -15px;
   background: white;
   padding: 1rem;

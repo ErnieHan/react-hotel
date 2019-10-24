@@ -21,7 +21,8 @@
     "password": "密碼",
     "loginButton": "登入",
     "registerNow": "立即註冊",
-    "format": "6 - 15 字符"
+    "format": "6 - 15 字符",
+    "chowsangsangMember": "周生生之友"
   },
   "signUpPage": {
     "title": "登記成為會員",
@@ -35,6 +36,36 @@
     "password": "密碼",
     "submit": "註冊",
     "profile": "須與身分證件相同",
-    "format": "6 - 15 字符"
+    "format": "6 - 15 字符",
+    "chowsangsangMember": "周生生之友"
+  },
+  "miniBag": {
+    "title": "我的購物袋",
+    "total": "合計",
+    "checkout": "結帳"
+  },
+  "memberInfo": {
+    "hello": "Hello",
+    "account": "我的帳戶",
+    "shoppingRecord": "我的購物紀錄",
+    "membersOnly": "會員專區",
+    "more": "更多",
+    "logout": "登出"
+  },
+  "myAccountPage": {
+    "welcome": "歡迎回來",
+    "startMoneyTitle": "可用悅享錢餘額",
+    "startMoneyComment": "每悅享錢等於人民幣/澳門幣1元或台幣4元",
+    "myMember": "我的會籍",
+    "seeMore": "查看詳情",
+    "memberLevelTitle": "會員層級",
+    "silverMember": "銀白會員",
+    "clickHere": "按此",
+    "eachMemberLevel": "了解各會員層級詳情",
+    "memberData": "我的會員資料",
+    "editAndCheck": "編輯 / 查看",
+    "name": "姓名",
+    "mobile": "手機號碼",
+    "email": "電郵"
   }
 }

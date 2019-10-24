@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import Login from "../components/Login";
 import { withRouter } from "react-router-dom";
 import styled from "styled-components";
+import { Translation } from "react-i18next";
 
 const Title = styled.h2`
   font-size: 2.5rem;
@@ -22,7 +23,11 @@ class LoginPage extends Component {
   render() {
     return (
       <div>
-        <Title>周生生之友</Title>
+        <Title>
+          <Translation>
+            {t => <>{t("signInPage.chowsangsangMember")}</>}
+          </Translation>
+        </Title>
         <Login />
       </div>
     );

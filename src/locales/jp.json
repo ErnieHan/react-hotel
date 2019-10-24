@@ -1,0 +1,71 @@
+{
+  "app": {
+    "hello": "Hello World!",
+    "home": "Home",
+    "about": "About",
+    "users": "Users"
+  },
+  "header": {
+    "hello": "こんにちは",
+    "login": "ログイン",
+    "register": "登録",
+    "logout": "ログアウト",
+    "spotlight": "スポットライト",
+    "collections": "コレクション",
+    "jewellery": "ジュエリー",
+    "services": "サービス"
+  },
+  "signInPage": {
+    "title": "ログイン",
+    "mobile": "モバイル",
+    "password": "パスワード",
+    "loginButton": "ログイン",
+    "registerNow": "今すぐ登録",
+    "format": "6 - 15文字",
+    "chowsangsangMember": "周生生の友達"
+  },
+  "signUpPage": {
+    "title": "スターショッパーとして登録する",
+    "subtitle": "今日から、あなたは私たちの絶妙なジュエリーの範囲を買い物するとき、あなたは排他的な節約の多くを楽しみ、スタードルで報われるでしょう。",
+    "salutation": "あいさつ",
+    "miss": "お嬢",
+    "mr": "ミスター",
+    "name": "名前",
+    "mobile": "モバイル",
+    "email": "Eメール",
+    "password": "パスワード",
+    "submit": "提出する",
+    "profile": "ID証明文書に示されているように",
+    "format": "6 - 15文字",
+    "chowsangsangMember": "周生生の友達"
+  },
+  "miniBag": {
+    "title": "ショッピングバッグ",
+    "total": "合計",
+    "checkout": "チェックアウト"
+  },
+  "memberInfo": {
+    "hello": "こんにちは",
+    "account": "アカウント",
+    "shoppingRecord": "ショッピング記録",
+    "membersOnly": "会員エリア",
+    "more": "その他",
+    "logout": "ログアウト"
+  },
+  "myAccountPage": {
+    "welcome": "おかえり",
+    "startMoneyTitle": "お金のバランスを楽しむことができます",
+    "startMoneyComment": "お金のすべての楽しみは RMB1 / MOP1または NT$4に等しい",
+    "myMember": "メンバーシップの説明",
+    "seeMore": "詳細を見る",
+    "memberLevelTitle": "メンバーレベル",
+    "silverMember": "シルバー会員",
+    "clickHere": "クリックしてください",
+    "eachMemberLevel": "各メンバーレベルの詳細",
+    "memberData": "会員プロフィール",
+    "editAndCheck": "編集 / 表示",
+    "name": "お名前",
+    "mobile": "モバイル",
+    "email": "Eメール"
+  }
+}

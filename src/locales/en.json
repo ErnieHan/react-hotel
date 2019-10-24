@@ -21,7 +21,8 @@
     "password": "Password",
     "loginButton": "Login",
     "registerNow": "Register Now",
-    "format": "6 - 15 characters long"
+    "format": "6 - 15 characters long",
+    "chowsangsangMember": "Friends of Chow Sang Sang"
   },
   "signUpPage": {
     "title": "Register as Star Shopper",
@@ -35,6 +36,36 @@
     "password": "Create Password",
     "submit": "submit",
     "profile": "As shown in the ID proof document",
-    "format": "6 - 15 characters long"
+    "format": "6 - 15 characters long",
+    "chowsangsangMember": "Friends of Chow Sang Sang"
+  },
+  "miniBag": {
+    "title": "My Bag",
+    "total": "Total",
+    "checkout": "Checkout"
+  },
+  "memberInfo": {
+    "hello": "Hello",
+    "account": "My Account",
+    "shoppingRecord": "My Order History",
+    "membersOnly": "Member Zone",
+    "more": "More",
+    "logout": "Logout"
+  },
+  "myAccountPage": {
+    "welcome": "Welcome Back",
+    "startMoneyTitle": "Star Dollar Purchase Quota",
+    "startMoneyComment": "Every HKD equates 1 RMB/MOP 1 or TWD 4",
+    "myMember": "My Privilege Details",
+    "seeMore": "DETAILS",
+    "memberLevelTitle": "Tier",
+    "silverMember": "Silver Member",
+    "clickHere": "Click Here",
+    "eachMemberLevel": "to read the member benefits details.",
+    "memberData": "My Member Profile",
+    "editAndCheck": "Edit / View",
+    "name": "Name",
+    "mobile": "Mobile",
+    "email": "E-mail"
   }
 }

@@ -14,44 +14,17 @@ import { withRouter } from "react-router-dom";
 import { connect } from "react-redux";
 import { login, changeLanguage } from "../../store/actions";
 import { Translation } from "react-i18next";
-import i18n from "i18next";
-import writeCookie from "../../function/writeCookie";
 import MiniBag from "../MiniBag";
+import LanguageSwitch from "../LanguageSwitch";
+import MiniMemberInfo from "../MiniMemberInfo";
 
 class Header extends Component {
-  logout = () => {
-    localStorage.removeItem("user");
-    this.props.login(false);
-    this.props.history.push("/");
-  };
-
   goHomePage = () => {
     this.props.history.push("/");
   };
 
-  changeLanguage = () => {
-    // 判斷目前的語系
-    const { language, changeLanguage } = this.props;
-    if (language === "zhTW") {
-      // 切換為英文
-      writeCookie("language", "en");
-      i18n.changeLanguage("en");
-      changeLanguage("en");
-    } else {
-      // 切換為中文
-      writeCookie("language", "zhTW");
-      i18n.changeLanguage("zhTW");
-      changeLanguage("zhTW");
-    }
-  };
-
   render() {
-    const {
-      isLogin,
-      memberInfo,
-      getMemberInfoSuccessfully,
-      language
-    } = this.props;
+    const { isLogin } = this.props;
     return (
       <Content>
         <Left>
@@ -63,8 +36,7 @@ class Header extends Component {
         <Right>
           {isLogin ? (
             <Item>
-              <Translation>{t => <>{t("header.hello")}</>}</Translation>,
-              {getMemberInfoSuccessfully && memberInfo.gsx$name.$t}
+              <MiniMemberInfo />
             </Item>
           ) : (
             <Item>
@@ -87,14 +59,9 @@ class Header extends Component {
           <Item>
             <MiniBag />
           </Item>
-          <Item onClick={this.changeLanguage}>
-            {language === "zhTW" ? "繁" : "EN"}
+          <Item>
+            <LanguageSwitch />
           </Item>
-          {isLogin && (
-            <Item onClick={this.logout}>
-              <Translation>{t => <>{t("header.logout")}</>}</Translation>
-            </Item>
-          )}
         </Right>
         <Buttom>
           <SubItem>
