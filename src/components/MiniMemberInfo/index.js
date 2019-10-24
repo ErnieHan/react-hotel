@@ -25,7 +25,7 @@ class MiniMemberInfo extends Component {
   logout = () => {
     localStorage.removeItem("user");
     this.props.login(false);
-    window.location = "/";
+    window.location = "./";
   };
 
   render() {

@@ -5,13 +5,14 @@ export const Content = styled.div`
 `;
 
 export const SelectContent = styled.div`
+  padding-top: 15px;
   position: absolute;
-  top: 30px;
   left: 50%;
   transform: translateX(-50%);
   text-align: center;
   font-size: 13px;
-  border: 1px solid;
+  opacity: ${props => (props.active ? "1" : "0")};
+  pointer-events: ${props => (props.active ? "" : "none")};
   p {
     margin-bottom: 0.5rem;
   }

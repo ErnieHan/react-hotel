@@ -4,6 +4,13 @@ export const Content = styled.div`
   position: relative;
 `;
 
+export const BagOutline = styled.div`
+  width: 45px;
+  padding-top: 15px;
+  position: absolute;
+  right: -15px;
+`;
+
 export const Bag = styled.div`
   width: 350px;
   position: absolute;

@@ -19,3 +19,11 @@ export const ImageDiv = styled.div`
   max-width: 266px;
   margin: 35px auto;
 `;
+
+export const WarningText = styled.div`
+  text-align: center;
+  font-size: 0.85rem;
+  margin-bottom: 1rem;
+  color: #b72126;
+  font-weight: bold;
+`;

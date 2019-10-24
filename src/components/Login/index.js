@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Grid, ResignButton, LoginButton } from "../Register/Register-css.js";
-import { Content, Title, ImageDiv } from "./Login-css";
+import { Content, Title, ImageDiv, WarningText } from "./Login-css";
 import base64 from "base-64";
 import { withRouter } from "react-router-dom";
 import { connect } from "react-redux";
@@ -8,11 +8,14 @@ import { login, updateMemberInfo, showLoading } from "../../store/actions";
 import { Translation } from "react-i18next";
 import { withTranslation } from "react-i18next";
 import image from "../../images/logo-site.png";
+import CircleLoading from "../CircleLoading/index.js";
 
 class Login extends Component {
   state = {
     phoneNumber: "",
-    password: ""
+    password: "",
+    startLoading: false,
+    warning: false
   };
 
   handleChange = e => {
@@ -26,7 +29,11 @@ class Login extends Component {
     const { phoneNumber, password } = this.state;
     const securityPassword = base64.encode(password);
     if (phoneNumber && password) {
-      this.props.showLoading(true);
+      // this.props.showLoading(true);
+      this.setState({
+        startLoading: true,
+        warning: false
+      });
       const url = encodeURI(
         `https://spreadsheets.google.com/feeds/list/1frbwI55o0vd9Sj5kROoG_Wagntqjc_gy7kNZFL2buKo/1/public/values?alt=json&sq=password=${securityPassword} and phonenumber="${phoneNumber}"`
       );
@@ -50,9 +57,15 @@ class Login extends Component {
           });
       } catch (error) {
         console.log(error);
-        alert("登入失敗");
+        // alert("登入失敗");
+        this.setState({
+          warning: true
+        });
       } finally {
-        this.props.showLoading(false);
+        // this.props.showLoading(false);
+        this.setState({
+          startLoading: false
+        });
       }
     } else {
       alert("請填寫完整的資料");
@@ -60,7 +73,7 @@ class Login extends Component {
   };
 
   render() {
-    const { phoneNumber, password } = this.state;
+    const { phoneNumber, password, startLoading, warning } = this.state;
     const { t } = this.props;
     return (
       <>
@@ -90,8 +103,15 @@ class Login extends Component {
               ></input>
             </Grid>
           </form>
+          {warning ? <WarningText>登入失敗</WarningText> : null}
           <LoginButton onClick={this.login}>
-            <Translation>{t => <>{t("signInPage.loginButton")}</>}</Translation>
+            {startLoading ? (
+              <CircleLoading />
+            ) : (
+              <Translation>
+                {t => <>{t("signInPage.loginButton")}</>}
+              </Translation>
+            )}
           </LoginButton>
           <ResignButton>
             <Translation>{t => <>{t("signInPage.registerNow")}</>}</Translation>

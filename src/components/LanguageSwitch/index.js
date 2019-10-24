@@ -6,6 +6,10 @@ import writeCookie from "../../function/writeCookie";
 import i18n from "i18next";
 
 class LanguageSwitch extends Component {
+  state = {
+    active: false
+  };
+
   changeLanguage = () => {
     // 判斷目前的語系
     const { language, changeLanguage } = this.props;
@@ -56,12 +60,28 @@ class LanguageSwitch extends Component {
     }, 500);
   };
 
+  openLanguage = () => {
+    this.setState({
+      active: true
+    });
+  };
+
+  closeLanguage = () => {
+    this.setState({
+      active: false
+    });
+  };
+
   render() {
     const { language } = this.props;
+    const { active } = this.state;
     return (
-      <Content>
+      <Content
+        onMouseOver={this.openLanguage}
+        onMouseLeave={this.closeLanguage}
+      >
         {language === "zhTW" ? "繁" : language === "jp" ? "日" : "EN"}
-        <SelectContent>
+        <SelectContent active={active}>
           <p onClick={this.changeEN}>EN</p>
           <p onClick={this.changezhTW}>繁</p>
           <p onClick={this.changeJP}>日</p>
