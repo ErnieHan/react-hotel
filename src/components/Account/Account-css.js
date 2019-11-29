@@ -12,6 +12,7 @@ export const Content = styled.div`
 export const Left = styled.div`
   float: left;
   width: 30%;
+  position: relative;
   @media screen and (max-width: 991px) {
     width: 100%;
   }
@@ -20,6 +21,7 @@ export const Left = styled.div`
 export const Right = styled.div`
   float: left;
   width: 70%;
+  position: relative;
   @media screen and (max-width: 991px) {
     width: 100%;
   }
@@ -97,5 +99,24 @@ export const DetailValue = styled.p`
   font-size: 1.75rem;
   @media screen and (max-width: 991px) {
     font-size: 1.5rem;
+  }
+`;
+
+export const Message = styled.div`
+  padding: 12px;
+  background: #111;
+  border-radius: 5px;
+  color: white;
+  position: relative;
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: -25px;
+    left: 50%;
+    border-width: 15px;
+    border-color: transparent transparent #111 transparent;
+    border-style: solid;
+    transform: translateX(-50%);
   }
 `;

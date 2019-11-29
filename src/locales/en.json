@@ -55,7 +55,7 @@
   "myAccountPage": {
     "welcome": "Welcome Back",
     "startMoneyTitle": "Star Dollar Purchase Quota",
-    "startMoneyComment": "Every HKD equates 1 RMB/MOP 1 or TWD 4",
+    "startMoneyComment": "Every Star Dollar equates TWD 4",
     "myMember": "My Privilege Details",
     "seeMore": "DETAILS",
     "memberLevelTitle": "Tier",
@@ -67,5 +67,8 @@
     "name": "Name",
     "mobile": "Mobile",
     "email": "E-mail"
+  },
+  "tip": {
+    "Iagree": "Please confirm the tick option \"I agree\" before submitting."
   }
 }

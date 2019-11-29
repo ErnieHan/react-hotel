@@ -55,7 +55,7 @@
   "myAccountPage": {
     "welcome": "歡迎回來",
     "startMoneyTitle": "可用悅享錢餘額",
-    "startMoneyComment": "每悅享錢等於人民幣/澳門幣1元或台幣4元",
+    "startMoneyComment": "每悅享錢可折抵新台幣4元",
     "myMember": "我的會籍",
     "seeMore": "查看詳情",
     "memberLevelTitle": "會員層級",
@@ -67,5 +67,8 @@
     "name": "姓名",
     "mobile": "手機號碼",
     "email": "電郵"
+  },
+  "tip": {
+    "Iagree": "提交前請確認勾選會員條款「我同意」"
   }
 }

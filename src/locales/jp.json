@@ -55,7 +55,7 @@
   "myAccountPage": {
     "welcome": "おかえり",
     "startMoneyTitle": "お金のバランスを楽しむことができます",
-    "startMoneyComment": "お金のすべての楽しみは RMB1 / MOP1または NT$4に等しい",
+    "startMoneyComment": "お金のすべての楽しみは NT$4 に等しい",
     "myMember": "メンバーシップの説明",
     "seeMore": "詳細を見る",
     "memberLevelTitle": "メンバーレベル",
@@ -67,5 +67,8 @@
     "name": "お名前",
     "mobile": "モバイル",
     "email": "Eメール"
+  },
+  "tip": {
+    "Iagree": "送信する前に同意するチェックボックスをオンにしてください。"
   }
 }

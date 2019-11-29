@@ -58,6 +58,7 @@ class App extends React.Component {
       }
     }
   }
+
   render() {
     const { getLoginSuccessfully, isLoading } = this.props;
     return (

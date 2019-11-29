@@ -12,11 +12,13 @@ import {
   MemberGrid,
   MemberDetail,
   DetailKey,
-  DetailValue
+  DetailValue,
+  Message
 } from "./Account-css";
 import { Translation } from "react-i18next";
 import SubTitle from "./SubTitle";
 import startImage from "../../images/stardollar-blue-xs.png";
+import TipButton from "../TipButton";
 
 class Account extends Component {
   render() {
@@ -26,7 +28,10 @@ class Account extends Component {
         {getMemberInfoSuccessfully && (
           <>
             {console.log(memberInfo)}
-            <Left>Left</Left>
+            <Left>
+              left
+              <TipButton />
+            </Left>
             <Right>
               <Title>
                 <h2>
@@ -44,10 +49,10 @@ class Account extends Component {
                     : $0
                   </h3>
                   <h4>
-                    (
+                    ({" "}
                     <Translation>
                       {t => <>{t("myAccountPage.startMoneyComment")}</>}
-                    </Translation>
+                    </Translation>{" "}
                     )
                   </h4>
                 </StarMoney>

@@ -1,8 +1,10 @@
 import React, { Component } from "react";
-import Login from "../components/Login";
+// import Login from "../components/Login";
 import { withRouter } from "react-router-dom";
 import styled from "styled-components";
 import { Translation } from "react-i18next";
+import "../css/test.css";
+import LR from "../components/LR";
 
 const Title = styled.h2`
   font-size: 2.5rem;
@@ -20,6 +22,7 @@ class LoginPage extends Component {
       this.props.history.push("/");
     }
   }
+
   render() {
     return (
       <div>
@@ -28,7 +31,8 @@ class LoginPage extends Component {
             {t => <>{t("signInPage.chowsangsangMember")}</>}
           </Translation>
         </Title>
-        <Login />
+        {/* <Login /> */}
+        <LR />
       </div>
     );
   }

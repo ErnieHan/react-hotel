@@ -15,8 +15,9 @@ export const Title = styled.h2`
 
 export const SubTitle = styled.div`
   font-size: 0.85rem;
-  color: #ccc;
+  color: #999999;
   margin-bottom: 1rem;
+  font-weight: bold;
 `;
 
 export const Grid = styled.div`
@@ -26,10 +27,11 @@ export const Grid = styled.div`
   grid-row-gap: 1rem;
   font-size: 0.85rem;
   font-weight: bold;
-  div {
+  /* div {
     padding: 0.5rem;
-  }
+  } */
   input {
+    width: 100%;
     padding: 0.5rem;
     border: 0;
     border-bottom: 1px solid #111;
@@ -42,10 +44,12 @@ export const Grid = styled.div`
     }
   }
   select {
+    width: 100%;
     padding: 0.5rem;
     border: 1px solid #111;
     background: transparent;
     border-radius: 0;
+    appearance: none;
   }
   @media screen and (max-width: 991px) {
     grid-template-columns: 1fr;
@@ -85,5 +89,26 @@ export const LoginButton = styled.button`
   border: 0;
   &:hover {
     opacity: 0.8;
+  }
+`;
+
+export const WarningText = styled.div`
+  text-align: center;
+  font-size: 0.85rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+`;
+
+export const SuccessfullyText = styled.div`
+  font-weight: bold;
+  margin-bottom: 1rem;
+  h3 {
+    font-size: 1.5rem;
+    color: #28a745;
+    text-align: center;
+  }
+  p {
+    font-size: 0.85rem;
+    text-align: center;
   }
 `;
