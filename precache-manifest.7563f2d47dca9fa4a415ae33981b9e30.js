@@ -1,19 +1,19 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "5d944e9724eb28151b813d3a86ea521e",
+    "revision": "9963ddb18ae1b07a7de9f778b928cdff",
     "url": "/react-hotel/index.html"
   },
   {
-    "revision": "373f09e516517dce7e91",
-    "url": "/react-hotel/static/css/main.b45208e7.chunk.css"
+    "revision": "2fdab197c162eafed0fe",
+    "url": "/react-hotel/static/css/main.2d75743f.chunk.css"
   },
   {
-    "revision": "346ccfa805d05da97e89",
-    "url": "/react-hotel/static/js/2.199191da.chunk.js"
+    "revision": "010d57a0647008ab9fee",
+    "url": "/react-hotel/static/js/2.c9c32d07.chunk.js"
   },
   {
-    "revision": "373f09e516517dce7e91",
-    "url": "/react-hotel/static/js/main.72716e61.chunk.js"
+    "revision": "2fdab197c162eafed0fe",
+    "url": "/react-hotel/static/js/main.1008ce9c.chunk.js"
   },
   {
     "revision": "63b6fe71498edea05f58",
@@ -30,9 +30,5 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "25b6dfd5c39049fa3571a37b20a7f755",
     "url": "/react-hotel/static/media/logo-black.25b6dfd5.25b6dfd5.svg"
-  },
-  {
-    "revision": "bb4f4c345d4ee4944e7b3120aae7e7ea",
-    "url": "/react-hotel/static/media/logo-site.bb4f4c34.png"
   }
 ]);
