@@ -1,18 +1,18 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "d285dd095789cebfe8736878616d3aa3",
+    "revision": "3a5cee5e6896f2fae759b38c88eaceca",
     "url": "/react-hotel/index.html"
   },
   {
-    "revision": "251e0620aa8134037b29",
-    "url": "/react-hotel/static/css/main.607f8acc.chunk.css"
+    "revision": "da8f7bfc994a0f8eed9b",
+    "url": "/react-hotel/static/css/main.63a29acb.chunk.css"
   },
   {
     "revision": "7cf7420f3070562bc0f1",
     "url": "/react-hotel/static/js/2.abc2eb8e.chunk.js"
   },
   {
-    "revision": "251e0620aa8134037b29",
+    "revision": "da8f7bfc994a0f8eed9b",
     "url": "/react-hotel/static/js/main.4cd19de2.chunk.js"
   },
   {
@@ -26,6 +26,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "f7c2b4b747b1a225eb8dee034134a1b0",
     "url": "/react-hotel/static/media/fontawesome-webfont-1.f7c2b4b7.eot"
+  },
+  {
+    "revision": "97493d3f11c0a3bd5cbd959f5d19b699",
+    "url": "/react-hotel/static/media/fontawesome-webfont-2.97493d3f.woff2"
   },
   {
     "revision": "d9ee23d59d0e0e727b51368b458a0bff",
