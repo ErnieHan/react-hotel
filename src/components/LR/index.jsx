@@ -9,7 +9,6 @@ const Content = styled.div`
 
 const Left = styled.div`
   width: 60%;
-  height: 600px;
   background: #e9e8e7;
 `;
 
@@ -26,7 +25,6 @@ const Sticky = styled.div`
   top: 0px;
   background: #f9f9f9;
   padding: 15px;
-  min-height: 250px;
 `;
 
 const Move = styled.div`
@@ -100,7 +98,7 @@ class LR extends Component {
       <div>
         <Content>
           <Left ref="sticky-sibling">
-            {this.state.getRandom && (
+            {/* {this.state.getRandom && (
               <Draggable handle="strong" bounds="body">
                 <Move>
                   <strong>
@@ -109,13 +107,16 @@ class LR extends Component {
                   <div>You must click my handle to drag me</div>
                 </Move>
               </Draggable>
-            )}
+            )} */}
           </Left>
-          <Mid>Mid</Mid>
+          <Mid />
           <Right ref="sticky-parent">
-            <Sticky ref="sticky">Sticky</Sticky>
+            <Sticky ref="sticky">
+              <h1>Testing</h1>
+            </Sticky>
           </Right>
         </Content>
+        <div style={{ height: "1000px" }}></div>
       </div>
     );
   }

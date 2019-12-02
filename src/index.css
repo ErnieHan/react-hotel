@@ -180,3 +180,25 @@ button {
 .transition {
   transition: all 300ms ease;
 }
+
+.cool {
+  background: black;
+  padding: 12px;
+  color: white;
+  font-size: 48px;
+  font-family: "FontAwesome";
+}
+
+@font-face {
+  font-family: "FontAwesome";
+  font-weight: normal;
+  font-style: normal;
+  src: url("./assets/font/fontawesome-webfont.eot");
+  src: url("./assets/font/fontawesome-webfont-1.eot")
+      format("embedded-opentype"),
+    url("./assets/font/fontawesome-webfont-2.woff2") format("woff2"),
+    url("./assets/font/fontawesome-webfont-3.woff") format("woff"),
+    url("./assets/font/fontawesome-webfont.ttf") format("truetype"),
+    url("https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/fonts/fontawesome-webfont.svg?v=4.3.0#fontawesomeregular")
+      format("svg");
+}

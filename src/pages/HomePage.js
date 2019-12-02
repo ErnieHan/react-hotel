@@ -6,8 +6,14 @@ class HomePage extends Component {
   render() {
     return (
       <div>
+        <div className="cool">TESTING 測試用</div>
         <IframeTest />
-        <img src={indexImage} style={{ width: "100%" }} alt="" />
+        <img
+          data-src={indexImage}
+          style={{ width: "100%" }}
+          alt=""
+          className="lazyload"
+        />
       </div>
     );
   }

@@ -13,6 +13,9 @@ import "isomorphic-fetch";
 import "react-app-polyfill/ie11";
 import "react-app-polyfill/stable";
 import "core-js/features/promise";
+// LazyLoad img
+import "lazysizes";
+import "lazysizes/plugins/parent-fit/ls.parent-fit";
 
 ReactDOM.render(
   <Provider store={store}>
