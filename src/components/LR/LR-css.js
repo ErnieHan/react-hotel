@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const Price = styled.span`
   color: #c69967;
   font-weight: bold;
-  font-size: 1rem;
+  font-size: 18px;
 `;
 
 export const OrigPrice = styled.span`
@@ -34,7 +34,7 @@ export const AddToBag = styled.button`
 `;
 
 export const NeedsHelp = styled.div`
-  font-size: 0.75rem;
+  font-size: 13px;
   text-align: center;
   margin-bottom: 0.5rem;
 `;
@@ -48,7 +48,7 @@ export const FlexRow = styled.div`
 export const FlexCol = styled.div`
   width: ${props => (props.col === 6 ? "50%" : "100%")};
   text-align: center;
-  font-size: 0.75rem;
+  font-size: 13px;
   color: #8e8e8e;
   display: flex;
   justify-content: center;
@@ -105,7 +105,7 @@ export const SoldOutButton = styled.button`
 `;
 
 export const OpitionButton = styled.div`
-  padding: 0.5rem;
+  padding: 0.5rem 1rem;
   min-width: 72px;
   text-align: center;
   margin-right: 0.5rem;
@@ -120,7 +120,7 @@ export const OpitionButton = styled.div`
 `;
 
 export const OpitionDisableButton = styled.div`
-  padding: 0.5rem;
+  padding: 0.5rem 1rem;
   min-width: 72px;
   text-align: center;
   border: 1px solid #d1d1d1;

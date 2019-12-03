@@ -33,11 +33,13 @@ const Content = styled.div`
 
 const Left = styled.div`
   width: 60%;
-  height: 900px;
+  height: 800px;
   background: #e9e8e7;
   padding: 15px;
   @media (max-width: 767px) {
     width: 100%;
+    height: 200px;
+    margin-bottom: 1rem;
   }
 `;
 
@@ -71,6 +73,7 @@ const Sticky = styled.div`
   }
   @media (max-width: 767px) {
     padding: 0;
+    background: #fff;
   }
 `;
 
