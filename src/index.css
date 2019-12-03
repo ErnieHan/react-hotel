@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Lato&display=swap");
 
 * {
   box-sizing: border-box;
@@ -17,11 +17,12 @@ html {
 
 body {
   margin: 0;
-  font-family: -apple-system, "Roboto", BlinkMacSystemFont, "微軟正黑體",
+  font-family: -apple-system, "Lato", BlinkMacSystemFont, "微軟正黑體",
     "Segoe UI", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
     "Helvetica Neue", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  -webkit-overflow-scrolling: touch;
 }
 
 code {
@@ -171,6 +172,7 @@ a {
 }
 
 button {
+  border: 0;
   border-radius: 0;
   outline: 0;
   cursor: pointer;
@@ -179,26 +181,4 @@ button {
 
 .transition {
   transition: all 300ms ease;
-}
-
-.cool {
-  background: black;
-  padding: 12px;
-  color: white;
-  font-size: 48px;
-  font-family: "FontAwesome";
-}
-
-@font-face {
-  font-family: "FontAwesome";
-  font-weight: normal;
-  font-style: normal;
-  src: url("./assets/font/fontawesome-webfont.eot");
-  src: url("./assets/font/fontawesome-webfont-1.eot")
-      format("embedded-opentype"),
-    url("./assets/font/fontawesome-webfont-2.woff2") format("woff2"),
-    url("./assets/font/fontawesome-webfont-3.woff") format("woff"),
-    url("./assets/font/fontawesome-webfont.ttf") format("truetype"),
-    url("https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/fonts/fontawesome-webfont.svg?v=4.3.0#fontawesomeregular")
-      format("svg");
 }

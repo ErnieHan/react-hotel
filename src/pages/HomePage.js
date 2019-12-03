@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import indexImage from "../images/index_pic_7.jfif";
 import IframeTest from "../components/IframeTest";
+// import { Helmet } from "react-helmet";
 
 class HomePage extends Component {
   render() {
