@@ -1,12 +1,13 @@
 {
   "files": {
     "main.css": "/react-hotel/static/css/main.714dc986.chunk.css",
-    "main.js": "/react-hotel/static/js/main.99562e2d.chunk.js",
+    "main.js": "/react-hotel/static/js/main.5e263489.chunk.js",
     "runtime-main.js": "/react-hotel/static/js/runtime-main.552c6706.js",
-    "static/js/2.a0a1105f.chunk.js": "/react-hotel/static/js/2.a0a1105f.chunk.js",
+    "static/js/2.778a6f53.chunk.js": "/react-hotel/static/js/2.778a6f53.chunk.js",
     "index.html": "/react-hotel/index.html",
-    "precache-manifest.f741dc9dc65e25c62f8501b4ee705060.js": "/react-hotel/precache-manifest.f741dc9dc65e25c62f8501b4ee705060.js",
+    "precache-manifest.d06debfe19f1f2e10e5cbec4e4f6a098.js": "/react-hotel/precache-manifest.d06debfe19f1f2e10e5cbec4e4f6a098.js",
     "service-worker.js": "/react-hotel/service-worker.js",
+    "static/media/arrow-left.svg": "/react-hotel/static/media/arrow-left.72db753e.svg",
     "static/media/close.png": "/react-hotel/static/media/close.4618bc82.png",
     "static/media/icon-1year-maintenance.73f22180.svg": "/react-hotel/static/media/icon-1year-maintenance.73f22180.73f22180.svg",
     "static/media/icon-7days-return.1d791f24.svg": "/react-hotel/static/media/icon-7days-return.1d791f24.1d791f24.svg",
@@ -15,8 +16,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.552c6706.js",
-    "static/js/2.a0a1105f.chunk.js",
+    "static/js/2.778a6f53.chunk.js",
     "static/css/main.714dc986.chunk.css",
-    "static/js/main.99562e2d.chunk.js"
+    "static/js/main.5e263489.chunk.js"
   ]
 }
