@@ -1,11 +1,11 @@
 {
   "files": {
-    "main.css": "/react-hotel/static/css/main.6733c103.chunk.css",
-    "main.js": "/react-hotel/static/js/main.3e5e7a05.chunk.js",
+    "main.css": "/react-hotel/static/css/main.714dc986.chunk.css",
+    "main.js": "/react-hotel/static/js/main.a598694b.chunk.js",
     "runtime-main.js": "/react-hotel/static/js/runtime-main.552c6706.js",
     "static/js/2.a0a1105f.chunk.js": "/react-hotel/static/js/2.a0a1105f.chunk.js",
     "index.html": "/react-hotel/index.html",
-    "precache-manifest.a0ae121537fb95101031f52fea1bc6de.js": "/react-hotel/precache-manifest.a0ae121537fb95101031f52fea1bc6de.js",
+    "precache-manifest.f4519a826c6eec0a6813e9c360b35986.js": "/react-hotel/precache-manifest.f4519a826c6eec0a6813e9c360b35986.js",
     "service-worker.js": "/react-hotel/service-worker.js",
     "static/media/close.png": "/react-hotel/static/media/close.4618bc82.png",
     "static/media/icon-1year-maintenance.73f22180.svg": "/react-hotel/static/media/icon-1year-maintenance.73f22180.73f22180.svg",
@@ -16,7 +16,7 @@
   "entrypoints": [
     "static/js/runtime-main.552c6706.js",
     "static/js/2.a0a1105f.chunk.js",
-    "static/css/main.6733c103.chunk.css",
-    "static/js/main.3e5e7a05.chunk.js"
+    "static/css/main.714dc986.chunk.css",
+    "static/js/main.a598694b.chunk.js"
   ]
 }
