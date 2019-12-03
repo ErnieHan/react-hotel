@@ -1,21 +1,22 @@
 {
   "files": {
-    "main.css": "/react-hotel/static/css/main.e71b1689.chunk.css",
-    "main.js": "/react-hotel/static/js/main.4cd19de2.chunk.js",
+    "main.css": "/react-hotel/static/css/main.6733c103.chunk.css",
+    "main.js": "/react-hotel/static/js/main.3e5e7a05.chunk.js",
     "runtime-main.js": "/react-hotel/static/js/runtime-main.552c6706.js",
-    "static/js/2.abc2eb8e.chunk.js": "/react-hotel/static/js/2.abc2eb8e.chunk.js",
+    "static/js/2.a0a1105f.chunk.js": "/react-hotel/static/js/2.a0a1105f.chunk.js",
     "index.html": "/react-hotel/index.html",
-    "precache-manifest.012849d16f2f38f7f02da0fe5c90a731.js": "/react-hotel/precache-manifest.012849d16f2f38f7f02da0fe5c90a731.js",
+    "precache-manifest.a0ae121537fb95101031f52fea1bc6de.js": "/react-hotel/precache-manifest.a0ae121537fb95101031f52fea1bc6de.js",
     "service-worker.js": "/react-hotel/service-worker.js",
     "static/media/close.png": "/react-hotel/static/media/close.4618bc82.png",
-    "static/media/index.css": "/react-hotel/static/media/fontawesome-webfont.f7c2b4b7.eot",
+    "static/media/icon-1year-maintenance.73f22180.svg": "/react-hotel/static/media/icon-1year-maintenance.73f22180.73f22180.svg",
+    "static/media/icon-7days-return.1d791f24.svg": "/react-hotel/static/media/icon-7days-return.1d791f24.1d791f24.svg",
     "static/media/index_pic_7.jfif": "/react-hotel/static/media/index_pic_7.4d5752d0.jfif",
     "static/media/logo-black.25b6dfd5.svg": "/react-hotel/static/media/logo-black.25b6dfd5.25b6dfd5.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.552c6706.js",
-    "static/js/2.abc2eb8e.chunk.js",
-    "static/css/main.e71b1689.chunk.css",
-    "static/js/main.4cd19de2.chunk.js"
+    "static/js/2.a0a1105f.chunk.js",
+    "static/css/main.6733c103.chunk.css",
+    "static/js/main.3e5e7a05.chunk.js"
   ]
 }
