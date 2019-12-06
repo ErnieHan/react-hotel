@@ -13,6 +13,11 @@ const Title = styled.h2`
   border-bottom: 1px solid #e9e8e7;
 `;
 
+const Content = styled.div`
+  max-width: 1420px;
+  margin: 0 auto;
+`;
+
 class LoginPage extends Component {
   componentDidMount() {
     // 判斷是否為已登入狀態
@@ -25,15 +30,10 @@ class LoginPage extends Component {
 
   render() {
     return (
-      <div>
-        <Title>
-          <Translation>
-            {t => <>{t("signInPage.chowsangsangMember")}</>}
-          </Translation>
-        </Title>
+      <Content>
         {/* <Login /> */}
         <LR />
-      </div>
+      </Content>
     );
   }
 }

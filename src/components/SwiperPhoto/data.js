@@ -1,0 +1,45 @@
+export const mainLists = [
+  {
+    url:
+      "//cdn.chowsangsang.com/dfs/ivCssModelImages/85194/4de888bafb7aa7471e80dfbe45647f85.jpg"
+  },
+  {
+    url:
+      "//cdn.chowsangsang.com/dfs/ivCssModelImages/85194/b49d0e045ae4b12b21a02aac43ad8002.jpg"
+  },
+  {
+    url:
+      "//cdn.chowsangsang.com/dfs/ivCssModelImages/85194/ca922f891eb030d90646bb03b3a97b74.jpg"
+  },
+  {
+    url:
+      "//cdn.chowsangsang.com/dfs/ivCssModelImages/85194/009ede69849447e6fcc964920eef6124.jpg"
+  },
+  {
+    url:
+      "//cdn.chowsangsang.com/dfs/ivCssModelImages/85194/c35ea8a406d15351404e48b790d6ce06.jpg"
+  }
+];
+
+export const thumbLists = [
+  {
+    url:
+      "//cdn.chowsangsang.com/dfs/ivCssModelImages/85194/18292a757bb85657d7464574901a1727.jpg"
+  },
+  {
+    url:
+      "//cdn.chowsangsang.com/dfs/ivCssModelImages/85194/aef429b018c0ce0c045c35e0360b4c76.jpg"
+  },
+  {
+    url:
+      "//cdn.chowsangsang.com/dfs/ivCssModelImages/85194/123141e97586949ca4842ffcb2e6160a.jpg"
+  },
+  {
+    url:
+      "//cdn.chowsangsang.com/dfs/ivCssModelImages/85194/a70f6879dbead819aa79d9fb04ebd52a.jpg"
+  },
+  {
+    url:
+      "//cdn.chowsangsang.com/dfs/ivCssModelImages/85194/0ec47cce1f86d5fa1f24953acae12722.jpg"
+  }
+];

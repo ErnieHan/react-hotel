@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Content = styled.header`
-  padding: 60px 0 40px 0;
+  padding: 40px 0 40px 0;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -25,7 +25,7 @@ export const Center = styled.div`
   text-align: center;
   cursor: pointer;
   img {
-    max-width: 285px;
+    max-width: 200px;
   }
   @media screen and (max-width: 991px) {
     width: 100%;
@@ -37,6 +37,7 @@ export const Right = styled.div`
   order: 3;
   width: 33.33%;
   text-align: right;
+  font-size: 13px;
   i {
     font-size: 20px;
   }
@@ -57,6 +58,8 @@ export const Buttom = styled.div`
   margin-top: 1rem;
   display: flex;
   justify-content: center;
+  border-bottom: 1px solid #f1f1f1;
+  padding-bottom: 1px;
 `;
 
 export const Item = styled.div`
@@ -83,4 +86,11 @@ export const Item = styled.div`
 export const SubItem = styled.div`
   margin: 0 10px;
   cursor: pointer;
+  font-weight: bold;
+  font-size: 13px;
+  padding-bottom: 1rem;
+  border-bottom: 4px solid transparent;
+  &:hover {
+    border-bottom: 4px solid #c69967;
+  }
 `;

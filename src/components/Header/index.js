@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component, PureComponent } from "react";
 import {
   Content,
   Left,
@@ -18,18 +18,23 @@ import MiniBag from "../MiniBag";
 import LanguageSwitch from "../LanguageSwitch";
 import MiniMemberInfo from "../MiniMemberInfo";
 
-class Header extends Component {
+class Header extends PureComponent {
   goHomePage = () => {
     this.props.history.push("/");
   };
 
+  shouldComponentUpdate(nextProp, nextState) {
+    console.log(nextProp, this.props);
+    if (nextProp.isLogin !== this.props.isLogin) return true;
+    return false;
+  }
+
   render() {
-    const { isLogin } = this.props;
+    // const { isLogin } = this.props;
+    const isLogin = false;
     return (
       <Content>
-        <Left>
-          TW / NTD$ | <i className="fas fa-map-marker-alt" />
-        </Left>
+        <Left></Left>
         <Center onClick={this.goHomePage}>
           <img src={logoImage} alt="" />
         </Center>
@@ -103,7 +108,4 @@ const mapDispatchToProps = dispatch => {
   };
 };
 
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(withRouterHeader);
+export default connect(mapStateToProps, mapDispatchToProps)(withRouterHeader);

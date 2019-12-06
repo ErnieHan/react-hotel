@@ -1,7 +1,5 @@
 import React, { Component } from "react";
 import styled from "styled-components";
-import Draggable from "react-draggable";
-import $ from "jquery";
 import {
   Price,
   OrigPrice,
@@ -22,6 +20,10 @@ import {
 } from "./LR-css";
 import return7DayImage from "../../images/icon-7days-return.1d791f24.svg";
 import mainTenanceImage from "../../images/icon-1year-maintenance.73f22180.svg";
+import Modal from "../Modal";
+import SwiperPhoto from "../SwiperPhoto";
+import ProductTabs from "../ProductTabs";
+import { lockBody, unlockBody } from "../../function/bodyLockStatus";
 
 const Content = styled.div`
   display: flex;
@@ -33,12 +35,10 @@ const Content = styled.div`
 
 const Left = styled.div`
   width: 60%;
-  height: 800px;
   background: #e9e8e7;
   padding: 15px;
   @media (max-width: 767px) {
     width: 100%;
-    height: 200px;
     margin-bottom: 1rem;
   }
 `;
@@ -59,8 +59,8 @@ const Right = styled.div`
 `;
 
 const Sticky = styled.div`
-  /* position: sticky; */
-  /* top: 85px; */
+  position: sticky;
+  top: 0px;
   background: #f9f9f9;
   padding: 15px;
   h1 {
@@ -77,31 +77,12 @@ const Sticky = styled.div`
   }
 `;
 
-const Move = styled.div`
-  position: absolute;
-  border: 1px solid #f1f1f1;
-  background: #fff;
-  padding: 15px;
-  border-radius: 10px;
-  z-index: 99;
-`;
-
-const Head = styled.div`
-  position: fixed;
-  top: 0;
-  left: 0;
-  background: #fff;
-  border-bottom: 1px solid #ccc;
-  width: 100%;
-  height: 70px;
-  z-index: 99;
-`;
-
 class LR extends Component {
   state = {
     stickyOffsetTop: 0,
     randomPosition: 0,
-    getRandom: false
+    getRandom: false,
+    showModal: false
   };
 
   componentDidMount() {
@@ -115,7 +96,7 @@ class LR extends Component {
     if (!!window.ActiveXObject || "ActiveXObject" in window) {
       this.isIE();
     }
-    this.isIE();
+    // this.isIE();
   }
 
   componentWillUnmount() {
@@ -170,23 +151,30 @@ class LR extends Component {
     }
   };
 
+  open = () => {
+    lockBody();
+    document.body.style.overflow = "hidden";
+    this.setState({
+      showModal: true
+    });
+  };
+
+  close = () => {
+    unlockBody();
+    document.body.style.overflow = "";
+    this.setState({
+      showModal: false
+    });
+  };
+
   render() {
     return (
-      <div>
+      <>
         <Content>
-          {/* <Head>1523</Head> */}
           <Left ref="sticky-sibling">
-            {/* {this.state.getRandom && (
-              <Draggable handle="strong" bounds="body">
-                <Move>
-                  <strong>
-                    <div>Drag here</div>
-                  </strong>
-                  <div>You must click my handle to drag me</div>
-                </Move>
-              </Draggable>
-            )} */}
-            <h1>Testing</h1>
+            {/* 滑動產品圖 */}
+            <SwiperPhoto />
+            <ProductTabs />
           </Left>
           <Mid />
           <Right ref="sticky-parent" id="sticky-parent">
@@ -225,7 +213,7 @@ class LR extends Component {
                 </QuantityFlex>
               </QuantitySection>
               <AddToBag>加入購物袋</AddToBag>
-              <SoldOutButton>已售完補貨中</SoldOutButton>
+              <SoldOutButton onClick={this.open}>已售完補貨中</SoldOutButton>
               <NeedsHelp>需要協助? +852 2192 3228</NeedsHelp>
               <FlexRow>
                 <FlexCol col={6}>
@@ -240,8 +228,13 @@ class LR extends Component {
             </Sticky>
           </Right>
         </Content>
-        <div style={{ height: "1000px" }}></div>
-      </div>
+        <Modal
+          title="到貨通知"
+          body="body"
+          active={this.state.showModal}
+          closeModal={this.close.bind(this)}
+        />
+      </>
     );
   }
 }
