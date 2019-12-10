@@ -1,27 +1,34 @@
 {
   "files": {
-    "main.css": "/react-hotel/static/css/main.714dc986.chunk.css",
-    "main.js": "/react-hotel/static/js/main.be74c599.chunk.js",
+    "main.css": "/react-hotel/static/css/main.96040487.chunk.css",
+    "main.js": "/react-hotel/static/js/main.95e10430.chunk.js",
     "runtime-main.js": "/react-hotel/static/js/runtime-main.552c6706.js",
-    "static/js/2.f50c7e7e.chunk.js": "/react-hotel/static/js/2.f50c7e7e.chunk.js",
+    "static/js/2.074aa5d3.chunk.js": "/react-hotel/static/js/2.074aa5d3.chunk.js",
     "index.html": "/react-hotel/index.html",
-    "precache-manifest.11fa08ad0ec5916e53a2b46c13825cbc.js": "/react-hotel/precache-manifest.11fa08ad0ec5916e53a2b46c13825cbc.js",
+    "precache-manifest.27c50668bc07ceac62dae94064470ff7.js": "/react-hotel/precache-manifest.27c50668bc07ceac62dae94064470ff7.js",
     "service-worker.js": "/react-hotel/service-worker.js",
     "static/media/arrow-left.svg": "/react-hotel/static/media/arrow-left.72db753e.svg",
     "static/media/arrow-up-new.svg": "/react-hotel/static/media/arrow-up-new.d9720405.svg",
     "static/media/close.png": "/react-hotel/static/media/close.4618bc82.png",
+    "static/media/custom-service.jpg": "/react-hotel/static/media/custom-service.6e965757.jpg",
+    "static/media/feminine-elegance-bg.jpg": "/react-hotel/static/media/feminine-elegance-bg.b2307ff0.jpg",
+    "static/media/index.css": "/react-hotel/static/media/user.2720623a.png",
     "static/media/icon-1year-maintenance.73f22180.svg": "/react-hotel/static/media/icon-1year-maintenance.73f22180.73f22180.svg",
     "static/media/icon-7days-return.1d791f24.svg": "/react-hotel/static/media/icon-7days-return.1d791f24.1d791f24.svg",
     "static/media/icon-global-delivery.6306a5c7.svg": "/react-hotel/static/media/icon-global-delivery.6306a5c7.6306a5c7.svg",
     "static/media/icon-instore.5fcffbbd.svg": "/react-hotel/static/media/icon-instore.5fcffbbd.5fcffbbd.svg",
     "static/media/icon-local-delivery.541c81ff.svg": "/react-hotel/static/media/icon-local-delivery.541c81ff.541c81ff.svg",
     "static/media/index_pic_7.jfif": "/react-hotel/static/media/index_pic_7.4d5752d0.jfif",
-    "static/media/logo-black.25b6dfd5.svg": "/react-hotel/static/media/logo-black.25b6dfd5.25b6dfd5.svg"
+    "static/media/logo-black.25b6dfd5.svg": "/react-hotel/static/media/logo-black.25b6dfd5.25b6dfd5.svg",
+    "static/media/playful-versatile-bg.jpg": "/react-hotel/static/media/playful-versatile-bg.c2fc36ae.jpg",
+    "static/media/sleek-modern-bg.jpg": "/react-hotel/static/media/sleek-modern-bg.e7f80eed.jpg",
+    "static/media/store-experience.jpg": "/react-hotel/static/media/store-experience.e4116063.jpg",
+    "static/media/submenu_thm.jpg": "/react-hotel/static/media/submenu_thm.7e04f72f.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.552c6706.js",
-    "static/js/2.f50c7e7e.chunk.js",
-    "static/css/main.714dc986.chunk.css",
-    "static/js/main.be74c599.chunk.js"
+    "static/js/2.074aa5d3.chunk.js",
+    "static/css/main.96040487.chunk.css",
+    "static/js/main.95e10430.chunk.js"
   ]
 }
