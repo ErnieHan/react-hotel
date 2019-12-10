@@ -12,38 +12,57 @@ import {
   RightCenter,
   RegisterButton
 } from "./VRegister-css";
+import { Translation } from "react-i18next";
 
 class VRegister extends Component {
   render() {
     return (
       <Content>
         <Left>
-          <Title>REGISTERED USER</Title>
-          <Text>If you are already registered, please log in.</Text>
+          <Title>
+            <Translation>{t => <>{t("login.l0")}</>}</Translation>
+          </Title>
+          <Text>
+            <Translation>{t => <>{t("login.l1")}</>}</Translation>
+          </Text>
           <Center>
-            <p>EMAIL ADDRESS *</p>
+            <p>
+              <Translation>{t => <>{t("login.l2")}</>}</Translation>
+            </p>
             <input type="text" />
-            <p>PASSWORD *</p>
+            <p>
+              <Translation>{t => <>{t("login.l3")}</>}</Translation>
+            </p>
             <input type="password" />
             <ForgetDiv>
               <div>
-                <span>Forgot your password?</span>
+                <span>
+                  <Translation>{t => <>{t("login.l4")}</>}</Translation>
+                </span>
               </div>
               <div>
-                Consult our <span>Privacy Policy</span> for further information.
+                <Translation>{t => <>{t("login.l5")}</>}</Translation>
               </div>
             </ForgetDiv>
           </Center>
           <ButtonDiv>
-            <LoginButton>LOG IN</LoginButton>
+            <LoginButton>
+              <Translation>{t => <>{t("login.l6")}</>}</Translation>
+            </LoginButton>
           </ButtonDiv>
         </Left>
         <Right>
-          <Title>NEW USER</Title>
-          <Text>Register now and make the most of My Account.</Text>
+          <Title>
+            <Translation>{t => <>{t("login.l7")}</>}</Translation>
+          </Title>
+          <Text>
+            <Translation>{t => <>{t("login.l8")}</>}</Translation>
+          </Text>
           <RightCenter>Not finished</RightCenter>
           <ButtonDiv>
-            <RegisterButton>REGISTER</RegisterButton>
+            <RegisterButton>
+              <Translation>{t => <>{t("login.l9")}</>}</Translation>
+            </RegisterButton>
           </ButtonDiv>
         </Right>
       </Content>

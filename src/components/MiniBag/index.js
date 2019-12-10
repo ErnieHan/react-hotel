@@ -69,7 +69,4 @@ const mapDispatchToProps = dispatch => {
   };
 };
 
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(MiniBag);
+export default connect(mapStateToProps, mapDispatchToProps)(MiniBag);

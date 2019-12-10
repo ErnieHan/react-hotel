@@ -29,14 +29,18 @@ export const AddToBag = styled.button`
   border: 0;
   border-radius: 0;
   width: 100%;
-  margin-bottom: 0.5rem;
+  margin-bottom: 1rem;
   font-size: 1rem;
 `;
 
 export const NeedsHelp = styled.div`
-  font-size: 13px;
   text-align: center;
   margin-bottom: 0.5rem;
+  a {
+    color: #c69967;
+    margin: 0 10px;
+    border-bottom: 1px solid #c69967;
+  }
 `;
 
 export const FlexRow = styled.div`
@@ -100,7 +104,7 @@ export const SoldOutButton = styled.button`
   border: 1px solid #d1d1d1;
   color: #d1d1d1;
   font-weight: bold;
-  margin-bottom: 0.5rem;
+  margin-bottom: 1rem;
   cursor: help;
 `;
 

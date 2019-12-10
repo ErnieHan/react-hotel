@@ -13,10 +13,12 @@ export const Text = styled.div`
   padding-left: 1rem;
   p {
     margin-bottom: 1rem;
+    line-height: 1.5;
   }
   li {
     padding-left: 1rem;
     position: relative;
+    margin-bottom: 0.5rem;
     &::before {
       content: "";
       position: absolute;

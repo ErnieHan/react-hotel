@@ -24,6 +24,8 @@ import Modal from "../Modal";
 import SwiperPhoto from "../SwiperPhoto";
 import ProductTabs from "../ProductTabs";
 import { lockBody, unlockBody } from "../../function/bodyLockStatus";
+import { Translation } from "react-i18next";
+import i18next from "i18next";
 
 const Content = styled.div`
   display: flex;
@@ -35,7 +37,6 @@ const Content = styled.div`
 
 const Left = styled.div`
   width: 60%;
-  background: #e9e8e7;
   padding: 15px;
   @media (max-width: 767px) {
     width: 100%;
@@ -60,8 +61,7 @@ const Right = styled.div`
 
 const Sticky = styled.div`
   position: sticky;
-  top: 0px;
-  background: #f9f9f9;
+  top: 60px;
   padding: 15px;
   h1 {
     font-size: 1.25rem;
@@ -168,6 +168,7 @@ class LR extends Component {
   };
 
   render() {
+    const lang = i18next.language;
     return (
       <>
         <Content>
@@ -179,55 +180,97 @@ class LR extends Component {
           <Mid />
           <Right ref="sticky-parent" id="sticky-parent">
             <Sticky ref="sticky" id="sticky">
-              <NewsTitle>新季產品</NewsTitle>
+              <NewsTitle>
+                <Translation>{t => <>{t("product.10")}</>}</Translation>
+              </NewsTitle>
               <h1>Marco Bicego</h1>
-              <h3>18K黃金鑽石不對稱耳環</h3>
+              <h3>
+                <Translation>{t => <>{t("product.0")}</>}</Translation>
+              </h3>
               <PriceSection>
-                <OrigPrice>NT$5,800</OrigPrice>
-                <Price>NT$4,800</Price>
+                <OrigPrice>
+                  {lang === "zhTW" ? "$5,800" : null}
+                  {lang === "en" ? "$199" : null}
+                  {lang === "jp" ? "¥17,400" : null}
+                </OrigPrice>
+                <Price>
+                  {lang === "zhTW" ? "$4,800" : null}
+                  {lang === "en" ? "$169" : null}
+                  {lang === "jp" ? "¥14,400(税込)" : null}
+                </Price>
               </PriceSection>
               <QuantitySection>
-                <Sub>款式</Sub>
+                <Sub>
+                  <Translation>{t => <>{t("product.1")}</>}</Translation>
+                </Sub>
                 <QuantityFlex>
-                  <OpitionButton active>夾式</OpitionButton>
-                  <OpitionButton>垂掛式</OpitionButton>
-                  <OpitionDisableButton>加大垂掛式</OpitionDisableButton>
+                  <OpitionButton active>
+                    <Translation>{t => <>{t("product.2")}</>}</Translation>
+                  </OpitionButton>
+                  <OpitionButton>
+                    <Translation>{t => <>{t("product.3")}</>}</Translation>
+                  </OpitionButton>
+                  <OpitionDisableButton>
+                    <Translation>{t => <>{t("product.4")}</>}</Translation>
+                  </OpitionDisableButton>
                 </QuantityFlex>
               </QuantitySection>
               <QuantitySection>
-                <Sub>長度</Sub>
+                <Sub>
+                  <Translation>{t => <>{t("product.5")}</>}</Translation>
+                </Sub>
                 <QuantityFlex>
-                  <OpitionButton>13公分</OpitionButton>
-                  <OpitionButton active>15公分</OpitionButton>
-                  <OpitionButton>17公分</OpitionButton>
-                  <OpitionDisableButton>19公分</OpitionDisableButton>
-                  <OpitionButton>21公分</OpitionButton>
+                  <OpitionButton>
+                    13<Translation>{t => <>{t("product.6")}</>}</Translation>
+                  </OpitionButton>
+                  <OpitionButton active>
+                    15<Translation>{t => <>{t("product.6")}</>}</Translation>
+                  </OpitionButton>
+                  <OpitionButton>
+                    17<Translation>{t => <>{t("product.6")}</>}</Translation>
+                  </OpitionButton>
+                  <OpitionDisableButton>
+                    19<Translation>{t => <>{t("product.6")}</>}</Translation>
+                  </OpitionDisableButton>
+                  <OpitionButton>
+                    21<Translation>{t => <>{t("product.6")}</>}</Translation>
+                  </OpitionButton>
                 </QuantityFlex>
               </QuantitySection>
               <QuantitySection>
-                <Sub>數量</Sub>
+                <Sub>
+                  <Translation>{t => <>{t("product.7")}</>}</Translation>
+                </Sub>
                 <QuantityFlex>
                   <PlusButton>-</PlusButton>
                   <Quantity>1</Quantity>
                   <PlusButton>+</PlusButton>
                 </QuantityFlex>
               </QuantitySection>
-              <AddToBag>加入購物袋</AddToBag>
-              <SoldOutButton onClick={this.open}>已售完補貨中</SoldOutButton>
-              <NeedsHelp>需要協助? +852 2192 3228</NeedsHelp>
+              <AddToBag id="add-to-bag">
+                <Translation>{t => <>{t("product.8")}</>}</Translation>
+              </AddToBag>
+              <SoldOutButton onClick={this.open}>
+                <Translation>{t => <>{t("product.9")}</>}</Translation>
+              </SoldOutButton>
+              <NeedsHelp>
+                <Translation>{t => <>{t("product.11")}</>}</Translation>
+                <a href="tel:85221923228">+852 2192 3228</a>
+              </NeedsHelp>
               <FlexRow>
                 <FlexCol col={6}>
                   <img src={return7DayImage} alt="" />
-                  7天無理由退換貨
+                  <Translation>{t => <>{t("product.12")}</>}</Translation>
                 </FlexCol>
                 <FlexCol col={6}>
                   <img src={mainTenanceImage} alt="" />
-                  1年飾品保養
+                  <Translation>{t => <>{t("product.13")}</>}</Translation>
                 </FlexCol>
               </FlexRow>
             </Sticky>
           </Right>
         </Content>
+        <div style={{ height: "1000px" }}></div>
         <Modal
           title="到貨通知"
           body="body"

@@ -9,11 +9,11 @@ const Content = styled.div`
   top: 0;
   left: 0;
   background: white;
-  opacity: 0.65;
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 99;
+  z-index: 200;
+  opacity: 0.65;
 `;
 
 class Loading extends Component {

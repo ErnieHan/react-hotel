@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { TabsContent, TabTitle, TabBody } from "./ProductTabs-css";
 import Information from "./Information";
 import DeliveryAndReturn from "./DeliveryAndReturn";
+import { Translation } from "react-i18next";
 
 class ProductTabs extends Component {
   state = {
@@ -15,9 +16,9 @@ class ProductTabs extends Component {
   };
   render() {
     const tabLists = [
-      { name: "產品資訊" },
-      { name: "配送及退換" },
-      { name: "稅項及關稅" }
+      { name: <Translation>{t => <>{t("tabs.title01")}</>}</Translation> },
+      { name: <Translation>{t => <>{t("tabs.title02")}</>}</Translation> },
+      { name: <Translation>{t => <>{t("tabs.title03")}</>}</Translation> }
     ];
     const tabBodyLists = [
       { body: <Information /> },

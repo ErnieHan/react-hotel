@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Content, Image, Text } from "./Information-css";
+import { Translation } from "react-i18next";
 
 export class Information extends Component {
   render() {
@@ -13,13 +14,19 @@ export class Information extends Component {
         </Image>
         <Text>
           <p>
-            經典心形設計融入獨特鏤空花紋，以群鑲工藝打造立體心形圍邊，襯托中間大顆美鑽的雍容華貴。
-            18K/750紅色黃金鑽石耳環
+            <Translation>{t => <>{t("tabs.1-1")}</>}</Translation>
           </p>
-          <p>款號# 85194E-18KR-DD</p>
+          <p>
+            <Translation>{t => <>{t("tabs.1-2")}</>}</Translation>#
+            85194E-18KR-DD
+          </p>
           <ul>
-            <li>鑽石, 總克拉重 0.482 克拉</li>
-            <li>南洋養殖珍珠, 總克拉重 0.133 克拉</li>
+            <li>
+              <Translation>{t => <>{t("tabs.1-3")}</>}</Translation>
+            </li>
+            <li>
+              <Translation>{t => <>{t("tabs.1-4")}</>}</Translation>
+            </li>
           </ul>
         </Text>
       </Content>

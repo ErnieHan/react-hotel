@@ -58,7 +58,7 @@ export const CheckoutButton = styled.button`
   background: #111;
   color: white;
   border: 0;
-  padding: 0.5rem;
+  padding: 1rem;
   width: 100%;
 `;
 

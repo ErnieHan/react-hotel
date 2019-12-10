@@ -57,7 +57,7 @@ class LanguageSwitch extends Component {
     this.props.showLoading(true);
     setTimeout(() => {
       this.props.showLoading(false);
-    }, 500);
+    }, 1500);
   };
 
   openLanguage = () => {
@@ -82,9 +82,9 @@ class LanguageSwitch extends Component {
       >
         {language === "zhTW" ? "繁" : language === "jp" ? "日" : "EN"}
         <SelectContent active={active}>
-          <p onClick={this.changeEN}>EN</p>
-          <p onClick={this.changezhTW}>繁</p>
-          <p onClick={this.changeJP}>日</p>
+          <p onClick={language !== "en" ? this.changeEN : null}>EN</p>
+          <p onClick={language !== "zhTW" ? this.changezhTW : null}>繁</p>
+          <p onClick={language !== "jp" ? this.changeJP : null}>日</p>
         </SelectContent>
       </Content>
     );
@@ -106,7 +106,4 @@ const mapDispatchToProps = dispatch => {
   };
 };
 
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(LanguageSwitch);
+export default connect(mapStateToProps, mapDispatchToProps)(LanguageSwitch);

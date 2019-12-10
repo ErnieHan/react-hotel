@@ -5,6 +5,7 @@ import styled from "styled-components";
 import { Translation } from "react-i18next";
 import "../css/test.css";
 import LR from "../components/LR";
+import ScrollAddToBag from "../components/ScrollAddToBag";
 
 const Title = styled.h2`
   font-size: 2.5rem;
@@ -33,6 +34,7 @@ class LoginPage extends Component {
       <Content>
         {/* <Login /> */}
         <LR />
+        <ScrollAddToBag />
       </Content>
     );
   }

@@ -6,7 +6,7 @@
 }
 
 html {
-  font-size: 16px;
+  font-size: 13px;
 }
 
 @media (max-width: 991px) {
@@ -181,4 +181,32 @@ button {
 
 .transition {
   transition: all 300ms ease;
+}
+
+span.icon {
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.icon-heart {
+  background-image: url("images/heart.png");
+}
+
+.icon-user {
+  background-image: url("images/user.png");
+}
+
+.icon-bag {
+  background-image: url("images/shopping-bag.png");
+}
+
+.icon-locate {
+  background-image: url("images/location-pin.png");
+}
+
+.icon-internet {
+  background-image: url("images/internet.png");
 }

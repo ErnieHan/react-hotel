@@ -10,10 +10,11 @@
     "login": "Login",
     "register": "Register",
     "logout": "Logout",
-    "spotlight": "Spotlight",
-    "collections": "Collections",
-    "jewellery": "Jewellery",
-    "services": "Services"
+    "spotlight": "SPOTLIGHT",
+    "collections": "COLLECTIONS",
+    "jewellery": "JEWELLERY",
+    "services": "SERVICES",
+    "brand": "SPOTLIGHT"
   },
   "signInPage": {
     "title": "Sign In",
@@ -70,5 +71,55 @@
   },
   "tip": {
     "Iagree": "Please confirm the tick option \"I agree\" before submitting."
+  },
+  "login": {
+    "l0": "REGISTERED USER",
+    "l1": "If you are already registered, please log in.",
+    "l2": "EMAIL ADDRESS *",
+    "l3": "PASSWORD *",
+    "l4": "Forgot your password?",
+    "l5": "Consult our Privacy Policy for further information.",
+    "l6": "LOG IN",
+    "l7": "NEW USER",
+    "l8": "Register now and make the most of My Account.",
+    "l9": "REGISTER"
+  },
+  "product": {
+    "0": "18K Gold Diamond Earrings",
+    "1": "Style",
+    "2": "Clip",
+    "3": "Pin",
+    "4": "Pin Plus",
+    "5": "Length",
+    "6": "cm",
+    "7": "Quantity",
+    "8": "Add To Bag",
+    "9": "Sold Out",
+    "10": "New Product",
+    "11": "Need Help?",
+    "12": "7 days to return",
+    "13": "1 year warranty"
+  },
+  "tabs": {
+    "title01": "Information",
+    "title02": "Delivery and Return",
+    "title03": "Taxes and Duties",
+    "1-1": "The classic heart-shaped design incorporates a unique hollow pattern, and the three-dimensional heart-shaped perimeter is created by the group setting technology, which sets off the grace and luxury of a large diamond in the middle. 18K / 750 Red Gold Diamond Earrings",
+    "1-2": "Style",
+    "1-3": "Diamonds total weight 0.42carat",
+    "1-4": "Nanyang Cultured Pearl total weight 0.133carat",
+    "2-1": "Shipping Information",
+    "2-2": "In-Store Collection",
+    "2-3": "Order online, collect in store. Service available in Taiwan only.",
+    "2-4": "Local Delivery",
+    "2-5": "Complimentary delivery to your address.",
+    "2-6": "Included with your order",
+    "2-7": "Certificates (If Applicable) Invoice for After-Sales Services Gift-Ready Packaging (Packaging image is for illustrative purpose only)",
+    "2-8": "Returns & exchanges",
+    "2-9": "Return & Exchange Policy",
+    "2-10": "7 day return or exchange",
+    "2-11": "Find out more",
+    "2-12": "International Delivery",
+    "2-13": "Now delivering to over 40 destinations. Shipping costs vary."
   }
 }
