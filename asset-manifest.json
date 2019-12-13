@@ -1,12 +1,12 @@
 {
   "files": {
-    "main.css": "/react-hotel/static/css/main.336c80f4.chunk.css",
-    "main.js": "/react-hotel/static/js/main.2fce69fd.chunk.js",
-    "runtime-main.js": "/react-hotel/static/js/runtime-main.6388b1ed.js",
-    "static/js/2.6245ebfa.chunk.js": "/react-hotel/static/js/2.6245ebfa.chunk.js",
-    "static/js/3.ccaca1c0.chunk.js": "/react-hotel/static/js/3.ccaca1c0.chunk.js",
+    "main.css": "/react-hotel/static/css/main.39410958.chunk.css",
+    "main.js": "/react-hotel/static/js/main.02f83e8e.chunk.js",
+    "runtime-main.js": "/react-hotel/static/js/runtime-main.b68d554f.js",
+    "static/js/2.fba36a2a.chunk.js": "/react-hotel/static/js/2.fba36a2a.chunk.js",
+    "static/js/3.985d7d01.chunk.js": "/react-hotel/static/js/3.985d7d01.chunk.js",
     "index.html": "/react-hotel/index.html",
-    "precache-manifest.07c935eb69e466c7e769dce824859313.js": "/react-hotel/precache-manifest.07c935eb69e466c7e769dce824859313.js",
+    "precache-manifest.e0c3487770028e44b921a1641db69c4b.js": "/react-hotel/precache-manifest.e0c3487770028e44b921a1641db69c4b.js",
     "service-worker.js": "/react-hotel/service-worker.js",
     "static/media/arrow-left.svg": "/react-hotel/static/media/arrow-left.72db753e.svg",
     "static/media/arrow-up-new.svg": "/react-hotel/static/media/arrow-up-new.d9720405.svg",
@@ -28,9 +28,9 @@
     "static/media/submenu_thm.jpg": "/react-hotel/static/media/submenu_thm.7e04f72f.jpg"
   },
   "entrypoints": [
-    "static/js/runtime-main.6388b1ed.js",
-    "static/js/2.6245ebfa.chunk.js",
-    "static/css/main.336c80f4.chunk.css",
-    "static/js/main.2fce69fd.chunk.js"
+    "static/js/runtime-main.b68d554f.js",
+    "static/js/2.fba36a2a.chunk.js",
+    "static/css/main.39410958.chunk.css",
+    "static/js/main.02f83e8e.chunk.js"
   ]
 }
