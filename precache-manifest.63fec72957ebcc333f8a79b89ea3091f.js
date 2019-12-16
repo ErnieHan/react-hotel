@@ -1,27 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "cbb434bf73c286837ca0a6d8148c08f6",
+    "revision": "153a5cab765e9e2303cde2419aaf41b7",
     "url": "/react-hotel/index.html"
   },
   {
-    "revision": "22d5a4be76ee6c75f053",
+    "revision": "7517c5fdadb6bde53ce4",
     "url": "/react-hotel/static/css/main.39410958.chunk.css"
   },
   {
-    "revision": "0e76f3222a7719391f10",
-    "url": "/react-hotel/static/js/2.6dacd931.chunk.js"
+    "revision": "2d6b1db87ab94d0a3d8d",
+    "url": "/react-hotel/static/js/2.8ba35e99.chunk.js"
   },
   {
-    "revision": "083b4ebd01167a3b7581",
-    "url": "/react-hotel/static/js/3.53e0cd1d.chunk.js"
+    "revision": "f9078bc28b0fea060551",
+    "url": "/react-hotel/static/js/3.a0c3f844.chunk.js"
   },
   {
-    "revision": "22d5a4be76ee6c75f053",
-    "url": "/react-hotel/static/js/main.e63adbf5.chunk.js"
+    "revision": "7517c5fdadb6bde53ce4",
+    "url": "/react-hotel/static/js/main.ce6ccfed.chunk.js"
   },
   {
-    "revision": "e1b2055f946c4d953461",
-    "url": "/react-hotel/static/js/runtime-main.03c06c82.js"
+    "revision": "962c21cee50c13e7fdc5",
+    "url": "/react-hotel/static/js/runtime-main.3da71f28.js"
   },
   {
     "revision": "72db753e0b5161bc8e958db291c45c4e",
