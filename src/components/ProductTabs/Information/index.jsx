@@ -8,7 +8,7 @@ export class Information extends Component {
       <Content>
         <Image>
           <img
-            src="//cdn.chowsangsang.com/dfs/ivCssModelImages/85194/e82b0cb88bc6b2cbfad81c14a8ac864d.jpg"
+            src="https://cdn.chowsangsang.com/dfs/ivCssModelImages/90792/bc877aad82665ceeff76581ae2f9ec6b.jpg"
             alt=""
           />
         </Image>

@@ -30,7 +30,6 @@ export const ModalContent = styled.div`
   transform: ${props =>
     props.active ? "translateY(0px)" : "translateY(-50px)"};
   transition: transform 350ms ease-out;
-  margin-right: ${props => (props.active ? "17px" : "0px")};
   @media (max-width: 1240px) {
     width: 780px;
   }

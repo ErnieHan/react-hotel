@@ -8,7 +8,7 @@ export const Price = styled.span`
 
 export const OrigPrice = styled.span`
   color: #8e8e8e;
-  font-size: 0.75rem;
+  font-size: 1rem;
   font-weight: bold;
   text-decoration: line-through;
   margin-right: 8px;

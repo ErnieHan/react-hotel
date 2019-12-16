@@ -58,7 +58,7 @@ export class SwiperPhoto extends Component {
         <div className="swiper-container gallery-main">
           <div className="swiper-wrapper">
             {mainLists.map((img, index) => (
-              <div className="swiper-slide zoom" key={index}>
+              <div className="swiper-slide" key={index}>
                 <img src={img.url} alt="" />
               </div>
             ))}

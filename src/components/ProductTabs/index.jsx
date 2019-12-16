@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { TabsContent, TabTitle, TabBody } from "./ProductTabs-css";
+import { TabsContent, TabTitle, TabBody, TabsLayout } from "./ProductTabs-css";
 import Information from "./Information";
 import DeliveryAndReturn from "./DeliveryAndReturn";
 import { Translation } from "react-i18next";
@@ -26,7 +26,7 @@ class ProductTabs extends Component {
       { body: <div>3</div> }
     ];
     return (
-      <>
+      <TabsLayout>
         <TabsContent>
           {tabLists.map((data, index) => (
             <TabTitle
@@ -43,7 +43,7 @@ class ProductTabs extends Component {
             {data.body}
           </TabBody>
         ))}
-      </>
+      </TabsLayout>
     );
   }
 }

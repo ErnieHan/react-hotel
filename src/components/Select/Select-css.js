@@ -3,14 +3,75 @@ import arrowImage from "../../images/sort-down.png";
 
 export const Content = styled.div`
   display: inline-block;
-  padding: 12px;
+  padding: 8px;
   border: 1px solid #d1d1d1;
   background: #fff;
-  min-width: 100px;
+  min-width: 250px;
   position: relative;
   cursor: pointer;
   background-image: url(${arrowImage});
   background-repeat: no-repeat;
   background-size: 10px;
   background-position: center right 10px;
+  font-size: 1rem;
+  @media (max-width: 767px) {
+    display: none;
+  }
+`;
+
+export const OptionSection = styled.div`
+  position: absolute;
+  min-width: 250px;
+  height: 250px;
+  overflow-y: auto;
+  background: #fff;
+  top: 100%;
+  left: -1px;
+  border: 1px solid #d1d1d1;
+  display: ${props => (props.active ? "block" : "none")};
+  &::-webkit-scrollbar {
+    width: 4px;
+  }
+  &::-webkit-scrollbar-thumb {
+    background: #cccccc;
+  }
+  &::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+`;
+
+export const Option = styled.div`
+  padding: 8px;
+  font-size: 1rem;
+  &:hover {
+    background: #f4ebe1;
+  }
+`;
+
+export const OptionDisable = styled.div`
+  padding: 8px;
+  font-size: 1rem;
+  color: #8e8e8e;
+`;
+
+export const MobileSelect = styled.select`
+  display: inline-block;
+  padding: 8px;
+  border: 1px solid #d1d1d1;
+  border-radius: 0;
+  background: #fff;
+  position: relative;
+  cursor: pointer;
+  background-repeat: no-repeat;
+  background-size: 10px;
+  background-position: center right 10px;
+  font-size: 1rem;
+  appearance: none;
+  background-image: url(${arrowImage});
+  display: none;
+  @media (max-width: 767px) {
+    display: block;
+    width: 100%;
+    min-width: 100%;
+  }
 `;

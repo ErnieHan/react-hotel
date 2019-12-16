@@ -75,6 +75,22 @@ export class Header extends Component {
     });
   };
 
+  openRegister = () => {
+    //1. open window
+    window.openedPage = window.open(
+      "/react-hotel/#/opened",
+      "你好",
+      "resizable,height=550,width=430"
+    );
+    //2. 註冊一個可判別的變數
+    const data = {
+      name: "Ernie",
+      value: "爾尼"
+    };
+    window.ernie = JSON.stringify(data);
+    // 3. 在第一步驟的行為window.openedPage 就是另開視窗的名稱，可以使用window.openedPage.close()去執行關閉他
+  };
+
   render() {
     const { sticky } = this.state;
 
@@ -109,7 +125,8 @@ export class Header extends Component {
             <img src={logo} alt="" />
           </Center>
           <Right>
-            註冊登入 | 喜愛清單 | 購物袋 | <LanguageSwitch />
+            <span onClick={this.openRegister}>註冊 / 登入</span> | 喜愛清單 |
+            購物袋 | <LanguageSwitch />
           </Right>
           <NavbarLayout ref="layout">
             <NavbarContent ref="content" sticky={sticky}>
@@ -127,7 +144,9 @@ export class Header extends Component {
                   </NavItem>
                 ))}
               </NavCenter>
-              <NavRight sticky={sticky}>註冊登入 | 喜愛清單 | 購物袋</NavRight>
+              <NavRight sticky={sticky}>
+                <span>註冊 / 登入</span>| 喜愛清單 | 購物袋
+              </NavRight>
               {navbarLists.map((data, index) =>
                 data.component !== null ? (
                   <ListBody

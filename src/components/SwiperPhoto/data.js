@@ -1,45 +1,45 @@
 export const mainLists = [
   {
     url:
-      "//cdn.chowsangsang.com/dfs/ivCssModelImages/85194/4de888bafb7aa7471e80dfbe45647f85.jpg"
+      "https://cdn.chowsangsang.com/dfs/ivCssModelImages/90792/ada726b9d2a0f75f2db19bee3a6ceaf9.jpg"
   },
   {
     url:
-      "//cdn.chowsangsang.com/dfs/ivCssModelImages/85194/b49d0e045ae4b12b21a02aac43ad8002.jpg"
+      "https://cdn.chowsangsang.com/dfs/ivCssModelImages/90792/02299d98a09b09d4ba97a5523f736f85.jpg"
   },
   {
     url:
-      "//cdn.chowsangsang.com/dfs/ivCssModelImages/85194/ca922f891eb030d90646bb03b3a97b74.jpg"
+      "https://cdn.chowsangsang.com/dfs/ivCssModelImages/90792/08e95bf52effe2ecd982eed5314c7c7f.jpg"
   },
   {
     url:
-      "//cdn.chowsangsang.com/dfs/ivCssModelImages/85194/009ede69849447e6fcc964920eef6124.jpg"
+      "https://cdn.chowsangsang.com/dfs/ivCssModelImages/90792/3426d235f8fa33314f25c4274fab2eeb.jpg"
   },
   {
     url:
-      "//cdn.chowsangsang.com/dfs/ivCssModelImages/85194/c35ea8a406d15351404e48b790d6ce06.jpg"
+      "https://cdn.chowsangsang.com/dfs/ivCssModelImages/90792/66eb0b147ef3fbfa8ee874a45cb998b6.jpg"
   }
 ];
 
 export const thumbLists = [
   {
     url:
-      "//cdn.chowsangsang.com/dfs/ivCssModelImages/85194/18292a757bb85657d7464574901a1727.jpg"
+      "https://cdn.chowsangsang.com/dfs/ivCssModelImages/90792/4bb23eff3be62de0a692489fe6f03379.jpg"
   },
   {
     url:
-      "//cdn.chowsangsang.com/dfs/ivCssModelImages/85194/aef429b018c0ce0c045c35e0360b4c76.jpg"
+      "https://cdn.chowsangsang.com/dfs/ivCssModelImages/90792/ebdb587d31b2e9248e64e01c02c7556f.jpg"
   },
   {
     url:
-      "//cdn.chowsangsang.com/dfs/ivCssModelImages/85194/123141e97586949ca4842ffcb2e6160a.jpg"
+      "https://cdn.chowsangsang.com/dfs/ivCssModelImages/90792/c93956817b31d17152f4ff587cdb54b3.jpg"
   },
   {
     url:
-      "//cdn.chowsangsang.com/dfs/ivCssModelImages/85194/a70f6879dbead819aa79d9fb04ebd52a.jpg"
+      "https://cdn.chowsangsang.com/dfs/ivCssModelImages/90792/5b61e7fab6467a777d5c1dbdc982a973.jpg"
   },
   {
     url:
-      "//cdn.chowsangsang.com/dfs/ivCssModelImages/85194/0ec47cce1f86d5fa1f24953acae12722.jpg"
+      "https://cdn.chowsangsang.com/dfs/ivCssModelImages/90792/96a68cb57d5e1f8d5c2ce0b0d07af18c.jpg"
   }
 ];

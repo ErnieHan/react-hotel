@@ -13,6 +13,12 @@ const activeAnimate = css`
   animation: ${fadeIn} 1s forwards;
 `;
 
+export const TabsLayout = styled.div`
+  @media (max-width: 767px) {
+    display: none;
+  }
+`;
+
 export const TabsContent = styled.div`
   display: flex;
   border-bottom: 1px solid #d1d1d1;

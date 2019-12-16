@@ -14,6 +14,7 @@ import Page404 from "./pages/Page404";
 import LoginPage from "./pages/LoginPage";
 import RegisterPage from "./pages/RegisterPage";
 import MyAccountPage from "./pages/MyAccountPage";
+import ProductPage from "./pages/ProductPage";
 // Components
 import Header from "./components/Header";
 import styled from "styled-components";
@@ -21,16 +22,22 @@ import i18n from "i18next";
 import getCookie from "./function/getCookie";
 import writeCookie from "./function/writeCookie";
 import Loading from "./components/Loading";
+import OpenedPage from "./pages/OpenedPage";
 
 const Content = styled.div`
   padding: 0 40px;
-  @media screen and (max-width: 991px) {
-    padding: 0 15px;
+  @media screen and (max-width: 767px) {
+    padding: 75px 15px 0px 15px;
   }
 `;
 
 class App extends React.Component {
-  componentDidMount() {
+  async componentDidMount() {
+    // 加載滑動效果
+    if (!("scrollBehavior" in document.documentElement.style)) {
+      await import("scroll-behavior-polyfill");
+    }
+
     const getUserId = localStorage.getItem("user");
     if (getUserId) {
       // 瀏覽器中有userID 執行登入
@@ -81,6 +88,12 @@ class App extends React.Component {
                 <Route path="/my-account">
                   <MyAccountPage />
                 </Route>
+                <Route path="/product">
+                  <ProductPage />
+                </Route>
+                <Route path="/opened">
+                  <OpenedPage />
+                </Route>
                 <Route path="*">
                   <Page404 />
                 </Route>
@@ -117,7 +130,4 @@ const mapDispatchToProps = dispatch => {
   };
 };
 
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(App);
+export default connect(mapStateToProps, mapDispatchToProps)(App);

@@ -85,7 +85,7 @@
     "l9": "REGISTER"
   },
   "product": {
-    "0": "18K Gold Diamond Earrings",
+    "0": "Boltenstern 18K Gold Chrysoprase Bracelet",
     "1": "Style",
     "2": "Clip",
     "3": "Pin",
@@ -121,5 +121,18 @@
     "2-11": "Find out more",
     "2-12": "International Delivery",
     "2-13": "Now delivering to over 40 destinations. Shipping costs vary."
+  },
+  "countries": {
+    "select": "Please select country / region",
+    "tw": "Taiwan",
+    "jp": "Japan",
+    "hk": "Hong Kong",
+    "kr": "Korea",
+    "cn": "China",
+    "rs": "Russia",
+    "ph": "Philippines",
+    "us": "United States",
+    "ca": "Canada",
+    "en": "United Kingdom"
   }
 }

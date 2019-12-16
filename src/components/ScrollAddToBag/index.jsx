@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import styled from "styled-components";
 import $ from "jquery";
 import { Translation } from "react-i18next";
+import topImage from "../../images/top.png";
 
 const Content = styled.div`
   position: fixed;
@@ -49,6 +50,21 @@ const Text = styled.div`
   }
 `;
 
+const ScrollTopButton = styled.div`
+  position: fixed;
+  width: 50px;
+  height: 50px;
+  bottom: 80px;
+  right: 0;
+  background-image: url(${topImage});
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  transform: ${props => (props.active ? "translateX(0)" : "translateX(105%)")};
+  transition: all 350ms ease;
+`;
+
 export class index extends Component {
   state = {
     active: false
@@ -60,33 +76,50 @@ export class index extends Component {
       window.addEventListener("scroll", this.handleScroll);
     }
   }
+
+  shouldComponentUpdate(props, state) {
+    if (state.active !== this.state.active) return true;
+    return false;
+  }
+
   handleScroll = () => {
     const element = $("#add-to-bag");
     if (window.pageYOffset > element.offset().top) {
-      console.log("顯示");
       this.setState({
         active: true
       });
     } else {
-      console.log("回去");
       this.setState({
         active: false
       });
     }
   };
+
+  scrollToTop = () => {
+    window.scrollTo({
+      behavior: "smooth",
+      top: "0"
+    });
+  };
+
   render() {
     return (
-      <Content active={this.state.active}>
-        <Text>
-          <h3>Marco Bicego</h3>
-          <Translation>{t => <>{t("product.0")}</>}</Translation>
-        </Text>
-        <div>
-          <AddToBag>
-            <Translation>{t => <>{t("product.8")}</>}</Translation>
-          </AddToBag>
-        </div>
-      </Content>
+      <>
+        <Content active={this.state.active}>
+          <Text>
+            <h3>Marco Bicego</h3>
+            <Translation>{t => <>{t("product.0")}</>}</Translation>
+          </Text>
+          <div>
+            <AddToBag>
+              <Translation>{t => <>{t("product.8")}</>}</Translation>
+            </AddToBag>
+          </div>
+        </Content>
+        <ScrollTopButton active={this.state.active} onClick={this.scrollToTop}>
+          123
+        </ScrollTopButton>
+      </>
     );
   }
 }

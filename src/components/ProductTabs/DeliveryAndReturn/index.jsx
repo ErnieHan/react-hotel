@@ -57,7 +57,9 @@ class DeliveryAndReturn extends Component {
               </b>
               <br />
               <Translation>{t => <>{t("tabs.2-13")}</>}</Translation>
-              <div>{/* <Select /> */}</div>
+              <div style={{ marginTop: "1rem" }}>
+                <Select />
+              </div>
             </Text>
           </FlexBody>
         </Section>

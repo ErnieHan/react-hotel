@@ -14,18 +14,17 @@ import {
   QuantityFlex,
   PlusButton,
   Quantity,
-  SoldOutButton,
   OpitionButton,
   OpitionDisableButton
 } from "./LR-css";
 import return7DayImage from "../../images/icon-7days-return.1d791f24.svg";
 import mainTenanceImage from "../../images/icon-1year-maintenance.73f22180.svg";
-import Modal from "../Modal";
 import SwiperPhoto from "../SwiperPhoto";
 import ProductTabs from "../ProductTabs";
-import { lockBody, unlockBody } from "../../function/bodyLockStatus";
 import { Translation } from "react-i18next";
 import i18next from "i18next";
+import SwiperPhotoMobile from "../SwiperPhotoMobile";
+import SoldoutButton from "../SoldoutButton";
 
 const Content = styled.div`
   display: flex;
@@ -41,6 +40,7 @@ const Left = styled.div`
   @media (max-width: 767px) {
     width: 100%;
     margin-bottom: 1rem;
+    padding: 0;
   }
 `;
 
@@ -81,11 +81,12 @@ class LR extends Component {
   state = {
     stickyOffsetTop: 0,
     randomPosition: 0,
-    getRandom: false,
-    showModal: false
+    getRandom: false
   };
 
   componentDidMount() {
+    //
+    window.addEventListener("message", this.receiveMessage);
     const maxWidth = document.body.offsetWidth;
     // 產生亂數
     const randomNum = this.getRandom(maxWidth);
@@ -98,6 +99,15 @@ class LR extends Component {
     }
     // this.isIE();
   }
+
+  receiveMessage = e => {
+    if (e.data === "OPENED_PAGE_CALLING") {
+      //被子層呼叫了，開始執行事件
+      console.log("被子層呼叫了，開始執行事件");
+      // 1.執行把子層關閉
+      window.openedPage.close();
+    }
+  };
 
   componentWillUnmount() {
     window.removeEventListener("scroll", this.handleSticky);
@@ -151,22 +161,6 @@ class LR extends Component {
     }
   };
 
-  open = () => {
-    lockBody();
-    document.body.style.overflow = "hidden";
-    this.setState({
-      showModal: true
-    });
-  };
-
-  close = () => {
-    unlockBody();
-    document.body.style.overflow = "";
-    this.setState({
-      showModal: false
-    });
-  };
-
   render() {
     const lang = i18next.language;
     return (
@@ -175,7 +169,10 @@ class LR extends Component {
           <Left ref="sticky-sibling">
             {/* 滑動產品圖 */}
             <SwiperPhoto />
+            {/* 桌機版產品資訊 */}
             <ProductTabs />
+            {/* 手機板滑動產品圖 */}
+            <SwiperPhotoMobile />
           </Left>
           <Mid />
           <Right ref="sticky-parent" id="sticky-parent">
@@ -250,9 +247,8 @@ class LR extends Component {
               <AddToBag id="add-to-bag">
                 <Translation>{t => <>{t("product.8")}</>}</Translation>
               </AddToBag>
-              <SoldOutButton onClick={this.open}>
-                <Translation>{t => <>{t("product.9")}</>}</Translation>
-              </SoldOutButton>
+              {/* 補貨中按鈕 */}
+              <SoldoutButton />
               <NeedsHelp>
                 <Translation>{t => <>{t("product.11")}</>}</Translation>
                 <a href="tel:85221923228">+852 2192 3228</a>
@@ -270,13 +266,8 @@ class LR extends Component {
             </Sticky>
           </Right>
         </Content>
+
         <div style={{ height: "1000px" }}></div>
-        <Modal
-          title="到貨通知"
-          body="body"
-          active={this.state.showModal}
-          closeModal={this.close.bind(this)}
-        />
       </>
     );
   }

@@ -1,18 +1,7 @@
 import React, { Component } from "react";
-// import Login from "../components/Login";
+import Login from "../components/Login";
 import { withRouter } from "react-router-dom";
 import styled from "styled-components";
-import { Translation } from "react-i18next";
-import "../css/test.css";
-import LR from "../components/LR";
-import ScrollAddToBag from "../components/ScrollAddToBag";
-
-const Title = styled.h2`
-  font-size: 2.5rem;
-  font-weight: 500;
-  padding-bottom: 1rem;
-  border-bottom: 1px solid #e9e8e7;
-`;
 
 const Content = styled.div`
   max-width: 1420px;
@@ -32,9 +21,7 @@ class LoginPage extends Component {
   render() {
     return (
       <Content>
-        {/* <Login /> */}
-        <LR />
-        <ScrollAddToBag />
+        <Login />
       </Content>
     );
   }
