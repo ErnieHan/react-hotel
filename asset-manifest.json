@@ -1,12 +1,12 @@
 {
   "files": {
     "main.css": "/react-hotel/static/css/main.39410958.chunk.css",
-    "main.js": "/react-hotel/static/js/main.664a7af7.chunk.js",
-    "runtime-main.js": "/react-hotel/static/js/runtime-main.b68d554f.js",
-    "static/js/2.fba36a2a.chunk.js": "/react-hotel/static/js/2.fba36a2a.chunk.js",
-    "static/js/3.985d7d01.chunk.js": "/react-hotel/static/js/3.985d7d01.chunk.js",
+    "main.js": "/react-hotel/static/js/main.53dfde50.chunk.js",
+    "runtime-main.js": "/react-hotel/static/js/runtime-main.03c06c82.js",
+    "static/js/2.6dacd931.chunk.js": "/react-hotel/static/js/2.6dacd931.chunk.js",
+    "static/js/3.53e0cd1d.chunk.js": "/react-hotel/static/js/3.53e0cd1d.chunk.js",
     "index.html": "/react-hotel/index.html",
-    "precache-manifest.1f05361da1155b50905cca312674c51c.js": "/react-hotel/precache-manifest.1f05361da1155b50905cca312674c51c.js",
+    "precache-manifest.e20630e1471c3fae97732ed144c59d82.js": "/react-hotel/precache-manifest.e20630e1471c3fae97732ed144c59d82.js",
     "service-worker.js": "/react-hotel/service-worker.js",
     "static/media/arrow-left.svg": "/react-hotel/static/media/arrow-left.72db753e.svg",
     "static/media/arrow-up-new.svg": "/react-hotel/static/media/arrow-up-new.d9720405.svg",
@@ -19,7 +19,7 @@
     "static/media/icon-global-delivery.6306a5c7.svg": "/react-hotel/static/media/icon-global-delivery.6306a5c7.6306a5c7.svg",
     "static/media/icon-instore.5fcffbbd.svg": "/react-hotel/static/media/icon-instore.5fcffbbd.5fcffbbd.svg",
     "static/media/icon-local-delivery.541c81ff.svg": "/react-hotel/static/media/icon-local-delivery.541c81ff.541c81ff.svg",
-    "static/media/index_pic_7.jfif": "/react-hotel/static/media/index_pic_7.4d5752d0.jfif",
+    "static/media/img-banner.jpg": "/react-hotel/static/media/img-banner.f6011f36.jpg",
     "static/media/logo-black.25b6dfd5.svg": "/react-hotel/static/media/logo-black.25b6dfd5.25b6dfd5.svg",
     "static/media/logo-site.png": "/react-hotel/static/media/logo-site.bb4f4c34.png",
     "static/media/playful-versatile-bg.jpg": "/react-hotel/static/media/playful-versatile-bg.c2fc36ae.jpg",
@@ -28,9 +28,9 @@
     "static/media/submenu_thm.jpg": "/react-hotel/static/media/submenu_thm.7e04f72f.jpg"
   },
   "entrypoints": [
-    "static/js/runtime-main.b68d554f.js",
-    "static/js/2.fba36a2a.chunk.js",
+    "static/js/runtime-main.03c06c82.js",
+    "static/js/2.6dacd931.chunk.js",
     "static/css/main.39410958.chunk.css",
-    "static/js/main.664a7af7.chunk.js"
+    "static/js/main.53dfde50.chunk.js"
   ]
 }
