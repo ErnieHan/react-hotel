@@ -1,27 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "c64aaf016d6277d0d2f7799d829315d3",
+    "revision": "0cb42bae894a4640514a97730222a638",
     "url": "/react-hotel/index.html"
   },
   {
-    "revision": "0ff31c3214d9ea15fcd8",
-    "url": "/react-hotel/static/css/main.5d0d2ea7.chunk.css"
+    "revision": "bb121eae130faf5cf6a7",
+    "url": "/react-hotel/static/css/main.403cd1d9.chunk.css"
   },
   {
-    "revision": "2d6b1db87ab94d0a3d8d",
-    "url": "/react-hotel/static/js/2.8ba35e99.chunk.js"
+    "revision": "5b4b08f73d2fd5749e2d",
+    "url": "/react-hotel/static/js/2.6e68aa4e.chunk.js"
   },
   {
-    "revision": "f9078bc28b0fea060551",
-    "url": "/react-hotel/static/js/3.a0c3f844.chunk.js"
+    "revision": "b317d9c22849d0a6ac61",
+    "url": "/react-hotel/static/js/3.5d812f68.chunk.js"
   },
   {
-    "revision": "0ff31c3214d9ea15fcd8",
-    "url": "/react-hotel/static/js/main.1c358746.chunk.js"
+    "revision": "bb121eae130faf5cf6a7",
+    "url": "/react-hotel/static/js/main.c9f89da7.chunk.js"
   },
   {
-    "revision": "962c21cee50c13e7fdc5",
-    "url": "/react-hotel/static/js/runtime-main.3da71f28.js"
+    "revision": "3d9d14f524f1b52cbbb3",
+    "url": "/react-hotel/static/js/runtime-main.116e02ad.js"
   },
   {
     "revision": "72db753e0b5161bc8e958db291c45c4e",
@@ -42,10 +42,6 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "b2307ff0b7c875061a25b44c4bfaf919",
     "url": "/react-hotel/static/media/feminine-elegance-bg.b2307ff0.jpg"
-  },
-  {
-    "revision": "363aaaef4b5f48e3455f901846b643d2",
-    "url": "/react-hotel/static/media/heart.363aaaef.png"
   },
   {
     "revision": "73f22180a1915f42e9870f0686530c84",
@@ -72,20 +68,16 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/react-hotel/static/media/img-banner.f6011f36.jpg"
   },
   {
-    "revision": "f8dc6f1ee3367e8aaafbe646993567b6",
-    "url": "/react-hotel/static/media/internet.f8dc6f1e.png"
-  },
-  {
-    "revision": "bebce7fc11ddb9ba9669eafeb6037f19",
-    "url": "/react-hotel/static/media/location-pin.bebce7fc.png"
-  },
-  {
     "revision": "25b6dfd5c39049fa3571a37b20a7f755",
     "url": "/react-hotel/static/media/logo-black.25b6dfd5.25b6dfd5.svg"
   },
   {
     "revision": "bb4f4c345d4ee4944e7b3120aae7e7ea",
     "url": "/react-hotel/static/media/logo-site.bb4f4c34.png"
+  },
+  {
+    "revision": "1980c98971adae2ba5b75cab3b207456",
+    "url": "/react-hotel/static/media/pack02.1980c989.jpg"
   },
   {
     "revision": "c2fc36ae5686e07d795d33d4cfdda93c",
@@ -102,9 +94,5 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "7e04f72f920c3b0ce2ecf2e52530d69d",
     "url": "/react-hotel/static/media/submenu_thm.7e04f72f.jpg"
-  },
-  {
-    "revision": "2720623a39a4c49a627d4ad0a44b242f",
-    "url": "/react-hotel/static/media/user.2720623a.png"
   }
 ]);
