@@ -15,7 +15,7 @@ class ProductPage extends Component {
     return (
       <Content>
         <Helmet>
-          <title> Boltenstern 18K黃金綠石髓手鍊 &nbsp;|&nbsp; EMPHASIS</title>
+          <title> Boltenstern 18K 黃金綠石髓手鍊 &nbsp;|&nbsp; EMPHASIS</title>
           <meta
             name="description"
             content="少年漫畫是指以青少年為主要讀者對象的漫畫，另外讀者組別甚廣，有許多的兒童和少女、甚至成人也是忠實讀者。題材一般以打鬥、懸疑、冒險、科幻為主。"

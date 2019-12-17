@@ -19,6 +19,8 @@ import Basic from "./Navbar/Basic";
 import Listing from "./Navbar/Listing";
 import Collection from "./Navbar/Collection";
 import LanguageSwitch from "../LanguageSwitch";
+import MiniBag from "../MiniBag";
+import Favorite from "../Favorite";
 import { Translation } from "react-i18next";
 
 export class Header extends Component {
@@ -125,8 +127,9 @@ export class Header extends Component {
             <img src={logo} alt="" />
           </Center>
           <Right>
-            <span onClick={this.openRegister}>註冊 / 登入</span> | 喜愛清單 |
-            購物袋 | <LanguageSwitch />
+            <span onClick={this.openRegister}>註冊 / 登入</span> | <Favorite />
+            |
+            <MiniBag /> | <LanguageSwitch />
           </Right>
           <NavbarLayout ref="layout">
             <NavbarContent ref="content" sticky={sticky}>
@@ -145,7 +148,7 @@ export class Header extends Component {
                 ))}
               </NavCenter>
               <NavRight sticky={sticky}>
-                <span>註冊 / 登入</span>| 喜愛清單 | 購物袋
+                <span>註冊 / 登入</span>| 喜愛清單 | <MiniBag />
               </NavRight>
               {navbarLists.map((data, index) =>
                 data.component !== null ? (

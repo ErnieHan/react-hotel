@@ -134,5 +134,9 @@
     "us": "United States",
     "ca": "Canada",
     "en": "United Kingdom"
+  },
+  "breadcrumbs": {
+    "home": "Home",
+    "bracelet": "Bracelet"
   }
 }

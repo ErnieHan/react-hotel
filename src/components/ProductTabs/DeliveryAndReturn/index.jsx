@@ -13,6 +13,7 @@ import flatImage from "../../../images/icon-global-delivery.6306a5c7.svg";
 import returnImage from "../../../images/icon-7days-return.1d791f24.svg";
 import Select from "../../Select";
 import { Translation } from "react-i18next";
+import packImage from "../../../images/pack02.jpg";
 
 class DeliveryAndReturn extends Component {
   render() {
@@ -69,11 +70,8 @@ class DeliveryAndReturn extends Component {
           </Title>
           <div style={{ marginBottom: "1rem" }}>
             <Translation>{t => <>{t("tabs.2-7")}</>}</Translation>
-            <div>
-              <img
-                src="//cdn.chowsangsang.com/eshop/tw/newweb/packing.jpg"
-                alt=""
-              />
+            <div style={{ maxWidth: "350px" }}>
+              <img src={packImage} alt="" />
             </div>
           </div>
         </Section>

@@ -2,10 +2,20 @@ import styled from "styled-components";
 
 export const Content = styled.div`
   display: flex;
+  @media (max-width: 1023px) {
+    display: block;
+  }
 `;
 
 export const Image = styled.div`
   width: 250px;
+  @media (max-width: 1023px) {
+    width: 100%;
+    text-align: center;
+    img {
+      max-width: 250px;
+    }
+  }
 `;
 
 export const Text = styled.div`
@@ -30,5 +40,9 @@ export const Text = styled.div`
       border-radius: 50%;
       transform: translateY(-50%);
     }
+  }
+  @media (max-width: 1023px) {
+    width: 100%;
+    padding-left: 0;
   }
 `;

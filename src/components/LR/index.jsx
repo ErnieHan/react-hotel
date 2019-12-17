@@ -12,8 +12,6 @@ import {
   QuantitySection,
   Sub,
   QuantityFlex,
-  PlusButton,
-  Quantity,
   OpitionButton,
   OpitionDisableButton
 } from "./LR-css";
@@ -25,6 +23,8 @@ import { Translation } from "react-i18next";
 import i18next from "i18next";
 import SwiperPhotoMobile from "../SwiperPhotoMobile";
 import SoldoutButton from "../SoldoutButton";
+import Quantity from "../Quantity";
+import LevelOption from "../LevelOption";
 
 const Content = styled.div`
   display: flex;
@@ -37,6 +37,9 @@ const Content = styled.div`
 const Left = styled.div`
   width: 60%;
   padding: 15px;
+  @media (max-width: 1023px) {
+    width: 65%;
+  }
   @media (max-width: 767px) {
     width: 100%;
     margin-bottom: 1rem;
@@ -46,7 +49,7 @@ const Left = styled.div`
 
 const Mid = styled.div`
   width: 5%;
-  @media (max-width: 767px) {
+  @media (max-width: 1023px) {
     display: none;
   }
 `;
@@ -196,59 +199,16 @@ class LR extends Component {
                   {lang === "jp" ? "¥14,400(税込)" : null}
                 </Price>
               </PriceSection>
-              <QuantitySection>
-                <Sub>
-                  <Translation>{t => <>{t("product.1")}</>}</Translation>
-                </Sub>
-                <QuantityFlex>
-                  <OpitionButton active>
-                    <Translation>{t => <>{t("product.2")}</>}</Translation>
-                  </OpitionButton>
-                  <OpitionButton>
-                    <Translation>{t => <>{t("product.3")}</>}</Translation>
-                  </OpitionButton>
-                  <OpitionDisableButton>
-                    <Translation>{t => <>{t("product.4")}</>}</Translation>
-                  </OpitionDisableButton>
-                </QuantityFlex>
-              </QuantitySection>
-              <QuantitySection>
-                <Sub>
-                  <Translation>{t => <>{t("product.5")}</>}</Translation>
-                </Sub>
-                <QuantityFlex>
-                  <OpitionButton>
-                    13<Translation>{t => <>{t("product.6")}</>}</Translation>
-                  </OpitionButton>
-                  <OpitionButton active>
-                    15<Translation>{t => <>{t("product.6")}</>}</Translation>
-                  </OpitionButton>
-                  <OpitionButton>
-                    17<Translation>{t => <>{t("product.6")}</>}</Translation>
-                  </OpitionButton>
-                  <OpitionDisableButton>
-                    19<Translation>{t => <>{t("product.6")}</>}</Translation>
-                  </OpitionDisableButton>
-                  <OpitionButton>
-                    21<Translation>{t => <>{t("product.6")}</>}</Translation>
-                  </OpitionButton>
-                </QuantityFlex>
-              </QuantitySection>
-              <QuantitySection>
-                <Sub>
-                  <Translation>{t => <>{t("product.7")}</>}</Translation>
-                </Sub>
-                <QuantityFlex>
-                  <PlusButton>-</PlusButton>
-                  <Quantity>1</Quantity>
-                  <PlusButton>+</PlusButton>
-                </QuantityFlex>
-              </QuantitySection>
+              {/* 產品規格選項 */}
+              <LevelOption />
+              {/* 購買數量 */}
+              <Quantity />
+              {/* 加入購物袋按鈕 */}
               <AddToBag id="add-to-bag">
                 <Translation>{t => <>{t("product.8")}</>}</Translation>
               </AddToBag>
               {/* 補貨中按鈕 */}
-              <SoldoutButton />
+              {/* <SoldoutButton /> */}
               <NeedsHelp>
                 <Translation>{t => <>{t("product.11")}</>}</Translation>
                 <a href="tel:85221923228">+852 2192 3228</a>

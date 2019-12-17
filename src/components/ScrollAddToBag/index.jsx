@@ -77,6 +77,10 @@ export class index extends Component {
     }
   }
 
+  componentWillUnmount() {
+    window.removeEventListener("scroll", this.handleScroll);
+  }
+
   shouldComponentUpdate(props, state) {
     if (state.active !== this.state.active) return true;
     return false;

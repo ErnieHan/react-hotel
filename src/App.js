@@ -23,11 +23,15 @@ import getCookie from "./function/getCookie";
 import writeCookie from "./function/writeCookie";
 import Loading from "./components/Loading";
 import OpenedPage from "./pages/OpenedPage";
+import TicketPage from "./pages/TicketPage";
 
 const Content = styled.div`
   padding: 0 40px;
+  @media screen and (max-width: 1023px) {
+    padding: 0 15px;
+  }
   @media screen and (max-width: 767px) {
-    padding: 75px 15px 0px 15px;
+    padding: 60px 15px 0px 15px;
   }
 `;
 
@@ -93,6 +97,9 @@ class App extends React.Component {
                 </Route>
                 <Route path="/opened">
                   <OpenedPage />
+                </Route>
+                <Route path="/ticket">
+                  <TicketPage />
                 </Route>
                 <Route path="*">
                   <Page404 />

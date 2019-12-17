@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Content, List } from "./css";
 import { Helmet } from "react-helmet";
+import { Translation } from "react-i18next";
 
 class index extends Component {
   render() {
@@ -26,8 +27,12 @@ class index extends Component {
           `}</script>
         </Helmet>
         <Content>
-          <List>首頁</List>
-          <List>手鍊</List>
+          <List>
+            <Translation>{t => <>{t("breadcrumbs.home")}</>}</Translation>
+          </List>
+          <List>
+            <Translation>{t => <>{t("breadcrumbs.bracelet")}</>}</Translation>
+          </List>
         </Content>
       </>
     );

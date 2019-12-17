@@ -12,8 +12,10 @@ export const Content = styled.div`
 `;
 
 export const List = styled.div`
+  font-size: 12px;
   color: #8e8e8e;
   font-weight: bold;
+  cursor: pointer;
   &::after {
     content: ">";
     margin: 0 5px;

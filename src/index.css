@@ -17,7 +17,7 @@ html {
 
 body {
   margin: 0;
-  font-family: -apple-system, "Lato", BlinkMacSystemFont, "微軟正黑體",
+  font-family: "Lato", -apple-system, "微軟正黑體", BlinkMacSystemFont,
     "Segoe UI", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
     "Helvetica Neue", sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -181,32 +181,4 @@ button {
 
 .transition {
   transition: all 300ms ease;
-}
-
-span.icon {
-  width: 20px;
-  height: 20px;
-  display: inline-block;
-  background-size: contain;
-  background-repeat: no-repeat;
-}
-
-.icon-heart {
-  background-image: url("images/heart.png");
-}
-
-.icon-user {
-  background-image: url("images/user.png");
-}
-
-.icon-bag {
-  background-image: url("images/shopping-bag.png");
-}
-
-.icon-locate {
-  background-image: url("images/location-pin.png");
-}
-
-.icon-internet {
-  background-image: url("images/internet.png");
 }

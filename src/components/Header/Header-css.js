@@ -24,6 +24,10 @@ export const Top = styled.div`
 export const Left = styled.div`
   width: 33.33%;
   order: 1;
+  @media (max-width: 767px) {
+    /* display: none; */
+    opacity: 0;
+  }
 `;
 
 export const Center = styled.div`
@@ -39,6 +43,10 @@ export const Right = styled.div`
   width: 33.33%;
   text-align: right;
   order: 3;
+  @media (max-width: 767px) {
+    display: none;
+    opacity: 0;
+  }
 `;
 
 export const NavbarLayout = styled.div`
@@ -103,7 +111,6 @@ export const NavRight = styled.div`
 
 export const NavItem = styled.div`
   padding: 0 10px;
-  font-weight: bold;
   height: 100%;
   display: flex;
   justify-content: center;

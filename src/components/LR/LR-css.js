@@ -81,21 +81,6 @@ export const QuantityFlex = styled.div`
   flex-wrap: wrap;
 `;
 
-export const PlusButton = styled.div`
-  cursor: pointer;
-  min-width: 38px;
-  text-align: center;
-  padding: 8px 0;
-  color: #8e8e8e;
-`;
-
-export const Quantity = styled.div`
-  padding: 12px;
-  min-width: 72px;
-  text-align: center;
-  border: 1px solid #d1d1d1;
-`;
-
 export const SoldOutButton = styled.button`
   background: #fff;
   font-size: 1rem;
