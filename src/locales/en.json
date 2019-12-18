@@ -102,8 +102,8 @@
   },
   "tabs": {
     "title01": "Information",
-    "title02": "Delivery and Return",
-    "title03": "Taxes and Duties",
+    "title02": "Shipping & Return",
+    "title03": "Taxes & Duties",
     "1-1": "The classic heart-shaped design incorporates a unique hollow pattern, and the three-dimensional heart-shaped perimeter is created by the group setting technology, which sets off the grace and luxury of a large diamond in the middle. 18K / 750 Red Gold Diamond Earrings",
     "1-2": "Style",
     "1-3": "Diamonds total weight 0.42carat",
@@ -114,15 +114,22 @@
     "2-4": "Local Delivery",
     "2-5": "Complimentary delivery to your address.",
     "2-6": "Included with your order",
-    "2-7": "Certificates (If Applicable) Invoice for After-Sales Services Gift-Ready Packaging (Packaging image is for illustrative purpose only)",
     "2-8": "Returns & exchanges",
     "2-9": "Return & Exchange Policy",
     "2-10": "7 day return or exchange",
     "2-11": "Find out more",
     "2-12": "International Delivery",
-    "2-13": "Now delivering to over 40 destinations. Shipping costs vary."
+    "2-13": "Now delivering to over 40 destinations. Shipping costs vary.",
+    "order1": "Certificates (If Applicable)",
+    "order2": "Invoice for After-Sales Services",
+    "order3": "Gift-Ready Packaging (Packaging image is for illustrative purpose only)"
   },
   "countries": {
+    "mode": "Mode",
+    "cost": "Cost",
+    "shippingTime": "Shipping time",
+    "priority": "Priority",
+    "businessdays": "5 - 7 business days",
     "select": "Please select country / region",
     "tw": "Taiwan",
     "jp": "Japan",
@@ -138,5 +145,12 @@
   "breadcrumbs": {
     "home": "Home",
     "bracelet": "Bracelet"
+  },
+  "levelOptions": {
+    "style": "Style",
+    "chrysoprase": "Chrysoprase",
+    "carnelian": "Carnelian",
+    "topaz": "Topaz",
+    "Length": "Length"
   }
 }

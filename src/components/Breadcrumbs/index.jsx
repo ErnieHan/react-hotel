@@ -30,6 +30,7 @@ class index extends Component {
           <List>
             <Translation>{t => <>{t("breadcrumbs.home")}</>}</Translation>
           </List>
+          <List>Marco Bicego</List>
           <List>
             <Translation>{t => <>{t("breadcrumbs.bracelet")}</>}</Translation>
           </List>

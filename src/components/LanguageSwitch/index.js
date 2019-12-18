@@ -2,62 +2,35 @@ import React, { Component } from "react";
 import { Content, SelectContent } from "./Language-css";
 import { connect } from "react-redux";
 import { changeLanguage, showLoading } from "../../store/actions";
-import writeCookie from "../../function/writeCookie";
-import i18n from "i18next";
+import { withRouter } from "react-router-dom";
 
 class LanguageSwitch extends Component {
   state = {
     active: false
   };
 
-  changeLanguage = () => {
-    // 判斷目前的語系
-    const { language, changeLanguage } = this.props;
-    if (language === "zhTW") {
-      // 切換為英文
-      writeCookie("language", "en");
-      i18n.changeLanguage("en");
-      changeLanguage("en");
-    } else {
-      // 切換為中文
-      writeCookie("language", "zhTW");
-      i18n.changeLanguage("zhTW");
-      changeLanguage("zhTW");
-    }
-  };
+  componentDidMount() {
+    const url = window.location.hash;
+    const pattern = "en";
+    const replace = "jp";
+    let urlChange = url.replace(new RegExp(pattern), replace);
+  }
 
   changeEN = () => {
-    this.loadingHalfSec();
-    const { changeLanguage } = this.props;
-    // 切換為英文
-    writeCookie("language", "en");
-    i18n.changeLanguage("en");
-    changeLanguage("en");
+    const { language } = this.props;
+    console.log(language, "############");
+    window.location.hash = "#/en/product";
+    window.location.reload();
   };
 
-  changezhTW = () => {
-    this.loadingHalfSec();
-    const { changeLanguage } = this.props;
-    // 切換為中文
-    writeCookie("language", "zhTW");
-    i18n.changeLanguage("zhTW");
-    changeLanguage("zhTW");
+  changeTC = () => {
+    window.location.hash = "#/tc/product";
+    window.location.reload();
   };
 
   changeJP = () => {
-    this.loadingHalfSec();
-    const { changeLanguage } = this.props;
-    // 切換為中文
-    writeCookie("language", "jp");
-    i18n.changeLanguage("jp");
-    changeLanguage("jp");
-  };
-
-  loadingHalfSec = () => {
-    this.props.showLoading(true);
-    setTimeout(() => {
-      this.props.showLoading(false);
-    }, 1500);
+    window.location.hash = "#/jp/product";
+    window.location.reload();
   };
 
   openLanguage = () => {
@@ -80,10 +53,10 @@ class LanguageSwitch extends Component {
         onMouseOver={this.openLanguage}
         onMouseLeave={this.closeLanguage}
       >
-        {language === "zhTW" ? "繁" : language === "jp" ? "日" : "EN"}
+        {language === "tc" ? "繁" : language === "jp" ? "日" : "EN"}
         <SelectContent active={active}>
           <p onClick={language !== "en" ? this.changeEN : null}>EN</p>
-          <p onClick={language !== "zhTW" ? this.changezhTW : null}>繁</p>
+          <p onClick={language !== "tc" ? this.changeTC : null}>繁</p>
           <p onClick={language !== "jp" ? this.changeJP : null}>日</p>
         </SelectContent>
       </Content>
@@ -106,4 +79,6 @@ const mapDispatchToProps = dispatch => {
   };
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(LanguageSwitch);
+const routerLanguage = withRouter(LanguageSwitch);
+
+export default connect(mapStateToProps, mapDispatchToProps)(routerLanguage);

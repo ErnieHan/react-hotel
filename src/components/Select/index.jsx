@@ -4,7 +4,8 @@ import {
   OptionSection,
   Option,
   OptionDisable,
-  MobileSelect
+  MobileSelect,
+  Table
 } from "./Select-css";
 import { Translation } from "react-i18next";
 import { withTranslation } from "react-i18next";
@@ -131,6 +132,22 @@ class Select extends Component {
               </option>
             ))}
           </MobileSelect>
+        </div>
+        <div>
+          <Table>
+            <tbody>
+              <tr>
+                <th>{t("countries.mode")}</th>
+                <th>{t("countries.cost")}</th>
+                <th>{t("countries.shippingTime")}</th>
+              </tr>
+              <tr>
+                <td>{t("countries.priority")}</td>
+                <td>-</td>
+                <td>{t("countries.businessdays")}</td>
+              </tr>
+            </tbody>
+          </Table>
         </div>
       </>
     );

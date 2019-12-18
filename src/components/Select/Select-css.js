@@ -29,6 +29,7 @@ export const OptionSection = styled.div`
   left: -1px;
   border: 1px solid #d1d1d1;
   display: ${props => (props.active ? "block" : "none")};
+  z-index: 5;
   &::-webkit-scrollbar {
     width: 4px;
   }
@@ -73,5 +74,32 @@ export const MobileSelect = styled.select`
     display: block;
     width: 100%;
     min-width: 100%;
+  }
+`;
+
+export const Table = styled.table`
+  width: 100%;
+  margin: 1rem 0;
+  th {
+    width: 33.33%;
+    border-right: 1px solid #d1d1d1;
+    padding: 0.5rem;
+    &:last-child {
+      border-right: 0;
+    }
+  }
+  tr {
+    border-bottom: 1px solid #d1d1d1;
+    &:last-child {
+      border-bottom: 0;
+    }
+  }
+  td {
+    border-right: 1px solid #d1d1d1;
+    padding: 0.5rem;
+    text-align: center;
+    &:last-child {
+      border-right: 0;
+    }
   }
 `;

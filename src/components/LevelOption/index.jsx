@@ -10,10 +10,10 @@ import {
 
 const leveloptions = [
   {
-    lv1Title: "Style",
+    lv1Title: "Style 款式",
     lv1Options: [
       {
-        name: "Chrysoprase",
+        name: "Chrysoprase 綠石髓",
         lv2Options: [
           { name: "17cm", quantity: 5 },
           { name: "19cm", quantity: 0 },
@@ -22,7 +22,7 @@ const leveloptions = [
         quantity: 5
       },
       {
-        name: "Carnelian",
+        name: "Carnelian 紅石髓",
         lv2Options: [
           { name: "19cm", quantity: 5 },
           { name: "21cm", quantity: 5 }
@@ -30,7 +30,7 @@ const leveloptions = [
         quantity: 5
       },
       {
-        name: "Topaz",
+        name: "Topaz 黃石",
         lv2Options: [
           { name: "19cm", quantity: 5 },
           { name: "21cm", quantity: 5 }

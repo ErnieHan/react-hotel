@@ -92,7 +92,7 @@ class App extends React.Component {
                 <Route path="/my-account">
                   <MyAccountPage />
                 </Route>
-                <Route path="/product">
+                <Route path="/:lang/product">
                   <ProductPage />
                 </Route>
                 <Route path="/opened">

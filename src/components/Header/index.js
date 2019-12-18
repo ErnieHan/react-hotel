@@ -95,7 +95,6 @@ export class Header extends Component {
 
   render() {
     const { sticky } = this.state;
-
     const navbarLists = [
       {
         name: <Translation>{t => <>{t("header.brand")}</>}</Translation>,
@@ -121,6 +120,7 @@ export class Header extends Component {
     ];
     return (
       <Content>
+        
         <Top>
           <Left>幣值 | 分店</Left>
           <Center>

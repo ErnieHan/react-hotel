@@ -189,14 +189,21 @@ class LR extends Component {
               </h3>
               <PriceSection>
                 <OrigPrice>
-                  {lang === "zhTW" ? "$5,800" : null}
-                  {lang === "en" ? "$199" : null}
+                  {lang === "tc" ? "NT$5,800" : null}
+                  {lang === "en" ? "$199.00" : null}
                   {lang === "jp" ? "¥17,400" : null}
                 </OrigPrice>
                 <Price>
-                  {lang === "zhTW" ? "$4,800" : null}
-                  {lang === "en" ? "$169" : null}
-                  {lang === "jp" ? "¥14,400(税込)" : null}
+                  {lang === "tc" ? "NT$4,800" : null}
+                  {lang === "en" ? "$169.00" : null}
+                  {lang === "jp" ? (
+                    <>
+                      ¥14,400
+                      <span style={{ fontSize: "13px", paddingLeft: "2px" }}>
+                        税込
+                      </span>
+                    </>
+                  ) : null}
                 </Price>
               </PriceSection>
               {/* 產品規格選項 */}

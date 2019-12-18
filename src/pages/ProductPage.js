@@ -4,6 +4,11 @@ import ScrollAddToBag from "../components/ScrollAddToBag";
 import Breadcrumbs from "../components/Breadcrumbs";
 import styled from "styled-components";
 import { Helmet } from "react-helmet";
+import { withRouter } from "react-router-dom";
+import i18next from "i18next";
+import writeCookie from "../function/writeCookie";
+import { connect } from "react-redux";
+import { changeLanguage } from "../store/actions";
 
 const Content = styled.div`
   max-width: 1420px;
@@ -11,6 +16,15 @@ const Content = styled.div`
 `;
 
 class ProductPage extends Component {
+  componentDidMount() {
+    const { lang } = this.props.match.params;
+    // 切換語系
+    i18next.changeLanguage(lang);
+    // 寫入 Cookie
+    writeCookie("language", lang);
+    // 存進 Redux
+    this.props.changeLanguage(lang);
+  }
   render() {
     return (
       <Content>
@@ -29,4 +43,18 @@ class ProductPage extends Component {
   }
 }
 
-export default ProductPage;
+const mapStateToProps = state => ({
+  language: state.app.language.language
+});
+
+const mapDispatchToProps = dispatch => {
+  return {
+    changeLanguage: language => {
+      dispatch(changeLanguage(language));
+    }
+  };
+};
+
+const RouterProductPage = withRouter(ProductPage);
+
+export default connect(mapStateToProps, mapDispatchToProps)(RouterProductPage);

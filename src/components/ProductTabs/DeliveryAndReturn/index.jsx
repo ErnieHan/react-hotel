@@ -5,7 +5,8 @@ import {
   FlexBody,
   Icon,
   Text,
-  Section
+  Section,
+  List
 } from "./DeliveryAndReturn-css";
 import storeImage from "../../../images/icon-instore.5fcffbbd.svg";
 import carImage from "../../../images/icon-local-delivery.541c81ff.svg";
@@ -69,7 +70,17 @@ class DeliveryAndReturn extends Component {
             <Translation>{t => <>{t("tabs.2-6")}</>}</Translation>
           </Title>
           <div style={{ marginBottom: "1rem" }}>
-            <Translation>{t => <>{t("tabs.2-7")}</>}</Translation>
+            <ul>
+              <List>
+                <Translation>{t => <>{t("tabs.order1")}</>}</Translation>
+              </List>
+              <List>
+                <Translation>{t => <>{t("tabs.order2")}</>}</Translation>
+              </List>
+              <List>
+                <Translation>{t => <>{t("tabs.order3")}</>}</Translation>
+              </List>
+            </ul>
             <div style={{ maxWidth: "350px" }}>
               <img src={packImage} alt="" />
             </div>

@@ -8,10 +8,31 @@ import {
   Answer
 } from "./css";
 
-export class index extends Component {
+let opitions1; // 問題一
+let opitions2; // 問題二
+let answer; // 正確解答
+let apple;
+
+class index extends Component {
+  state = {
+    answer: ""
+  };
+  hanldeChange = e => {
+    this.setState({
+      answer: e.target.value
+    });
+  };
+  checkAnswer = () => {
+    if (this.state.answer === "D4") {
+      alert("答對了");
+    } else {
+      alert("答案錯誤");
+    }
+  };
   render() {
     return (
       <Content>
+        {apple}
         <Table>
           <tbody>
             <tr>
@@ -72,31 +93,38 @@ export class index extends Component {
         </Table>
         <Question>
           問題一：在《消極掰》MV中，連同Jolin及演員共有幾人集體跳喪志操？
-          <br />
-          (A) 15人
-          <br />
-          (B) 32人
-          <br />
-          (C) 8人
-          <br />
-          (D) 72人
-          <br />
-          <br />
-          問題二：何者不是Jolin在instagram中稱呼屋虎的別名？
-          <br />
-          (1) 皮小胖
-          <br />
-          (2) 皮在癢
-          <br />
-          (3) 皮皮剉
-          <br />
-          (4) 皮卡丘
+          <div>
+            (A) 8人
+            <br />
+            (B) 32人
+            <br />
+            (C) 72人
+            <br />
+            (D) 15人
+          </div>
+          問題二：何者不是Jolin在Instagram中稱呼屋虎的別名？
+          <div>
+            (1) 皮小胖
+            <br />
+            (2) 皮卡丘
+            <br />
+            (3) 皮在癢
+            <br />
+            (4) 皮皮剉
+          </div>
           <Answer>
-            <input type="text" />
+            <input
+              type="text"
+              placeholder="請在此輸入答案"
+              onChange={this.hanldeChange}
+            />
           </Answer>
         </Question>
-        {/* <DisableButton>下一步</DisableButton>
-        <NextButton>下一步</NextButton> */}
+        {this.state.answer !== "" ? (
+          <NextButton onClick={this.checkAnswer}>下一步</NextButton>
+        ) : (
+          <DisableButton>下一步</DisableButton>
+        )}
       </Content>
     );
   }

@@ -1,14 +1,12 @@
 import React, { Component } from "react";
-import { Title, Table } from "./css";
+import { Title, Table, Banner } from "./css";
 
 export class index extends Component {
   render() {
     return (
       <>
-        <Title>
-          <span>5 / 15</span>
-          Ugly Beauty 2020 ワールドツアー 高雄站
-        </Title>
+        <Banner />
+        <Title>蔡依林 Ugly Beauty 2020 世界巡迴演唱會 高雄站</Title>
         <Table>
           <tbody>
             <tr>
@@ -29,7 +27,7 @@ export class index extends Component {
             </tr>
             <tr>
               <td className="dome-key">支払い方法</td>
-              <td>ATM</td>
+              <td>ATM、虛擬帳號</td>
             </tr>
           </tbody>
         </Table>

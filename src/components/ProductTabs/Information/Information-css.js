@@ -23,17 +23,18 @@ export const Text = styled.div`
   padding-left: 1rem;
   p {
     margin-bottom: 1rem;
-    line-height: 1.5;
+    line-height: 2;
   }
   li {
     padding-left: 1rem;
     position: relative;
     margin-bottom: 0.5rem;
+    line-height: 1;
     &::before {
       content: "";
       position: absolute;
-      width: 8px;
-      height: 8px;
+      width: 6px;
+      height: 6px;
       background: #c69967;
       top: 50%;
       left: 0;

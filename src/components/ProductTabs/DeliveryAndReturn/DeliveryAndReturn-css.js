@@ -19,8 +19,8 @@ export const Icon = styled.div`
 `;
 
 export const Text = styled.div`
+  width: calc(100% - 30px);
   padding-left: 1rem;
-  font-size: 14px;
   a {
     margin: 0 5px;
     color: tan;
@@ -32,5 +32,23 @@ export const Section = styled.section`
   margin-bottom: 2rem;
   &:last-child {
     margin-bottom: 0;
+  }
+`;
+
+export const List = styled.li`
+  padding-left: 1rem;
+  position: relative;
+  margin-bottom: 0.5rem;
+  line-height: 1;
+  &::before {
+    content: "";
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    background: #c69967;
+    top: 50%;
+    left: 0;
+    border-radius: 50%;
+    transform: translateY(-50%);
   }
 `;
