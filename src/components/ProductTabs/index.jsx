@@ -6,7 +6,7 @@ import { Translation } from "react-i18next";
 
 class ProductTabs extends Component {
   state = {
-    active: 1
+    active: 0
   };
 
   handleClick = index => {
@@ -17,13 +17,13 @@ class ProductTabs extends Component {
   render() {
     const tabLists = [
       { name: <Translation>{t => <>{t("tabs.title01")}</>}</Translation> },
-      { name: <Translation>{t => <>{t("tabs.title02")}</>}</Translation> },
-      { name: <Translation>{t => <>{t("tabs.title03")}</>}</Translation> }
+      { name: <Translation>{t => <>{t("tabs.title02")}</>}</Translation> }
+      // { name: <Translation>{t => <>{t("tabs.title03")}</>}</Translation> }
     ];
     const tabBodyLists = [
       { body: <Information /> },
-      { body: <DeliveryAndReturn /> },
-      { body: <div>3</div> }
+      { body: <DeliveryAndReturn /> }
+      // { body: <div>3</div> }
     ];
     return (
       <TabsLayout>

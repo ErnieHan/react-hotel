@@ -233,8 +233,6 @@ class LR extends Component {
             </Sticky>
           </Right>
         </Content>
-
-        <div style={{ height: "1000px" }}></div>
       </>
     );
   }

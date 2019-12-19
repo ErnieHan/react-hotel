@@ -45,7 +45,7 @@ class SoldoutButton extends Component {
         </Button>
         <Modal
           title="TESTING"
-          body="body"
+          body="body content"
           active={this.state.active}
           closeModal={this.closeModal.bind(this)}
           id="test-modal"

@@ -31,6 +31,7 @@ export const AddToBag = styled.button`
   width: 100%;
   margin-bottom: 1rem;
   font-size: 1rem;
+  font-weight: bold;
 `;
 
 export const NeedsHelp = styled.div`

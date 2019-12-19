@@ -2,16 +2,21 @@ import styled from "styled-components";
 
 export const Content = styled.header`
   width: 100%;
-  padding-top: 40px;
-  border-bottom: 1px solid #f1f1f1;
+  padding: 40px;
+  padding-bottom: 0;
   background: #fff;
   z-index: 99;
+  position: relative;
+  @media (max-width: 1023px) {
+    padding: 40px 15px 0 15px;
+  }
   @media (max-width: 767px) {
     position: fixed;
     top: 0;
     left: 0;
     height: 60px;
     padding: 15px;
+    border-bottom: 1px solid #f1f1f1;
   }
 `;
 
@@ -61,7 +66,7 @@ export const NavbarLayout = styled.div`
 export const NavbarContent = styled.div`
   width: 100%;
   height: 60px;
-  position: ${props => (props.sticky ? "fixed" : "relative")};
+  position: ${props => (props.sticky ? "fixed" : "")};
   top: ${props => (props.sticky ? "0" : "")};
   left: ${props => (props.sticky ? "0" : "")};
   z-index: 99;

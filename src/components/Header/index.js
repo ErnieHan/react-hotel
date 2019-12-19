@@ -22,6 +22,7 @@ import LanguageSwitch from "../LanguageSwitch";
 import MiniBag from "../MiniBag";
 import Favorite from "../Favorite";
 import { Translation } from "react-i18next";
+import { connect } from "react-redux";
 
 export class Header extends Component {
   state = {
@@ -36,7 +37,8 @@ export class Header extends Component {
   shouldComponentUpdate(nextProps, nextState) {
     if (
       nextState.sticky !== this.state.sticky ||
-      nextState.activeContent !== this.state.activeContent
+      nextState.activeContent !== this.state.activeContent ||
+      nextProps.language !== this.props.language
     )
       return true;
     return false;
@@ -84,13 +86,18 @@ export class Header extends Component {
       "你好",
       "resizable,height=550,width=430"
     );
-    //2. 註冊一個可判別的變數
+    //2. 註冊一個變數，Opened頁面則使用此變數是否正確顯示，來阻止直接輸入網址而進入的情況
     const data = {
       name: "Ernie",
       value: "爾尼"
     };
     window.ernie = JSON.stringify(data);
     // 3. 在第一步驟的行為window.openedPage 就是另開視窗的名稱，可以使用window.openedPage.close()去執行關閉他
+  };
+
+  goHomePage = () => {
+    const { language } = this.props;
+    window.location = `/#/${language}/home`;
   };
 
   render() {
@@ -120,10 +127,9 @@ export class Header extends Component {
     ];
     return (
       <Content>
-        
         <Top>
           <Left>幣值 | 分店</Left>
-          <Center>
+          <Center onClick={this.goHomePage}>
             <img src={logo} alt="" />
           </Center>
           <Right>
@@ -170,4 +176,8 @@ export class Header extends Component {
   }
 }
 
-export default Header;
+const mapStateToProps = state => ({
+  language: state.app.language.language
+});
+
+export default connect(mapStateToProps, null)(Header);

@@ -2,6 +2,11 @@ import React, { Component } from "react";
 import indexImage from "../images/img-banner.jpg";
 // import { Helmet } from "react-helmet";
 import styled from "styled-components";
+import { withRouter } from "react-router-dom";
+import writeCookie from "../function/writeCookie";
+import i18next from "i18next";
+import { connect } from "react-redux";
+import { changeLanguage } from "../store/actions";
 
 const BannerWrapper = styled.div`
   width: 100%;
@@ -37,6 +42,14 @@ const Content = styled.div`
 `;
 
 class HomePage extends Component {
+  componentDidMount() {
+    const { lang } = this.props.match.params;
+    if (lang) {
+      writeCookie("language", lang);
+      i18next.changeLanguage(lang);
+      this.props.changeLanguage(lang);
+    }
+  }
   render() {
     return (
       <>
@@ -49,4 +62,13 @@ class HomePage extends Component {
   }
 }
 
-export default HomePage;
+const mapDispatchToProps = dispatch => {
+  return {
+    changeLanguage: language => {
+      dispatch(changeLanguage(language));
+    }
+  };
+};
+
+const RouterHomePage = withRouter(HomePage);
+export default connect(null, mapDispatchToProps)(RouterHomePage);

@@ -17,10 +17,11 @@ import MyAccountPage from "./pages/MyAccountPage";
 import ProductPage from "./pages/ProductPage";
 // Components
 import Header from "./components/Header";
+import Footer from "./components/Footer";
 import styled from "styled-components";
-import i18n from "i18next";
-import getCookie from "./function/getCookie";
-import writeCookie from "./function/writeCookie";
+// import i18n from "i18next";
+// import getCookie from "./function/getCookie";
+// import writeCookie from "./function/writeCookie";
 import Loading from "./components/Loading";
 import OpenedPage from "./pages/OpenedPage";
 import TicketPage from "./pages/TicketPage";
@@ -50,65 +51,69 @@ class App extends React.Component {
       // 沒有則 執行未登入
       this.props.login(false);
     }
-    const cookie_language = getCookie("language");
-    const { changeLanguage } = this.props;
-    if (!cookie_language) {
-      // 初始時先預設語系為中文
-      writeCookie("language", "zhTW");
-    } else {
-      // 如果Cookie有語系的話 則判斷要切換為哪一個語系
-      if (cookie_language === "zhTW") {
-        i18n.changeLanguage("zhTW");
-        changeLanguage("zhTW");
-      } else if (cookie_language === "jp") {
-        i18n.changeLanguage("jp");
-        changeLanguage("jp");
-      } else {
-        i18n.changeLanguage("en");
-        changeLanguage("en");
-      }
-    }
+    // const cookie_language = getCookie("language");
+    // const { changeLanguage } = this.props;
+    // if (!cookie_language) {
+    //   // 初始時先預設語系為中文
+    //   writeCookie("language", "tc");
+    // } else {
+    //   // 如果Cookie有語系的話 則判斷要切換為哪一個語系
+    //   if (cookie_language === "tc") {
+    //     i18n.changeLanguage("tc");
+    //     changeLanguage("tc");
+    //   } else if (cookie_language === "jp") {
+    //     i18n.changeLanguage("jp");
+    //     changeLanguage("jp");
+    //   } else {
+    //     i18n.changeLanguage("en");
+    //     changeLanguage("en");
+    //   }
+    // }
   }
 
   render() {
     const { getLoginSuccessfully, isLoading } = this.props;
     return (
-      <div>
+      <>
         {getLoginSuccessfully && (
           <Router>
-            <Content>
-              <Header />
-              {isLoading && <Loading />}
-              <Switch>
-                <Route exact path="/">
-                  <HomePage />
-                </Route>
-                <Route path="/login">
-                  <LoginPage />
-                </Route>
-                <Route path="/register">
-                  <RegisterPage />
-                </Route>
-                <Route path="/my-account">
-                  <MyAccountPage />
-                </Route>
-                <Route path="/:lang/product">
-                  <ProductPage />
-                </Route>
-                <Route path="/opened">
-                  <OpenedPage />
-                </Route>
-                <Route path="/ticket">
-                  <TicketPage />
-                </Route>
-                <Route path="*">
-                  <Page404 />
-                </Route>
-              </Switch>
-            </Content>
+            <Header />
+            {/* <Content> */}
+            {isLoading && <Loading />}
+            <Switch>
+              <Route exact path="/">
+                <HomePage />
+              </Route>
+              <Route exact path="/:lang/home">
+                <HomePage />
+              </Route>
+              <Route path="/login">
+                <LoginPage />
+              </Route>
+              <Route path="/register">
+                <RegisterPage />
+              </Route>
+              <Route path="/my-account">
+                <MyAccountPage />
+              </Route>
+              <Route path="/:lang/product">
+                <ProductPage />
+              </Route>
+              <Route path="/opened">
+                <OpenedPage />
+              </Route>
+              <Route path="/ticket">
+                <TicketPage />
+              </Route>
+              <Route path="*">
+                <Page404 />
+              </Route>
+            </Switch>
+            {/* </Content> */}
+            <Footer />
           </Router>
         )}
-      </div>
+      </>
     );
   }
 }

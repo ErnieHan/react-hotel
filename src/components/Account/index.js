@@ -12,8 +12,7 @@ import {
   MemberGrid,
   MemberDetail,
   DetailKey,
-  DetailValue,
-  Message
+  DetailValue
 } from "./Account-css";
 import { Translation } from "react-i18next";
 import SubTitle from "./SubTitle";
@@ -27,7 +26,6 @@ class Account extends Component {
       <Content>
         {getMemberInfoSuccessfully && (
           <>
-            {console.log(memberInfo)}
             <Left>
               left
               <TipButton />
@@ -157,7 +155,4 @@ const mapDispatchToProps = dispatch => {
   };
 };
 
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(Account);
+export default connect(mapStateToProps, mapDispatchToProps)(Account);

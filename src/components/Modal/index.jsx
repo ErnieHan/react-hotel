@@ -36,28 +36,9 @@ class Modal extends Component {
               {title}
               <CloseButton onClick={closeModal} />
             </ModalHead>
-
-            <ModalBody id={id}>
-              <Swipe onSwipeMove={this.onSwipeMove}>
-                {body}
-                <input type="text" />
-                <h1>Testing</h1>
-                <h1>Testing</h1>
-                <h1>Testing</h1>
-                <h1>Testing</h1>
-                <h1>Testing</h1>
-                <h1>Testing</h1>
-                <h1>Testing</h1>
-                <h1>Testing</h1>
-                <h1>Testing</h1>
-                <h1>Testing</h1>
-                <h1>Testing</h1>
-                <h1>Testing</h1>
-                <h1>Testing</h1>
-                <h1>Testing</h1>
-                <h1>Testing</h1>
-              </Swipe>
-            </ModalBody>
+            <Swipe onSwipeMove={this.onSwipeMove}>
+              <ModalBody id={id}>{body}</ModalBody>
+            </Swipe>
           </ModalContent>
         </ModalBackground>
       </>
