@@ -1,12 +1,12 @@
 {
   "files": {
     "main.css": "/react-hotel/static/css/main.403cd1d9.chunk.css",
-    "main.js": "/react-hotel/static/js/main.e3172323.chunk.js",
-    "runtime-main.js": "/react-hotel/static/js/runtime-main.6ce7ddc1.js",
-    "static/js/2.399bfcc3.chunk.js": "/react-hotel/static/js/2.399bfcc3.chunk.js",
-    "static/js/3.681679e3.chunk.js": "/react-hotel/static/js/3.681679e3.chunk.js",
+    "main.js": "/react-hotel/static/js/main.89be66e1.chunk.js",
+    "runtime-main.js": "/react-hotel/static/js/runtime-main.6e89ed57.js",
+    "static/js/2.f3945696.chunk.js": "/react-hotel/static/js/2.f3945696.chunk.js",
+    "static/js/3.d4164291.chunk.js": "/react-hotel/static/js/3.d4164291.chunk.js",
     "index.html": "/react-hotel/index.html",
-    "precache-manifest.a64102de3abbac2ad1c2586aadb73f2f.js": "/react-hotel/precache-manifest.a64102de3abbac2ad1c2586aadb73f2f.js",
+    "precache-manifest.9bc44bbcad2d4970716d8b63a93897ec.js": "/react-hotel/precache-manifest.9bc44bbcad2d4970716d8b63a93897ec.js",
     "service-worker.js": "/react-hotel/service-worker.js",
     "static/media/arrow-left.svg": "/react-hotel/static/media/arrow-left.72db753e.svg",
     "static/media/arrow-up-new.svg": "/react-hotel/static/media/arrow-up-new.d9720405.svg",
@@ -20,7 +20,7 @@
     "static/media/icon-local-delivery.541c81ff.svg": "/react-hotel/static/media/icon-local-delivery.541c81ff.541c81ff.svg",
     "static/media/img-banner.jpg": "/react-hotel/static/media/img-banner.f6011f36.jpg",
     "static/media/logo-black.25b6dfd5.svg": "/react-hotel/static/media/logo-black.25b6dfd5.25b6dfd5.svg",
-    "static/media/logo-embrace.svg": "/react-hotel/static/media/logo-embrace.58698686.svg",
+    "static/media/logo-embrace.svg": "/react-hotel/static/media/logo-embrace.df6f1a1c.svg",
     "static/media/logo-site.png": "/react-hotel/static/media/logo-site.bb4f4c34.png",
     "static/media/pack02.jpg": "/react-hotel/static/media/pack02.1980c989.jpg",
     "static/media/playful-versatile-bg.jpg": "/react-hotel/static/media/playful-versatile-bg.c2fc36ae.jpg",
@@ -30,9 +30,9 @@
     "static/media/ticket.webp": "/react-hotel/static/media/ticket.574367bb.webp"
   },
   "entrypoints": [
-    "static/js/runtime-main.6ce7ddc1.js",
-    "static/js/2.399bfcc3.chunk.js",
+    "static/js/runtime-main.6e89ed57.js",
+    "static/js/2.f3945696.chunk.js",
     "static/css/main.403cd1d9.chunk.css",
-    "static/js/main.e3172323.chunk.js"
+    "static/js/main.89be66e1.chunk.js"
   ]
 }
