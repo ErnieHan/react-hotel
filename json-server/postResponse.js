@@ -31,6 +31,30 @@ module.exports = function(req, res, next) {
       req.url
     );
   }
+  if (req.method === "GET" && req.url === "/pages") {
+    console.log(req.url);
+    res.statusCode = 204;
+    res.send({
+      errors: [
+        {
+          message: "The inventory quantity is not enough.",
+          errorCode: "E00949"
+        }
+      ]
+    });
+  }
+  if (req.method === "POST" && req.url === "/pages") {
+    console.log(req.url);
+    res.statusCode = 400;
+    res.send({
+      errors: [
+        {
+          message: "The inventory quantity is not enough.",
+          errorCode: "E00949"
+        }
+      ]
+    });
+  }
   // Continue to JSON Server router
   next();
 };

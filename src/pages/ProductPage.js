@@ -11,6 +11,7 @@ import { connect } from "react-redux";
 import { changeLanguage } from "../store/actions";
 import BrandStory from "../components/BrandStory";
 import ProductTabsMobile from "../components/ProductTabsMobile";
+import $ from "jquery";
 import { async } from "q";
 
 const Content = styled.div`
@@ -31,7 +32,6 @@ const Layout = styled.div`
 class ProductPage extends Component {
   componentDidMount() {
     const { lang } = this.props.match.params;
-
     if (["en", "jp", "tc"].includes(lang)) {
       // 切換語系
       i18next.changeLanguage(lang);
@@ -43,6 +43,66 @@ class ProductPage extends Component {
       this.props.history.push("/error");
     }
   }
+  postGoogleAPI = async () => {
+    var data = {
+      name: "Good",
+      phone: "+0911456368",
+      time: "2018/02/10 22:46:00",
+      order: "Apple",
+      price: "NTD$1000",
+      orderNum: "訂單編號01"
+    };
+    $.ajax({
+      type: "get",
+      url:
+        "https://script.google.com/macros/s/AKfycbxwfuuzVWs2ZtrmTTSLys-TH28gerVYLFFwwJhRdStS_l-YJFs/exec",
+      data: data,
+      dataType: "JSON",
+      success: function(response) {
+        console.log(response);
+        alert("感謝您的訂購！！");
+      }
+    });
+  };
+
+  search = () => {
+    var data = {
+      name: "Good",
+      phone: "+0911456368"
+    };
+    $.ajax({
+      type: "post",
+      url:
+        "https://script.google.com/macros/s/AKfycbxQyvLycM7PgAYc2w0bzKeroFC0Rqh0QxHMFW3jaP-AP21-_egW/exec",
+      data: data,
+      dataType: "JSON",
+      success: function(response) {
+        console.log(response);
+      }
+    });
+  };
+
+  setting = () => {
+    var data = {
+      name: "Apple先生",
+      phone: "+123",
+      index: "9",
+      status: "ABC有被更改嗎"
+    };
+    $.ajax({
+      type: "post",
+      url:
+        "https://script.google.com/macros/s/AKfycbxqtlFIHCK88Wh0GiJglLYsVeRgh1znuH5Ki_jgWRUypPwYvFw/exec",
+      data: data,
+      dataType: "JSON",
+      mode: "cors",
+      success: function(response) {
+        console.log(response);
+        alert("成功");
+      }
+    });
+  };
+
   render() {
     return (
       <>
@@ -58,6 +118,11 @@ class ProductPage extends Component {
               />
             </Helmet>
             {/* 麵包屑 */}
+            <button onClick={this.postGoogleAPI}>送出表單</button>
+            <br />
+            <button onClick={this.search}>查詢表單</button>
+            <br />
+            <button onClick={this.setting}>更改資料</button>
             <Breadcrumbs />
             {/* 左右兩欄資訊 */}
             <LR />

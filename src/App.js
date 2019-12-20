@@ -25,6 +25,7 @@ import styled from "styled-components";
 import Loading from "./components/Loading";
 import OpenedPage from "./pages/OpenedPage";
 import TicketPage from "./pages/TicketPage";
+import ListPage from "./pages/ListPage";
 
 const Content = styled.div`
   padding: 0 40px;
@@ -104,6 +105,9 @@ class App extends React.Component {
               </Route>
               <Route path="/ticket">
                 <TicketPage />
+              </Route>
+              <Route path="/list">
+                <ListPage />
               </Route>
               <Route path="*">
                 <Page404 />

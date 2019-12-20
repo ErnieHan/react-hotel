@@ -72,7 +72,7 @@ class Listing extends Component {
               <h3>{data.titleName}</h3>
               {data.items.map((item, index) => (
                 <p key={index}>
-                  <a href="/">{item.itemName}</a>
+                  <a href="#/list">{item.itemName}</a>
                 </p>
               ))}
             </Item>

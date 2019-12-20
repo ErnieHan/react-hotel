@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import image from "../../../images/img-banner.jpg";
+import { HOST_URL } from "../../../constants";
 
 export const Body = styled.div`
   width: 100%;
@@ -8,7 +8,7 @@ export const Body = styled.div`
 export const BannerImage = styled.div`
   position: relative;
   height: 700px;
-  background: url(${image}) no-repeat top center;
+  background: url(${`${HOST_URL}/images/img-banner.jpg`}) no-repeat top center;
   background-size: cover;
   @media (max-width: 767px) {
     height: 185px;
@@ -39,11 +39,11 @@ export const CollecttionContent = styled.div`
 
 export const Content = styled.div`
   position: relative;
-  max-width: 80%;
+  max-width: 1200px;
   margin: 0 auto;
   background: #fff;
   box-shadow: 0px 0px 12px 1px rgba(0, 0, 0, 0.1);
-  @media (max-width: 767px) {
+  @media (max-width: 1300px) {
     max-width: 95%;
   }
 `;

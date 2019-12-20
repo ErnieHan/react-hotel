@@ -95,11 +95,6 @@ export class Header extends Component {
     // 3. 在第一步驟的行為window.openedPage 就是另開視窗的名稱，可以使用window.openedPage.close()去執行關閉他
   };
 
-  goHomePage = () => {
-    const { language } = this.props;
-    window.location = `/#/${language}/home`;
-  };
-
   render() {
     const { sticky } = this.state;
     const navbarLists = [
@@ -129,8 +124,10 @@ export class Header extends Component {
       <Content>
         <Top>
           <Left>幣值 | 分店</Left>
-          <Center onClick={this.goHomePage}>
-            <img src={logo} alt="" />
+          <Center>
+            <a href={`#/${this.props.language}/home`}>
+              <img src={logo} alt="" />
+            </a>
           </Center>
           <Right>
             <span onClick={this.openRegister}>註冊 / 登入</span> | <Favorite />

@@ -25,6 +25,7 @@ import SwiperPhotoMobile from "../SwiperPhotoMobile";
 import SoldoutButton from "../SoldoutButton";
 import Quantity from "../Quantity";
 import LevelOption from "../LevelOption";
+import VideoPlayButtonMobile from "../VideoPlayButtonMobile";
 
 const Content = styled.div`
   display: flex;
@@ -176,6 +177,7 @@ class LR extends Component {
             <ProductTabs />
             {/* 手機板滑動產品圖 */}
             <SwiperPhotoMobile />
+            <VideoPlayButtonMobile />
           </Left>
           <Mid />
           <Right ref="sticky-parent" id="sticky-parent">

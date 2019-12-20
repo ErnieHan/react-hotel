@@ -10,6 +10,7 @@ import {
 } from "./css";
 import logo from "../../../images/logo-embrace.svg";
 import { Translation } from "react-i18next";
+import image from "../../../images/img-designer-product.png";
 
 class BrandStoryContent extends Component {
   render() {
