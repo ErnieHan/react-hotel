@@ -1,35 +1,35 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "a6023b65ca4641c8a5027708e84fe5ce",
+    "revision": "d7294bdc59f2b169825473539a1379e4",
     "url": "/react-hotel/index.html"
   },
   {
-    "revision": "04f38a1e7cda1c2e0d2b",
+    "revision": "2be3438efda39fd0f013",
     "url": "/react-hotel/static/css/main.403cd1d9.chunk.css"
   },
   {
-    "revision": "40e993881b9517014b2a",
-    "url": "/react-hotel/static/js/2.31fe84e4.chunk.js"
+    "revision": "75524be740e0cf3b765c",
+    "url": "/react-hotel/static/js/2.7bff458a.chunk.js"
   },
   {
     "revision": "84c4cb3fec1ff0a099e6",
     "url": "/react-hotel/static/js/3.b49383f0.chunk.js"
   },
   {
-    "revision": "04f38a1e7cda1c2e0d2b",
-    "url": "/react-hotel/static/js/main.9d632b3e.chunk.js"
+    "revision": "2be3438efda39fd0f013",
+    "url": "/react-hotel/static/js/main.de28bba5.chunk.js"
   },
   {
     "revision": "2c2cfeab470a175c3fb2",
     "url": "/react-hotel/static/js/runtime-main.1fa9b6db.js"
   },
   {
-    "revision": "72db753e0b5161bc8e958db291c45c4e",
-    "url": "/react-hotel/static/media/arrow-left.72db753e.svg"
+    "revision": "414fa1fde7d0238610a669d7adc9f80a",
+    "url": "/react-hotel/static/media/arrow-left.414fa1fd.svg"
   },
   {
-    "revision": "d97204050a2129a4d79d0bd373209e6c",
-    "url": "/react-hotel/static/media/arrow-up-new.d9720405.svg"
+    "revision": "85fc572bdf32b6ee91dcf293c1bb2f3f",
+    "url": "/react-hotel/static/media/arrow-up-new.85fc572b.svg"
   },
   {
     "revision": "4618bc82a61bb43a9df6c730f7a60f11",
@@ -44,24 +44,24 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/react-hotel/static/media/feminine-elegance-bg.b2307ff0.jpg"
   },
   {
-    "revision": "73f22180a1915f42e9870f0686530c84",
-    "url": "/react-hotel/static/media/icon-1year-maintenance.73f22180.73f22180.svg"
+    "revision": "4342498f91dd2b6e9f1a1e562fd77dde",
+    "url": "/react-hotel/static/media/icon-1year-maintenance.73f22180.4342498f.svg"
   },
   {
-    "revision": "1d791f2466dba54bf11356b6fcfbb4df",
-    "url": "/react-hotel/static/media/icon-7days-return.1d791f24.1d791f24.svg"
+    "revision": "7b5085d8b9519577011e2f916808576f",
+    "url": "/react-hotel/static/media/icon-7days-return.1d791f24.7b5085d8.svg"
   },
   {
-    "revision": "6306a5c7c6a2e00a95ea5ea9d6b58ebf",
-    "url": "/react-hotel/static/media/icon-global-delivery.6306a5c7.6306a5c7.svg"
+    "revision": "58f6e2527c9835a8d2a3d9878ec34a73",
+    "url": "/react-hotel/static/media/icon-global-delivery.6306a5c7.58f6e252.svg"
   },
   {
-    "revision": "5fcffbbd5d46447c6f3341a0e896ca1e",
-    "url": "/react-hotel/static/media/icon-instore.5fcffbbd.5fcffbbd.svg"
+    "revision": "cdbb2b7609f80f45582ca4d4850755d9",
+    "url": "/react-hotel/static/media/icon-instore.5fcffbbd.cdbb2b76.svg"
   },
   {
-    "revision": "541c81ffbcd54af6db10f4fe7030889a",
-    "url": "/react-hotel/static/media/icon-local-delivery.541c81ff.541c81ff.svg"
+    "revision": "aa1597050855fdd5ecf46fe51fd858e2",
+    "url": "/react-hotel/static/media/icon-local-delivery.541c81ff.aa159705.svg"
   },
   {
     "revision": "f6011f36a38853de48c3d6469374a735",
@@ -72,12 +72,12 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/react-hotel/static/media/img-designer-product.70ca6345.png"
   },
   {
-    "revision": "25b6dfd5c39049fa3571a37b20a7f755",
-    "url": "/react-hotel/static/media/logo-black.25b6dfd5.25b6dfd5.svg"
+    "revision": "de0046e98816f2b8eb99319ab82c5fcb",
+    "url": "/react-hotel/static/media/logo-black.25b6dfd5.de0046e9.svg"
   },
   {
-    "revision": "df6f1a1c9cb04d9102f07642a0fa48a2",
-    "url": "/react-hotel/static/media/logo-embrace.df6f1a1c.svg"
+    "revision": "b671a590a341ba214f875b5b7a0ee7d1",
+    "url": "/react-hotel/static/media/logo-embrace.b671a590.svg"
   },
   {
     "revision": "bb4f4c345d4ee4944e7b3120aae7e7ea",
