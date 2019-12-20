@@ -1,12 +1,12 @@
 {
   "files": {
     "main.css": "/react-hotel/static/css/main.403cd1d9.chunk.css",
-    "main.js": "/react-hotel/static/js/main.89be66e1.chunk.js",
-    "runtime-main.js": "/react-hotel/static/js/runtime-main.6e89ed57.js",
-    "static/js/2.f3945696.chunk.js": "/react-hotel/static/js/2.f3945696.chunk.js",
-    "static/js/3.d4164291.chunk.js": "/react-hotel/static/js/3.d4164291.chunk.js",
+    "main.js": "/react-hotel/static/js/main.6ab5c530.chunk.js",
+    "runtime-main.js": "/react-hotel/static/js/runtime-main.1fa9b6db.js",
+    "static/js/2.60d94757.chunk.js": "/react-hotel/static/js/2.60d94757.chunk.js",
+    "static/js/3.b49383f0.chunk.js": "/react-hotel/static/js/3.b49383f0.chunk.js",
     "index.html": "/react-hotel/index.html",
-    "precache-manifest.9bc44bbcad2d4970716d8b63a93897ec.js": "/react-hotel/precache-manifest.9bc44bbcad2d4970716d8b63a93897ec.js",
+    "precache-manifest.6e521b095592cf5b52f3fc980101f22f.js": "/react-hotel/precache-manifest.6e521b095592cf5b52f3fc980101f22f.js",
     "service-worker.js": "/react-hotel/service-worker.js",
     "static/media/arrow-left.svg": "/react-hotel/static/media/arrow-left.72db753e.svg",
     "static/media/arrow-up-new.svg": "/react-hotel/static/media/arrow-up-new.d9720405.svg",
@@ -19,6 +19,7 @@
     "static/media/icon-instore.5fcffbbd.svg": "/react-hotel/static/media/icon-instore.5fcffbbd.5fcffbbd.svg",
     "static/media/icon-local-delivery.541c81ff.svg": "/react-hotel/static/media/icon-local-delivery.541c81ff.541c81ff.svg",
     "static/media/img-banner.jpg": "/react-hotel/static/media/img-banner.f6011f36.jpg",
+    "static/media/img-designer-product.png": "/react-hotel/static/media/img-designer-product.70ca6345.png",
     "static/media/logo-black.25b6dfd5.svg": "/react-hotel/static/media/logo-black.25b6dfd5.25b6dfd5.svg",
     "static/media/logo-embrace.svg": "/react-hotel/static/media/logo-embrace.df6f1a1c.svg",
     "static/media/logo-site.png": "/react-hotel/static/media/logo-site.bb4f4c34.png",
@@ -30,9 +31,9 @@
     "static/media/ticket.webp": "/react-hotel/static/media/ticket.574367bb.webp"
   },
   "entrypoints": [
-    "static/js/runtime-main.6e89ed57.js",
-    "static/js/2.f3945696.chunk.js",
+    "static/js/runtime-main.1fa9b6db.js",
+    "static/js/2.60d94757.chunk.js",
     "static/css/main.403cd1d9.chunk.css",
-    "static/js/main.89be66e1.chunk.js"
+    "static/js/main.6ab5c530.chunk.js"
   ]
 }
