@@ -66,7 +66,7 @@ const mapDispatchToProps = dispatch => {
   return {
     changeLanguage: language => {
       dispatch(changeLanguage(language));
-    }
+    },
   };
 };
 

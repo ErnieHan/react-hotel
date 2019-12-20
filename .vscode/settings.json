@@ -1,0 +1,12 @@
+{
+  "window.zoomLevel": 1,
+  "files.autoSave": "afterDelay",
+  "workbench.iconTheme": "material-icon-theme",
+  "editor.formatOnSave": true,
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "prettier.singleQuote": false,
+  "prettier.semi": true,
+  "prettier.printWidth": 120,
+  "prettier.trailingComma": "es5",
+  "prettier.tabWidth": 2
+}

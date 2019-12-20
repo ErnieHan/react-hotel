@@ -43,65 +43,6 @@ class ProductPage extends Component {
       this.props.history.push("/error");
     }
   }
-  postGoogleAPI = async () => {
-    var data = {
-      name: "Good",
-      phone: "+0911456368",
-      time: "2018/02/10 22:46:00",
-      order: "Apple",
-      price: "NTD$1000",
-      orderNum: "訂單編號01"
-    };
-    $.ajax({
-      type: "get",
-      url:
-        "https://script.google.com/macros/s/AKfycbxwfuuzVWs2ZtrmTTSLys-TH28gerVYLFFwwJhRdStS_l-YJFs/exec",
-      data: data,
-      dataType: "JSON",
-      success: function(response) {
-        console.log(response);
-        alert("感謝您的訂購！！");
-      }
-    });
-  };
-
-  search = () => {
-    var data = {
-      name: "Good",
-      phone: "+0911456368"
-    };
-    $.ajax({
-      type: "post",
-      url:
-        "https://script.google.com/macros/s/AKfycbxQyvLycM7PgAYc2w0bzKeroFC0Rqh0QxHMFW3jaP-AP21-_egW/exec",
-      data: data,
-      dataType: "JSON",
-      success: function(response) {
-        console.log(response);
-      }
-    });
-  };
-
-  setting = () => {
-    var data = {
-      name: "Apple先生",
-      phone: "+123",
-      index: "9",
-      status: "ABC有被更改嗎"
-    };
-    $.ajax({
-      type: "post",
-      url:
-        "https://script.google.com/macros/s/AKfycbxqtlFIHCK88Wh0GiJglLYsVeRgh1znuH5Ki_jgWRUypPwYvFw/exec",
-      data: data,
-      dataType: "JSON",
-      mode: "cors",
-      success: function(response) {
-        console.log(response);
-        alert("成功");
-      }
-    });
-  };
 
   render() {
     return (
@@ -109,20 +50,13 @@ class ProductPage extends Component {
         <Layout>
           <Content>
             <Helmet>
-              <title>
-                Boltenstern 18K 黃金綠石髓手鍊 &nbsp;|&nbsp; EMPHASIS
-              </title>
+              <title>Boltenstern 18K 黃金綠石髓手鍊 &nbsp;|&nbsp; EMPHASIS</title>
               <meta
                 name="description"
                 content="少年漫畫是指以青少年為主要讀者對象的漫畫，另外讀者組別甚廣，有許多的兒童和少女、甚至成人也是忠實讀者。題材一般以打鬥、懸疑、冒險、科幻為主。"
               />
             </Helmet>
             {/* 麵包屑 */}
-            <button onClick={this.postGoogleAPI}>送出表單</button>
-            <br />
-            <button onClick={this.search}>查詢表單</button>
-            <br />
-            <button onClick={this.setting}>更改資料</button>
             <Breadcrumbs />
             {/* 左右兩欄資訊 */}
             <LR />
@@ -140,14 +74,14 @@ class ProductPage extends Component {
 }
 
 const mapStateToProps = state => ({
-  language: state.app.language.language
+  language: state.app.language.language,
 });
 
 const mapDispatchToProps = dispatch => {
   return {
     changeLanguage: language => {
       dispatch(changeLanguage(language));
-    }
+    },
   };
 };
 
