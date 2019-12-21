@@ -1,16 +1,7 @@
 import React, { Component } from "react";
-import {
-  Body,
-  BannerImage,
-  CollecttionContent,
-  Content,
-  FlexContent,
-  Box,
-  Text
-} from "./css";
+import { Body, BannerImage, CollecttionContent, Content, Text, GridContent, GridProductOne } from "./css";
 import logo from "../../../images/logo-embrace.svg";
 import { Translation } from "react-i18next";
-import image from "../../../images/img-designer-product.png";
 
 class BrandStoryContent extends Component {
   render() {
@@ -26,9 +17,21 @@ class BrandStoryContent extends Component {
                   <Translation>{t => <>{t("barndStory.text")}</>}</Translation>
                 </h3>
               </Text>
-              <FlexContent>
-                <Box></Box>
-              </FlexContent>
+              <GridContent>
+                <GridProductOne>
+                  <div></div>
+                </GridProductOne>
+                <div className="two"></div>
+                <div className="three"></div>
+                <div className="four">
+                  <div>
+                    <h1>用途廣泛</h1>
+                    <p>適合自用搭配，亦是送禮之選，不同場合也能彰顯價值。</p>
+                  </div>
+                </div>
+                <div className="five">123</div>
+                <div className="six">123</div>
+              </GridContent>
             </Content>
           </CollecttionContent>
         </Body>

@@ -73,13 +73,39 @@ export const Text = styled.div`
   }
 `;
 
-export const FlexContent = styled.div`
-  display: flex;
-  flex-wrap: wrap;
+export const GridContent = styled.div`
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  .two {
+    background: url(/images/img-designer-thumb.jpg) no-repeat center center;
+    background-size: cover;
+  }
+  .three {
+    background: url(/images/img-intro-prod-2.png) no-repeat center center;
+    background-size: 50%;
+  }
+  .four {
+    grid-column: 3/5;
+    background: rgb(211, 199, 138);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    h1 {
+      font-weight: 400;
+      text-align: center;
+    }
+  }
 `;
 
-export const Box = styled.div`
-  width: 33.33%;
-  padding-bottom: 33.33%;
-  background: #e9e8e7;
+export const GridProductOne = styled.div`
+  grid-column: 1/3;
+  grid-row: 1/3;
+  div {
+    padding-bottom: 100%;
+    background: url(/images/img-intro-prod-1.png) no-repeat center center;
+    background-color: #f9f9f9;
+    background-size: contain;
+  }
 `;
