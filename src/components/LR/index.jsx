@@ -13,7 +13,7 @@ import {
   Sub,
   QuantityFlex,
   OpitionButton,
-  OpitionDisableButton
+  OpitionDisableButton,
 } from "./LR-css";
 import return7DayImage from "../../images/icon-7days-return.1d791f24.svg";
 import mainTenanceImage from "../../images/icon-1year-maintenance.73f22180.svg";
@@ -26,6 +26,7 @@ import SoldoutButton from "../SoldoutButton";
 import Quantity from "../Quantity";
 import LevelOption from "../LevelOption";
 import VideoPlayButtonMobile from "../VideoPlayButtonMobile";
+import { Media } from "react-breakpoints";
 
 const Content = styled.div`
   display: flex;
@@ -85,7 +86,7 @@ class LR extends Component {
   state = {
     stickyOffsetTop: 0,
     randomPosition: 0,
-    getRandom: false
+    getRandom: false,
   };
 
   componentDidMount() {
@@ -96,7 +97,7 @@ class LR extends Component {
     const randomNum = this.getRandom(maxWidth);
     this.setState({
       randomPosition: randomNum,
-      getRandom: true
+      getRandom: true,
     });
     if (!!window.ActiveXObject || "ActiveXObject" in window) {
       this.isIE();
@@ -148,8 +149,7 @@ class LR extends Component {
         element.style.position = "";
         element.style.width = "";
         element.style.top = "0px";
-        element.style.transform = `translateY(${parentHeight -
-          elementHeight}px)`;
+        element.style.transform = `translateY(${parentHeight - elementHeight}px)`;
       } else {
         element.style.position = "fixed";
         element.style.maxWidth = "100%";
@@ -171,13 +171,25 @@ class LR extends Component {
       <>
         <Content>
           <Left ref="sticky-sibling">
-            {/* 滑動產品圖 */}
-            <SwiperPhoto />
-            {/* 桌機版產品資訊 */}
-            <ProductTabs />
-            {/* 手機板滑動產品圖 */}
-            <SwiperPhotoMobile />
-            <VideoPlayButtonMobile />
+            <Media>
+              {({ breakpoints, currentBreakpoint }) =>
+                breakpoints[currentBreakpoint] > 767 ? (
+                  <>
+                    {/* 滑動產品圖 */}
+                    <SwiperPhoto />
+                    {/* 桌機版產品資訊 */}
+                    <ProductTabs />
+                  </>
+                ) : (
+                  <>
+                    {/* 手機板滑動產品圖 */}
+                    <SwiperPhotoMobile />
+                    {/* 手機板播放商品影片鍵 */}
+                    <VideoPlayButtonMobile />
+                  </>
+                )
+              }
+            </Media>
           </Left>
           <Mid />
           <Right ref="sticky-parent" id="sticky-parent">
@@ -201,9 +213,7 @@ class LR extends Component {
                   {lang === "jp" ? (
                     <>
                       ¥14,400
-                      <span style={{ fontSize: "13px", paddingLeft: "2px" }}>
-                        税込
-                      </span>
+                      <span style={{ fontSize: "13px", paddingLeft: "2px" }}>税込</span>
                     </>
                   ) : null}
                 </Price>

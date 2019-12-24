@@ -25,7 +25,7 @@ class SwiperPhotoMobile extends Component {
           <div className="swiper-wrapper">
             {mainLists.map((data, index) => (
               <div className="swiper-slide" key={index}>
-                <img src={data.url} alt="" />
+                <img data-src={data.url} className="lazyload" alt="" />
               </div>
             ))}
           </div>

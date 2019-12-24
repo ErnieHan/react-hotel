@@ -11,6 +11,7 @@ import { connect } from "react-redux";
 import { changeLanguage } from "../store/actions";
 import BrandStory from "../components/BrandStory";
 import ProductTabsMobile from "../components/ProductTabsMobile";
+import { Media } from "react-breakpoints";
 
 const Content = styled.div`
   max-width: 1420px;
@@ -58,14 +59,30 @@ class ProductPage extends Component {
             <Breadcrumbs />
             {/* 左右兩欄資訊 */}
             <LR />
-            {/* 手機板資訊選單 */}
-            <ProductTabsMobile />
+            <Media>
+              {({ breakpoints, currentBreakpoint }) =>
+                breakpoints[currentBreakpoint] > 767 ? null : (
+                  <>
+                    {/* 手機板資訊選單 */}
+                    <ProductTabsMobile />
+                  </>
+                )
+              }
+            </Media>
             {/* 捲動至較下方的加入購物車、快速返上鍵 */}
             <ScrollAddToBag />
           </Content>
         </Layout>
-        {/* 探索系列故事 */}
-        <BrandStory />
+        <Media>
+          {({ breakpoints, currentBreakpoint }) =>
+            breakpoints[currentBreakpoint] > 767 ? (
+              <>
+                {/* 探索系列故事 */}
+                <BrandStory />
+              </>
+            ) : null
+          }
+        </Media>
       </>
     );
   }

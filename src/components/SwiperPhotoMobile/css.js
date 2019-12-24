@@ -53,6 +53,6 @@ export const CloseVideoButton = styled.div`
   background-size: 100%;
   position: absolute;
   top: 15px;
-  right: 5px;
+  right: 15px;
   z-index: 10;
 `;

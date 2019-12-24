@@ -69,11 +69,11 @@ export const GridContent = styled.div`
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(3, 1fr);
   .two {
-    background: url(/images/img-designer-thumb.jpg) no-repeat center center;
+    background: url(${HOST_URL}/images/img-designer-thumb.jpg) no-repeat center center;
     background-size: cover;
   }
   .three {
-    background: url(/images/img-intro-prod-2.png) no-repeat center center;
+    background: url(${HOST_URL}/images/img-intro-prod-2.png) no-repeat center center;
     background-size: 50%;
   }
   .four {
@@ -95,7 +95,7 @@ export const GridProductOne = styled.div`
   grid-row: 1/3;
   div {
     padding-bottom: 100%;
-    background: url(/images/img-intro-prod-1.png) no-repeat center center;
+    background: url(${HOST_URL}/images/img-intro-prod-1.png) no-repeat center center;
     background-color: #f9f9f9;
     background-size: contain;
   }
