@@ -1,12 +1,12 @@
 {
   "files": {
     "main.css": "/react-hotel/static/css/main.403cd1d9.chunk.css",
-    "main.js": "/react-hotel/static/js/main.a054922e.chunk.js",
-    "runtime-main.js": "/react-hotel/static/js/runtime-main.54ab9ded.js",
-    "static/js/2.c59dbf79.chunk.js": "/react-hotel/static/js/2.c59dbf79.chunk.js",
-    "static/js/3.1c36ac17.chunk.js": "/react-hotel/static/js/3.1c36ac17.chunk.js",
+    "main.js": "/react-hotel/static/js/main.d4404830.chunk.js",
+    "runtime-main.js": "/react-hotel/static/js/runtime-main.1553406b.js",
+    "static/js/2.af992f26.chunk.js": "/react-hotel/static/js/2.af992f26.chunk.js",
+    "static/js/3.ae3b880b.chunk.js": "/react-hotel/static/js/3.ae3b880b.chunk.js",
     "index.html": "/react-hotel/index.html",
-    "precache-manifest.cfc9b5526df3a0e8686a19568068e86e.js": "/react-hotel/precache-manifest.cfc9b5526df3a0e8686a19568068e86e.js",
+    "precache-manifest.c11660c363b4a322b8c37cbeb3ddce49.js": "/react-hotel/precache-manifest.c11660c363b4a322b8c37cbeb3ddce49.js",
     "service-worker.js": "/react-hotel/service-worker.js",
     "static/media/arrow-left.svg": "/react-hotel/static/media/arrow-left.72db753e.svg",
     "static/media/arrow-up-new.svg": "/react-hotel/static/media/arrow-up-new.d9720405.svg",
@@ -30,9 +30,9 @@
     "static/media/ticket.webp": "/react-hotel/static/media/ticket.574367bb.webp"
   },
   "entrypoints": [
-    "static/js/runtime-main.54ab9ded.js",
-    "static/js/2.c59dbf79.chunk.js",
+    "static/js/runtime-main.1553406b.js",
+    "static/js/2.af992f26.chunk.js",
     "static/css/main.403cd1d9.chunk.css",
-    "static/js/main.a054922e.chunk.js"
+    "static/js/main.d4404830.chunk.js"
   ]
 }
