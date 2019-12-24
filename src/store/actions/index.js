@@ -4,7 +4,7 @@ import writeCookie from "../../function/writeCookie";
 // 基本型
 export const setApp = () => {
   return {
-    type: "SET_APP"
+    type: "SET_APP",
   };
 };
 
@@ -18,7 +18,7 @@ export const fetchProduct = cbu => async dispatch => {
   fetch(`/shopping/v1/compositions/productDetails/info/${cbu}`, {
     credentials: "include",
     headers: { "content-type": "application/json" },
-    mode: "cors"
+    mode: "cors",
   })
     .then(response => response.json())
     .then(data => {
@@ -29,13 +29,13 @@ export const fetchProduct = cbu => async dispatch => {
 const primaryTheme = {
   background: "#FFFFFF",
   textColor: "#000000",
-  button: "red"
+  button: "red",
 };
 
 const darkTheme = {
   background: "#2F2F2F",
   textColor: "#CCCCCC",
-  button: "darkred"
+  button: "darkred",
 };
 
 export const readThemeCookie = () => dispatch => {
@@ -71,7 +71,7 @@ export const updateTheme = (themeName, themeColors) => {
   return {
     type: "UPDATE_THEME",
     themeName,
-    themeColors
+    themeColors,
   };
 };
 
@@ -118,4 +118,8 @@ export const showLoading = bool => {
 
 export const showMiniBag = bool => {
   return { type: "SHOW_MINI_BAG", bool };
+};
+
+export const startPlayingVideo = bool => {
+  return { type: "START_PLAYING_VIDEO", bool };
 };

@@ -156,5 +156,9 @@
   "barndStory": {
     "explore": "Explore Collection's Story",
     "text": "Go from daily chic to party-perfect in a flash! These fabulous designs are fun, delightful and pairs well with a variety of looks. Let your personal style shine through!"
+  },
+  "navbarBasic": {
+    "storeexperience": "Shop Experience",
+    "customerservice": "Customer Service"
   }
 }

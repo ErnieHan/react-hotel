@@ -156,5 +156,9 @@
   "barndStory": {
     "explore": "探索此系列故事",
     "text": "您的日常穿搭，隨時隨地的去赴一場時尚派對。富設計感的精緻單品，新穎有趣，輕鬆混搭出各種變奏，打造鮮明的個人風格，在人群中脫穎而出。"
+  },
+  "navbarBasic": {
+    "storeexperience": "店鋪體驗",
+    "customerservice": "客戶服務"
   }
 }

@@ -8,7 +8,8 @@ export class Information extends Component {
       <Content>
         <Image>
           <img
-            src="https://cdn.chowsangsang.com/dfs/ivCssModelImages/90792/bc877aad82665ceeff76581ae2f9ec6b.jpg"
+            data-src="https://cdn.chowsangsang.com/dfs/ivCssModelImages/90792/bc877aad82665ceeff76581ae2f9ec6b.jpg"
+            className="lazyload"
             alt=""
           />
         </Image>
@@ -17,8 +18,7 @@ export class Information extends Component {
             <Translation>{t => <>{t("tabs.1-1")}</>}</Translation>
           </p>
           <p>
-            <Translation>{t => <>{t("tabs.1-2")}</>}</Translation>#
-            85194E-18KR-DD
+            <Translation>{t => <>{t("tabs.1-2")}</>}</Translation># 85194E-18KR-DD
           </p>
           <ul>
             <li>

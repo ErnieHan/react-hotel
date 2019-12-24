@@ -156,7 +156,7 @@ class GoogleAPIPage extends Component {
     return (
       <>
         {/* 舊版本Ｗindow系列UI */}
-        <WindowOldUi />
+        {/* <WindowOldUi /> */}
         <Content>
           <FlexBody>
             <Box>

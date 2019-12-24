@@ -15,19 +15,19 @@ export class SwiperPhoto extends Component {
       watchSlidesProgress: true,
       navigation: {
         nextEl: ".vert-button-next",
-        prevEl: ".vert-button-prev"
-      }
+        prevEl: ".vert-button-prev",
+      },
     });
     // 大圖設定
     new Swiper(".gallery-main", {
       allowTouchMove: true,
       effect: "fade",
       fadeEffect: {
-        crossFade: true
+        crossFade: true,
       },
       thumbs: {
-        swiper: galleryThumbs
-      }
+        swiper: galleryThumbs,
+      },
     });
   }
   render() {
@@ -44,7 +44,7 @@ export class SwiperPhoto extends Component {
                   className="swiper-slide"
                   style={{
                     background: `url(${img.url}) no-repeat center`,
-                    backgroundSize: "cover"
+                    backgroundSize: "cover",
                   }}
                   key={index}
                 />
@@ -59,7 +59,7 @@ export class SwiperPhoto extends Component {
           <div className="swiper-wrapper">
             {mainLists.map((img, index) => (
               <div className="swiper-slide" key={index}>
-                <img src={img.url} alt="" />
+                <img data-src={img.url} className="lazyload" alt="" />
               </div>
             ))}
           </div>

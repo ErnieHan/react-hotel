@@ -1,13 +1,5 @@
 import React, { Component } from "react";
-import {
-  Content,
-  Title,
-  FlexBody,
-  Icon,
-  Text,
-  Section,
-  List
-} from "./DeliveryAndReturn-css";
+import { Content, Title, FlexBody, Icon, Text, Section, List } from "./DeliveryAndReturn-css";
 import storeImage from "../../../images/icon-instore.5fcffbbd.svg";
 import carImage from "../../../images/icon-local-delivery.541c81ff.svg";
 import flatImage from "../../../images/icon-global-delivery.6306a5c7.svg";
@@ -26,7 +18,7 @@ class DeliveryAndReturn extends Component {
           </Title>
           <FlexBody>
             <Icon>
-              <img src={storeImage} alt="" />
+              <img data-src={storeImage} className="lazyload" alt="" />
             </Icon>
             <Text>
               <b>
@@ -39,7 +31,7 @@ class DeliveryAndReturn extends Component {
 
           <FlexBody>
             <Icon>
-              <img src={carImage} alt="" />
+              <img data-src={carImage} className="lazyload" alt="" />
             </Icon>
             <Text>
               <b>
@@ -51,7 +43,7 @@ class DeliveryAndReturn extends Component {
           </FlexBody>
           <FlexBody>
             <Icon>
-              <img src={flatImage} alt="" />
+              <img data-src={flatImage} className="lazyload" alt="" />
             </Icon>
             <Text>
               <b>
@@ -82,7 +74,7 @@ class DeliveryAndReturn extends Component {
               </List>
             </ul>
             <div style={{ maxWidth: "350px" }}>
-              <img src={packImage} alt="" />
+              <img data-src={packImage} className="lazyload" alt="" />
             </div>
           </div>
         </Section>
@@ -92,7 +84,7 @@ class DeliveryAndReturn extends Component {
           </Title>
           <FlexBody>
             <Icon>
-              <img src={returnImage} alt="" />
+              <img data-src={returnImage} className="lazyload" alt="" />
             </Icon>
             <Text>
               <b>

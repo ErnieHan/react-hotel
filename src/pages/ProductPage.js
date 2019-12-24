@@ -11,8 +11,6 @@ import { connect } from "react-redux";
 import { changeLanguage } from "../store/actions";
 import BrandStory from "../components/BrandStory";
 import ProductTabsMobile from "../components/ProductTabsMobile";
-import $ from "jquery";
-import { async } from "q";
 
 const Content = styled.div`
   max-width: 1420px;

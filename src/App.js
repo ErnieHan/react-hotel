@@ -27,6 +27,7 @@ import OpenedPage from "./pages/OpenedPage";
 import TicketPage from "./pages/TicketPage";
 import ListPage from "./pages/ListPage";
 import GoogleAPIPage from "./pages/GoogleAPIPage";
+import API from "./pages/API";
 
 const Content = styled.div`
   padding: 0 40px;
@@ -113,6 +114,9 @@ class App extends React.Component {
               <Route path="/google-api">
                 <GoogleAPIPage />
               </Route>
+              <Route path="/api">
+                <API />
+              </Route>
               <Route path="*">
                 <Page404 />
               </Route>
@@ -127,13 +131,13 @@ class App extends React.Component {
 }
 
 App.propTypes = {
-  setApp: PropTypes.func
+  setApp: PropTypes.func,
 };
 
 const mapStateToProps = state => ({
   isLogin: state.app.login.isLogin,
   getLoginSuccessfully: state.app.login.getLoginSuccessfully,
-  isLoading: state.app.loading.isLoading
+  isLoading: state.app.loading.isLoading,
 });
 
 const mapDispatchToProps = dispatch => {
@@ -146,7 +150,7 @@ const mapDispatchToProps = dispatch => {
     },
     changeLanguage: language => {
       dispatch(changeLanguage(language));
-    }
+    },
   };
 };
 

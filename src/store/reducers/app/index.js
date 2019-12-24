@@ -5,9 +5,10 @@ import memberInfo from "./memberInfo";
 import language from "./language";
 import loading from "./loading";
 import miniBag from "./miniBag";
+import video from "./video";
 
 const initialState = {
-  active: true
+  active: true,
 };
 
 const index = (state = initialState, action) => {
@@ -15,7 +16,7 @@ const index = (state = initialState, action) => {
     case "SET_APP":
       return {
         ...state,
-        active: false
+        active: false,
       };
 
     default:
@@ -30,7 +31,8 @@ const reducers = combineReducers({
   memberInfo,
   language,
   loading,
-  miniBag
+  miniBag,
+  video,
 });
 
 export default reducers;

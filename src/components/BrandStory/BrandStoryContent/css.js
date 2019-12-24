@@ -51,12 +51,6 @@ export const Content = styled.div`
 export const Text = styled.div`
   text-align: center;
   padding: 35px;
-  h3 {
-    font-weight: normal;
-    text-align: center;
-    font-size: 1.25rem;
-    margin-bottom: 1rem;
-  }
   h4 {
     font-weight: normal;
     text-align: center;
@@ -67,9 +61,6 @@ export const Text = styled.div`
   }
   @media (max-width: 767px) {
     padding: 15px;
-    h3 {
-      font-size: 1.25rem;
-    }
   }
 `;
 

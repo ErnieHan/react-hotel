@@ -12,6 +12,7 @@ export const OrigPrice = styled.span`
   font-weight: bold;
   text-decoration: line-through;
   margin-right: 8px;
+  vertical-align: top;
 `;
 
 export const NewsTitle = styled.div`
@@ -101,8 +102,7 @@ export const OpitionButton = styled.div`
   margin-right: 0.5rem;
   margin-bottom: 0.5rem;
   background: ${props => (props.active ? "rgba(198,153,103,0.2)" : "")};
-  border: ${props =>
-    props.active ? "1px solid #c69967" : "1px solid #d1d1d1"};
+  border: ${props => (props.active ? "1px solid #c69967" : "1px solid #d1d1d1")};
   cursor: pointer;
   &:hover {
     border: 1px solid #c69967;

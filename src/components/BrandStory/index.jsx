@@ -11,7 +11,7 @@ class BrandStory extends Component {
     const headerHeight = 60;
     window.scrollTo({
       top: offsetTop - headerHeight,
-      behavior: "smooth"
+      behavior: "smooth",
     });
   };
   render() {
@@ -21,7 +21,7 @@ class BrandStory extends Component {
           <h3>
             <Translation>{t => <>{t("barndStory.explore")}</>}</Translation>
           </h3>
-          <img src={downarrowImage} alt="down-arrow" />
+          <img data-src={downarrowImage} className="lazyload" alt="down-arrow" />
         </Title>
         <div id="brand-story">
           <BrandStoryContent />

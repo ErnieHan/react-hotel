@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import image01 from "../../../images/navbar/store-experience.jpg";
 import image02 from "../../../images/navbar/custom-service.jpg";
 import styled from "styled-components";
+import { Translation } from "react-i18next";
 
 export const Content = styled.div`
   display: flex;
@@ -17,7 +18,6 @@ export const Item = styled.div`
   }
   h3 {
     text-align: center;
-    font-size: 1rem;
   }
   &:hover {
     img {
@@ -35,11 +35,15 @@ class Basic extends Component {
       <Content>
         <Item>
           <img src={image01} alt="" />
-          <h3>店鋪體驗</h3>
+          <h3>
+            <Translation>{t => <>{t("navbarBasic.storeexperience")}</>}</Translation>
+          </h3>
         </Item>
         <Item>
           <img src={image02} alt="" />
-          <h3>客戶服務</h3>
+          <h3>
+            <Translation>{t => <>{t("navbarBasic.customerservice")}</>}</Translation>
+          </h3>
         </Item>
       </Content>
     );

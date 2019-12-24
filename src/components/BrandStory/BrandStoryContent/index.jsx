@@ -12,10 +12,10 @@ class BrandStoryContent extends Component {
           <CollecttionContent>
             <Content>
               <Text>
-                <img src={logo} alt="" />
-                <h3>
+                <img data-src={logo} className="lazyload" alt="" />
+                <p>
                   <Translation>{t => <>{t("barndStory.text")}</>}</Translation>
-                </h3>
+                </p>
               </Text>
               <GridContent>
                 <GridProductOne>
