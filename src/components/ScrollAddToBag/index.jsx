@@ -15,8 +15,7 @@ const Content = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  transform: ${props =>
-    props.active ? "translateY(0%)" : "translateY(-200%)"};
+  transform: ${props => (props.active ? "translateY(0%)" : "translateY(-200%)")};
   transition: all 350ms ease;
   @media (max-width: 991px) {
     padding: 15px;
@@ -60,14 +59,19 @@ const ScrollTopButton = styled.div`
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
+  background-color: #1a1a1a;
   cursor: pointer;
   transform: ${props => (props.active ? "translateX(0)" : "translateX(105%)")};
   transition: all 350ms ease;
+  border-width: 1px 0 1px 1px;
+  border-style: solid;
+  border-color: #8e8e8e;
+  z-index: 10;
 `;
 
 export class index extends Component {
   state = {
-    active: false
+    active: false,
   };
 
   componentDidMount() {
@@ -90,11 +94,11 @@ export class index extends Component {
     const element = $("#add-to-bag");
     if (window.pageYOffset > element.offset().top) {
       this.setState({
-        active: true
+        active: true,
       });
     } else {
       this.setState({
-        active: false
+        active: false,
       });
     }
   };
@@ -102,7 +106,7 @@ export class index extends Component {
   scrollToTop = () => {
     window.scrollTo({
       behavior: "smooth",
-      top: "0"
+      top: "0",
     });
   };
 
@@ -120,9 +124,7 @@ export class index extends Component {
             </AddToBag>
           </div>
         </Content>
-        <ScrollTopButton active={this.state.active} onClick={this.scrollToTop}>
-          123
-        </ScrollTopButton>
+        <ScrollTopButton active={this.state.active} onClick={this.scrollToTop}></ScrollTopButton>
       </>
     );
   }

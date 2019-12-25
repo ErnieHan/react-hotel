@@ -81,7 +81,6 @@ class App extends React.Component {
         {getLoginSuccessfully && (
           <Router>
             <Header />
-            {/* <Content> */}
             {isLoading && <Loading />}
             <Switch>
               <Route exact path="/">
@@ -121,7 +120,6 @@ class App extends React.Component {
                 <Page404 />
               </Route>
             </Switch>
-            {/* </Content> */}
             <Footer />
           </Router>
         )}

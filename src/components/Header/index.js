@@ -12,7 +12,7 @@ import {
   NavCenter,
   NavRight,
   ListBody,
-  ListContent
+  ListContent,
 } from "./Header-css";
 import logo from "../../images/logo-black.25b6dfd5.svg";
 import Basic from "./Navbar/Basic";
@@ -27,7 +27,7 @@ import { connect } from "react-redux";
 export class Header extends Component {
   state = {
     sticky: false,
-    activeContent: null
+    activeContent: null,
   };
 
   componentDidMount() {
@@ -48,11 +48,11 @@ export class Header extends Component {
     const elementTop = this.getAbsPos(this.refs["layout"]).y;
     if (window.pageYOffset > elementTop) {
       this.setState({
-        sticky: true
+        sticky: true,
       });
     } else {
       this.setState({
-        sticky: false
+        sticky: false,
       });
     }
   };
@@ -69,27 +69,23 @@ export class Header extends Component {
 
   openContent = data => {
     this.setState({
-      activeContent: data.type
+      activeContent: data.type,
     });
   };
 
   closeContent = data => {
     this.setState({
-      activeContent: null
+      activeContent: null,
     });
   };
 
   openRegister = () => {
     //1. open window
-    window.openedPage = window.open(
-      "/react-hotel/#/opened",
-      "你好",
-      "resizable,height=550,width=430"
-    );
+    window.openedPage = window.open("/react-hotel/#/opened", "你好", "resizable,height=550,width=430");
     //2. 註冊一個變數，Opened頁面則使用此變數是否正確顯示，來阻止直接輸入網址而進入的情況
     const data = {
       name: "Ernie",
-      value: "爾尼"
+      value: "爾尼",
     };
     window.ernie = JSON.stringify(data);
     // 3. 在第一步驟的行為window.openedPage 就是另開視窗的名稱，可以使用window.openedPage.close()去執行關閉他
@@ -101,24 +97,24 @@ export class Header extends Component {
       {
         name: <Translation>{t => <>{t("header.brand")}</>}</Translation>,
         component: null,
-        type: "nomarl"
+        type: "nomarl",
       },
       {
         name: <Translation>{t => <>{t("header.collections")}</>}</Translation>,
         component: <Collection />,
-        type: "collection"
+        type: "collection",
       },
       {
         name: <Translation>{t => <>{t("header.jewellery")}</>}</Translation>,
         component: <Listing />,
-        type: "listing"
+        type: "listing",
       },
       {
         name: <Translation>{t => <>{t("header.services")}</>}</Translation>,
         component: <Basic />,
-        type: "basic"
+        type: "basic",
       },
-      { name: "MEMBER", component: null, type: "nomarl" }
+      { name: "MEMBER", component: null, type: "nomarl" },
     ];
     return (
       <Content>
@@ -174,7 +170,7 @@ export class Header extends Component {
 }
 
 const mapStateToProps = state => ({
-  language: state.app.language.language
+  language: state.app.language.language,
 });
 
 export default connect(mapStateToProps, null)(Header);

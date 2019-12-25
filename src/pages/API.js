@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import styled from "styled-components";
 import $ from "jquery";
+import i18next from "i18next";
+import { Translation } from "react-i18next";
 
 const Content = styled.div`
   min-height: 70vh;
@@ -69,11 +71,15 @@ class API extends Component {
     return (
       <Content>
         <div>
+          <Translation>{t => <>{t("barndStory.text")}</>}</Translation>
+        </div>
+        <div>
           <Button onClick={this.doPost}>GOOGLE APPS SCRIPT_POST</Button>
         </div>
         <div>
           <Button onClick={this.doRead}>GOOGLE APPS SCRIPT_READ</Button>
         </div>
+        <button onClick={this.change}>Change Language</button>
       </Content>
     );
   }

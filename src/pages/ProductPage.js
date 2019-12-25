@@ -12,6 +12,8 @@ import { changeLanguage } from "../store/actions";
 import BrandStory from "../components/BrandStory";
 import ProductTabsMobile from "../components/ProductTabsMobile";
 import { Media } from "react-breakpoints";
+import { Translation } from "react-i18next";
+import Footer from "../components/Footer";
 
 const Content = styled.div`
   max-width: 1420px;

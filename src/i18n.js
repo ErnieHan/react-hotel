@@ -6,14 +6,14 @@ import jp from "./locales/jp.json";
 
 const resources = {
   en: {
-    translation: en
+    translation: en,
   },
   tc: {
-    translation: tc
+    translation: tc,
   },
   jp: {
-    translation: jp
-  }
+    translation: jp,
+  },
 };
 
 i18n.use(initReactI18next).init({
@@ -21,7 +21,7 @@ i18n.use(initReactI18next).init({
   lng: "tc", //預設語言
   fallbackLng: "tc", //如果當前切換的語言沒有對應的翻譯則使用這個語言，
   interpolation: {
-    escapeValue: false
-  }
+    escapeValue: false,
+  },
 });
 export default i18n;

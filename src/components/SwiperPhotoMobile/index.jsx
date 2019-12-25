@@ -16,6 +16,8 @@ class SwiperPhotoMobile extends Component {
   }
   closeVideo = () => {
     this.props.startPlayingVideo(false);
+    const video = document.getElementById("product-video");
+    video.pause();
   };
   render() {
     const videoUrl = "//cdn.chowsangsang.com/dfs/ivCssModelImages/88377/35ed7129a652205f2fedb6454c615bfc.mp4";
@@ -31,14 +33,12 @@ class SwiperPhotoMobile extends Component {
           </div>
           <div className="swiper-mobile-pagination"></div>
         </div>
-        {this.props.playing && (
-          <VideoContent>
-            <CloseVideoButton onClick={this.closeVideo} />
-            <video id="product-video" key={videoUrl} loop={true} autoPlay={true}>
-              <source src={videoUrl} type="video/mp4" />
-            </video>
-          </VideoContent>
-        )}
+        <VideoContent active={this.props.playing}>
+          <CloseVideoButton onClick={this.closeVideo} />
+          <video id="product-video" key={videoUrl} loop={true} autoPlay={false}>
+            <source src={videoUrl} type="video/mp4" />
+          </video>
+        </VideoContent>
       </Content>
     );
   }

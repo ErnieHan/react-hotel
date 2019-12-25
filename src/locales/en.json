@@ -98,7 +98,8 @@
     "10": "New Product",
     "11": "Need Help?",
     "12": "7 days to return",
-    "13": "1 year warranty"
+    "13": "1 year warranty",
+    "14": "Testing"
   },
   "tabs": {
     "title01": "Information",
@@ -160,5 +161,20 @@
   "navbarBasic": {
     "storeexperience": "Shop Experience",
     "customerservice": "Customer Service"
+  },
+  "videobutton": {
+    "play": "Play Video"
+  },
+  "footer": {
+    "1": "Boutique Locator",
+    "2": "Return and Exchange",
+    "3": "Return and Exchange",
+    "4": "Contact Us",
+    "5": "Terms of Use",
+    "6": "Privacy Policy",
+    "7": "Cookie Policy",
+    "8": "Terms & Conditions",
+    "9": "© 2019 Chow Sang Sang Holdings International Ltd.",
+    "10": ""
   }
 }

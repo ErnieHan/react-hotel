@@ -40,6 +40,9 @@ export const VideoContent = styled.div`
   background: #fff;
   width: 100%;
   height: 100%;
+  opacity: ${props => (props.active ? "1" : "0")};
+  pointer-events: ${props => (props.active ? "" : "none")};
+  transition: all 350ms ease;
   video {
     width: 100%;
     height: 100%;
@@ -47,12 +50,12 @@ export const VideoContent = styled.div`
 `;
 
 export const CloseVideoButton = styled.div`
-  width: 25px;
-  height: 25px;
+  width: 20px;
+  height: 20px;
   background: url(${HOST_URL}/images/close.png) no-repeat center center;
   background-size: 100%;
   position: absolute;
-  top: 15px;
-  right: 15px;
+  top: 25px;
+  right: 8px;
   z-index: 10;
 `;
