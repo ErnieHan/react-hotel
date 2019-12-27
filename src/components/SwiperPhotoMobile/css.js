@@ -50,10 +50,10 @@ export const VideoContent = styled.div`
 `;
 
 export const CloseVideoButton = styled.div`
-  width: 20px;
-  height: 20px;
-  background: url(${HOST_URL}/images/close.png) no-repeat center center;
-  background-size: 100%;
+  width: 30px;
+  height: 30px;
+  background: #fff url(${HOST_URL}/images/close.png) no-repeat center center;
+  background-size: 60%;
   position: absolute;
   top: 25px;
   right: 8px;

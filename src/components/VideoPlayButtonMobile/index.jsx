@@ -14,11 +14,13 @@ class VideoPlayButtonMobile extends Component {
 
   render() {
     return (
-      <Content onClick={this.showVideo}>
-        <img src={`${HOST_URL}/images/play-button-small.png`} alt="" />
-        <span>
-          <Translation>{t => <>{t("videobutton.play")}</>}</Translation>
-        </span>
+      <Content>
+        <div onClick={this.showVideo}>
+          <img src={`${HOST_URL}/images/play-button-small.png`} alt="" />
+          <span>
+            <Translation>{t => <>{t("videobutton.play")}</>}</Translation>
+          </span>
+        </div>
       </Content>
     );
   }

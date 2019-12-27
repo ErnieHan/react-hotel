@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { Content, List } from "./css";
 import { Helmet } from "react-helmet";
 import { Translation } from "react-i18next";
+import { Link } from "react-router-dom";
 
 class index extends Component {
   render() {
@@ -20,7 +21,12 @@ class index extends Component {
                   },{
                     "@type": "ListItem",
                     "position": 2,
-                    "name": "戒指",
+                    "name": "Marco Bicego",
+                    "item": "https://tw.chowsangsang.com/tc/product/Jewellery"
+                  },{
+                    "@type": "ListItem",
+                    "position": 3,
+                    "name": "手鍊",
                     "item": "https://tw.chowsangsang.com/tc/product/Jewellery"
                   }]
                 }
@@ -28,11 +34,17 @@ class index extends Component {
         </Helmet>
         <Content>
           <List>
-            <Translation>{t => <>{t("breadcrumbs.home")}</>}</Translation>
+            <Link to="/">
+              <Translation>{t => <>{t("breadcrumbs.home")}</>}</Translation>
+            </Link>
           </List>
-          <List>Marco Bicego</List>
           <List>
-            <Translation>{t => <>{t("breadcrumbs.bracelet")}</>}</Translation>
+            <Link to="/collections/embrace">Marco Bicego</Link>
+          </List>
+          <List>
+            <Link to="/products/bracelet">
+              <Translation>{t => <>{t("breadcrumbs.bracelet")}</>}</Translation>
+            </Link>
           </List>
         </Content>
       </>

@@ -20,7 +20,7 @@ class SwiperPhotoMobile extends Component {
     video.pause();
   };
   render() {
-    const videoUrl = "//cdn.chowsangsang.com/dfs/ivCssModelImages/88377/35ed7129a652205f2fedb6454c615bfc.mp4";
+    const videoUrl = "https://cdn.chowsangsang.com/dfs/ivCssModelImages/90792/bf7f43b59a5b6b9b3b71f602c8c1e227.mp4";
     return (
       <Content>
         <div className="swiper-container swiper-mobile-container">

@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import Swiper from "swiper";
-import { Content, ArrowThumb } from "./SwiperPhoto-css";
-import { mainLists, thumbLists } from "./data";
+import { Content, ArrowThumb, PlayButton } from "./SwiperPhoto-css";
+import { mainLists, thumbLists, video } from "./data";
 
 export class SwiperPhoto extends Component {
   componentDidMount() {
@@ -30,6 +30,7 @@ export class SwiperPhoto extends Component {
       },
     });
   }
+
   render() {
     return (
       <Content>
@@ -49,6 +50,15 @@ export class SwiperPhoto extends Component {
                   key={index}
                 />
               ))}
+              <div
+                className="swiper-slide"
+                style={{
+                  background: `url(${video.img}) no-repeat center`,
+                  backgroundSize: "cover",
+                }}
+              >
+                <PlayButton />
+              </div>
             </div>
           </div>
           {/* 下箭頭 */}
@@ -62,6 +72,11 @@ export class SwiperPhoto extends Component {
                 <img data-src={img.url} className="lazyload" alt="" />
               </div>
             ))}
+            <div className="swiper-slide">
+              <video id="" key={video.url} loop={true} autoPlay={true}>
+                <source src={video.url} type="video/mp4" />
+              </video>
+            </div>
           </div>
         </div>
       </Content>

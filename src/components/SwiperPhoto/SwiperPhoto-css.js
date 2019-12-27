@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import arrowImage from "../../images/arrow-up-new.svg";
+import { HOST_URL } from "../../constants";
 
 export const Content = styled.div`
   display: flex;
@@ -14,6 +15,7 @@ export const Content = styled.div`
       border: 1px solid #d1d1d1;
       cursor: pointer;
       transition: border 350ms;
+      position: relative;
     }
     .swiper-slide-thumb-active {
       border: 1px solid #c69967;
@@ -25,6 +27,10 @@ export const Content = styled.div`
     text-align: center;
     img {
       height: 100%;
+    }
+    video {
+      width: 100%;
+      max-width: 472px;
     }
   }
   @media (max-width: 1200px) {
@@ -88,4 +94,15 @@ export const ArrowThumb = styled.div`
     outline: 0;
     transform: scaleY(-1);
   }
+`;
+
+export const PlayButton = styled.div`
+  width: 30px;
+  height: 30px;
+  background: url(${HOST_URL}/images/play-btn-web.png) no-repeat center center;
+  background-size: contain;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 `;

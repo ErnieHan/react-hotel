@@ -23,6 +23,7 @@ import MiniBag from "../MiniBag";
 import Favorite from "../Favorite";
 import { Translation } from "react-i18next";
 import { connect } from "react-redux";
+import MobileMenu from "../MobileMenu";
 
 export class Header extends Component {
   state = {
@@ -119,7 +120,10 @@ export class Header extends Component {
     return (
       <Content>
         <Top>
-          <Left>幣值 | 分店</Left>
+          <Left>
+            {/* <div>幣值 | 分店</div> */}
+            <MobileMenu />
+          </Left>
           <Center>
             <a href={`#/${this.props.language}/home`}>
               <img src={logo} alt="" />

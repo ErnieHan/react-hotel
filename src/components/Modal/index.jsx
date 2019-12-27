@@ -1,11 +1,5 @@
 import React, { Component } from "react";
-import {
-  ModalBackground,
-  ModalContent,
-  ModalHead,
-  ModalBody,
-  CloseButton
-} from "./Modal-css";
+import { ModalBackground, ModalContent, ModalHead, ModalBody, CloseButton } from "./Modal-css";
 import Swipe from "react-easy-swipe";
 
 class Modal extends Component {
@@ -17,7 +11,8 @@ class Modal extends Component {
   };
 
   onSwipeMove = (position, event) => {
-    if (position.x >= 45) {
+    console.log(position);
+    if (position.x > 80 && position.y < 10) {
       this.props.closeModal();
     }
   };
@@ -26,18 +21,17 @@ class Modal extends Component {
     const { title, body, closeModal, active, id } = this.props;
     return (
       <>
-        <ModalBackground
-          active={active}
-          id="modal-background"
-          onClick={this.backgroundClick}
-        >
+        <ModalBackground active={active} id="modal-background" onClick={this.backgroundClick}>
           <ModalContent active={active}>
-            <ModalHead>
-              {title}
-              <CloseButton onClick={closeModal} />
-            </ModalHead>
             <Swipe onSwipeMove={this.onSwipeMove}>
-              <ModalBody id={id}>{body}</ModalBody>
+              <ModalHead>
+                {title}
+                <CloseButton onClick={closeModal} />
+              </ModalHead>
+
+              <ModalBody id={id}>
+                <div>{body}</div>
+              </ModalBody>
             </Swipe>
           </ModalContent>
         </ModalBackground>

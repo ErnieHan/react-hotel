@@ -33,3 +33,8 @@ export const thumbLists = [
     url: "https://cdn.chowsangsang.com/dfs/ivCssModelImages/90792/96a68cb57d5e1f8d5c2ce0b0d07af18c.jpg",
   },
 ];
+
+export const video = {
+  img: "https://cdn.chowsangsang.com/dfs/ivCssModelImages/90792/4bb23eff3be62de0a692489fe6f03379.jpg",
+  url: "https://cdn.chowsangsang.com/dfs/ivCssModelImages/90792/bf7f43b59a5b6b9b3b71f602c8c1e227.mp4",
+};

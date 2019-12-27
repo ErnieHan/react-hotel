@@ -29,74 +29,28 @@ export const BannerImage = styled.div`
   }
 `;
 
-export const CollecttionContent = styled.div`
-  background: #f3f0e9;
-  margin-top: -100px;
-  @media (max-width: 767px) {
-    margin-top: -45px;
-  }
-`;
-
-export const Content = styled.div`
-  position: relative;
-  max-width: 1200px;
-  margin: 0 auto;
+export const CollectionCotent = styled.div`
+  width: 550px;
   background: #fff;
-  box-shadow: 0px 0px 12px 1px rgba(0, 0, 0, 0.1);
-  @media (max-width: 1300px) {
-    max-width: 95%;
-  }
-`;
-
-export const Text = styled.div`
-  text-align: center;
+  z-index: 2;
+  position: absolute;
+  top: 50%;
+  right: 10%;
+  transform: translateY(-50%);
   padding: 35px;
-  h4 {
-    font-weight: normal;
-    text-align: center;
-    font-size: 15px;
-  }
+  box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.1);
   img {
-    width: 570px;
-  }
-  @media (max-width: 767px) {
-    padding: 15px;
+    width: 100%;
   }
 `;
 
-export const GridContent = styled.div`
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(3, 1fr);
-  .two {
-    background: url(${HOST_URL}/images/img-designer-thumb.jpg) no-repeat center center;
-    background-size: cover;
-  }
-  .three {
-    background: url(${HOST_URL}/images/img-intro-prod-2.png) no-repeat center center;
-    background-size: 50%;
-  }
-  .four {
-    grid-column: 3/5;
-    background: rgb(211, 199, 138);
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    h1 {
-      font-weight: 400;
-      text-align: center;
-    }
-  }
+export const ImageContent = styled.div`
+  border-bottom: 1px solid #d1d1d1;
+  margin-bottom: 1rem;
 `;
 
-export const GridProductOne = styled.div`
-  grid-column: 1/3;
-  grid-row: 1/3;
-  div {
-    padding-bottom: 100%;
-    background: url(${HOST_URL}/images/img-intro-prod-1.png) no-repeat center center;
-    background-color: #f9f9f9;
-    background-size: contain;
-  }
+export const TextContent = styled.div`
+  text-align: center;
+  font-size: 18px;
+  line-height: 1.5;
 `;

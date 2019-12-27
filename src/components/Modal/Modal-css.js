@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import closeImage from "../../images/close.png";
 import arrowImage from "../../images/arrow-left.svg";
+import { HOST_URL } from "../../constants";
 
 export const ModalBackground = styled.div`
   position: fixed;
@@ -17,8 +18,7 @@ export const ModalBackground = styled.div`
   visibility: ${props => (props.active ? "visible" : "hidden")};
   transition: all 350ms ease-out;
   @media (max-width: 767px) {
-    transform: ${props =>
-      props.active ? "translateX(0)" : "translateX(100%)"};
+    transform: ${props => (props.active ? "translateX(0)" : "translateX(100%)")};
     opacity: 1;
   }
 `;
@@ -27,8 +27,7 @@ export const ModalContent = styled.div`
   width: 980px;
   background: #fff;
   padding: 30px;
-  transform: ${props =>
-    props.active ? "translateY(0px)" : "translateY(-50px)"};
+  transform: ${props => (props.active ? "translateY(0px)" : "translateY(-50px)")};
   transition: transform 350ms ease-out;
   @media (max-width: 1240px) {
     width: 780px;
@@ -42,6 +41,7 @@ export const ModalContent = styled.div`
     padding: 0px;
     transform: none;
     margin-right: 0;
+    position: relative;
   }
 `;
 
@@ -54,20 +54,30 @@ export const ModalHead = styled.div`
   position: relative;
   @media (max-width: 767px) {
     font-size: 1.25rem;
-    font-weight: bold;
     height: 60px;
     line-height: 60px;
     margin-bottom: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #fff;
+    z-index: 10;
+    border-bottom: 1px solid #f1f1f1;
   }
 `;
 
 export const ModalBody = styled.div`
   @media (max-width: 767px) {
-    padding: 15px;
-    height: calc(100% - 60px);
+    padding: 75px 15px 15px 15px;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
     overflow-y: auto;
     h1 {
-      font-size: 60px !important;
+      font-size: 72px;
     }
   }
 `;
@@ -92,7 +102,7 @@ export const CloseButton = styled.div`
     right: auto;
     top: 50%;
     transform: translateY(-50%);
-    background-image: url(${arrowImage});
+    background-image: url(${HOST_URL}/images/arrow-left.svg);
     opacity: 1;
     &:hover {
       opacity: 1;

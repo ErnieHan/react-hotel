@@ -29,9 +29,10 @@ export const Top = styled.div`
 export const Left = styled.div`
   width: 33.33%;
   order: 1;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
   @media (max-width: 767px) {
-    /* display: none; */
-    opacity: 0;
   }
 `;
 
@@ -39,6 +40,9 @@ export const Center = styled.div`
   width: 33.33%;
   text-align: center;
   order: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   img {
     height: 2rem;
   }
@@ -48,6 +52,9 @@ export const Right = styled.div`
   width: 33.33%;
   text-align: right;
   order: 3;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
   @media (max-width: 767px) {
     display: none;
     opacity: 0;
@@ -72,8 +79,7 @@ export const NavbarContent = styled.div`
   z-index: 99;
   padding: ${props => (props.sticky ? "0 40px" : "")};
   background: #fff;
-  border-bottom: ${props =>
-    props.sticky ? "1px solid #f1f1f1" : "1px solid transparent"};
+  border-bottom: ${props => (props.sticky ? "1px solid #f1f1f1" : "1px solid transparent")};
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -91,8 +97,7 @@ export const NavLeft = styled.div`
   opacity: ${props => (props.sticky ? "1" : "0")};
   img {
     height: 1.5rem;
-    transform: ${props =>
-      props.sticky ? "translateY(0)" : "translateY(-50px)"};
+    transform: ${props => (props.sticky ? "translateY(0)" : "translateY(-50px)")};
     transition: ${props => (props.sticky ? "all 350ms ease" : "")};
   }
 `;

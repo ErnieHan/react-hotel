@@ -16,6 +16,12 @@ export const List = styled.div`
   color: #8e8e8e;
   font-weight: bold;
   cursor: pointer;
+  &:hover {
+    color: tan;
+    &:after {
+      color: #8e8e8e;
+    }
+  }
   &::after {
     content: ">";
     margin: 0 5px;
