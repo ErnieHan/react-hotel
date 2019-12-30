@@ -12,8 +12,9 @@ export const Box = styled.div`
   &:nth-child(4n + 0) {
   }
   @media (max-width: 767px) {
-    width: 50%;
+    width: ${props => (props.scaleSize ? "50%" : "100%")};
     padding-right: 0;
+    transition: all 350ms ease;
   }
 `;
 

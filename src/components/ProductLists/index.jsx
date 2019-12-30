@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Cotent, Box, Image, Label, Sub } from "./css";
 import { HOST_URL } from "../../constants";
+import { Link } from "react-router-dom";
 
 class ProductLists extends Component {
   render() {
@@ -8,7 +9,7 @@ class ProductLists extends Component {
       {
         collectionName: "Timeless",
         productName: "「Boltenstern」 18K Gold Chrysoprase Bracelet",
-        price: "HK$3000.00",
+        price: "$169.00",
         image: `${HOST_URL}/images/list01.jpg`,
         image2: "",
         label: "新品",
@@ -16,7 +17,7 @@ class ProductLists extends Component {
       {
         collectionName: "Embance",
         productName: "「Boltenstern」 18K Gold Chrysoprase Bracelet",
-        price: "HK$9100.00",
+        price: "$179.00",
         image: `${HOST_URL}/images/list02.jpg`,
         image2: "",
         label: "母親節優惠",
@@ -24,15 +25,15 @@ class ProductLists extends Component {
       {
         collectionName: "Embance",
         productName: "「Boltenstern」 18K Gold Chrysoprase Bracelet",
-        price: "HK$9100.00",
+        price: "$179.00",
         image: `${HOST_URL}/images/list03.jpg`,
         image2: "",
-        label: "15% off",
+        label: "指定兩件9折",
       },
       {
         collectionName: "Embance",
         productName: "「Boltenstern」 18K Gold Chrysoprase Bracelet",
-        price: "HK$9100.00",
+        price: "$249.00",
         image: `${HOST_URL}/images/list04.jpg`,
         image2: "",
         label: "Motherday's Gift",
@@ -40,7 +41,7 @@ class ProductLists extends Component {
       {
         collectionName: "Embance",
         productName: "「Boltenstern」 18K Gold Chrysoprase Bracelet",
-        price: "HK$9100.00",
+        price: "$179.00",
         image: `${HOST_URL}/images/list05.jpg`,
         image2: "",
         label: "15% off",
@@ -48,7 +49,7 @@ class ProductLists extends Component {
       {
         collectionName: "Embance",
         productName: "「Boltenstern」 18K Gold Chrysoprase Bracelet",
-        price: "HK$9100.00",
+        price: "$129.00",
         image: `${HOST_URL}/images/list06.jpg`,
         image2: "",
         label: "15% off",
@@ -56,7 +57,7 @@ class ProductLists extends Component {
       {
         collectionName: "Embance",
         productName: "「Boltenstern」 18K Gold Chrysoprase Bracelet",
-        price: "HK$9100.00",
+        price: "$179.00",
         image: `${HOST_URL}/images/list07.jpg`,
         image2: "",
         label: null,
@@ -65,11 +66,14 @@ class ProductLists extends Component {
     return (
       <Cotent>
         {list.map((data, index) => (
-          <Box key={index}>
-            <Image image={data.image}>{data.label && <Label>{data.label}</Label>}</Image>
+          <Box key={index} scaleSize={this.props.scale === "50%"}>
+            <Link to={"/en/product"}>
+              <Image image={data.image}>{data.label && <Label>{data.label}</Label>}</Image>
+            </Link>
             <Sub>
               <h3>{data.collectionName}</h3>
               <p className="product-title">{data.productName}</p>
+
               <p className="product-price">{data.price}</p>
             </Sub>
           </Box>

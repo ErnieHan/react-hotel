@@ -39,7 +39,7 @@ class MobileMenu extends Component {
           <img src={`${HOST_URL}/images/menu.png`} alt="" />
         </Content>
         <Modal
-          title={"MENU"}
+          title={"MENU 目錄"}
           body={
             <>
               <Body />
@@ -55,6 +55,7 @@ class MobileMenu extends Component {
 }
 
 const Item = styled.div`
+  font-size: 15px;
   padding: 1.25rem;
   text-align: center;
   position: relative;
@@ -65,13 +66,14 @@ const Item = styled.div`
     height: 10px;
     top: 50%;
     right: 0;
-    background: url(/images/down-arrow.png) no-repeat center center;
+    background: url(${HOST_URL}/images/down-arrow.png) no-repeat center center;
     background-size: contain;
     transform: translateY(-50%) rotate(-90deg);
   }
 `;
 
 const Log = styled.div`
+  font-size: 15px;
   padding: 1rem;
   border: 1px solid #d9d9d9;
   text-align: center;
@@ -84,6 +86,7 @@ const Log = styled.div`
 `;
 
 const Log2 = styled.div`
+  font-size: 15px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -97,28 +100,37 @@ const Log2 = styled.div`
     &:first-child {
       border-right: 1px solid #d9d9d9;
     }
+    i {
+      margin-right: 5px;
+    }
   }
 `;
 
 const Body = () => {
   return (
     <>
-      <Item>ABOUT</Item>
-      <Item>COLLECTIONS</Item>
-      <Item>All JEWELLERY</Item>
-      <Item>EXPERIENCE</Item>
+      <Item>ABOUT 品牌概念</Item>
+      <Item>COLLECTIONS 產品系列</Item>
+      <Item>All JEWELLERY 所有珠寶</Item>
+      <Item>EXPERIENCE 購物體驗</Item>
       <Item>MEMBER</Item>
-      <Item>WEDDING</Item>
-      <Item>GIFTS</Item>
-      <Item>ROLEX</Item>
-      <Item>STAR SHOPPER</Item>
-      <Log>LOGIN / REGISTER</Log>
+      <Item>WEDDING 婚嫁</Item>
+      <Item>GIFTS 禮品</Item>
+      <Item>ROLEX 勞力士</Item>
+      <Item>STAR SHOPPER 周生生之友</Item>
+      <Log>登入 / 註冊</Log>
       <Log2>
-        <div>LOCATOR</div>
-        <div>GOLD PRICE</div>
+        <div>
+          <i className="fas fa-map-marker-alt"></i>
+          分店位置
+        </div>
+        <div>
+          <i className="fas fa-dollar-sign"></i>
+          金價資訊
+        </div>
       </Log2>
       <Log>
-        CONTACT US <span>+886 2789 6809</span>
+        聯絡我們 <span>+886 2789 6809</span>
       </Log>
       <Log>EN</Log>
     </>

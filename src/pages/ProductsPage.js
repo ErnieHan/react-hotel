@@ -3,6 +3,7 @@ import { Layout, Content } from "./ProductPage";
 import styled from "styled-components";
 import ProductLists from "../components/ProductLists";
 import FilterBarMobile from "../components/FilterBarMobile";
+import ScrollTopButton from "../components/ScrollTopButton";
 
 const Title = styled.div`
   h1 {
@@ -14,7 +15,7 @@ const Title = styled.div`
   @media (max-width: 767px) {
     margin-bottom: 1rem;
     h1 {
-      font-size: 18px;
+      font-size: 22px;
     }
   }
 `;
@@ -56,7 +57,35 @@ const FindProducts = styled.div`
   }
 `;
 
+const SacleSection = styled.div`
+  display: none;
+  @media (max-width: 767px) {
+    display: block;
+    margin-bottom: 1rem;
+    font-size: 2.25rem;
+  }
+`;
+
+const ScaleOption = styled.i`
+  cursor: pointer;
+  margin-right: 0.5rem;
+  color: ${props => (props.scaleSize ? "tan" : "#e9e8e7")};
+`;
+
 class ProductsPage extends Component {
+  state = {
+    scale: "50%",
+  };
+  scale50 = () => {
+    this.setState({
+      scale: "50%",
+    });
+  };
+  scale100 = () => {
+    this.setState({
+      scale: "100%",
+    });
+  };
   render() {
     return (
       <Layout>
@@ -76,10 +105,16 @@ class ProductsPage extends Component {
               排序：<Item>最新上架</Item>
             </div>
           </FilterBar>
+          <SacleSection>
+            <ScaleOption className="fas fa-th-large" scaleSize={this.state.scale === "50%"} onClick={this.scale50} />
+            <ScaleOption className="fas fa-square" scaleSize={this.state.scale === "100%"} onClick={this.scale100} />
+          </SacleSection>
+
           <FilterBarMobile />
-          <FindProducts>找到 59 件飾品</FindProducts>
-          <ProductLists />
+          <FindProducts>找到 7 件飾品</FindProducts>
+          <ProductLists scale={this.state.scale} />
         </Content>
+        <ScrollTopButton />
       </Layout>
     );
   }

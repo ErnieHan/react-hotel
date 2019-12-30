@@ -82,6 +82,27 @@ const Sticky = styled.div`
   }
 `;
 
+const Co = styled.div`
+  margin-bottom: 1rem;
+  padding-left: 1rem;
+  position: relative;
+  font-weight: bold;
+  &::before {
+    content: "";
+    position: absolute;
+    width: 0px;
+    height: 0px;
+    border-width: 4px;
+    border-style: solid;
+    border-color: #1a1a1a transparent transparent #1a1a1a;
+    top: 0;
+    left: 0;
+  }
+  span {
+    color: #c69667;
+  }
+`;
+
 class LR extends Component {
   state = {
     stickyOffsetTop: 0,
@@ -222,6 +243,7 @@ class LR extends Component {
               <LevelOption />
               {/* 購買數量 */}
               <Quantity />
+              <Co>本商品攜帶銷貨保單可至所有門市，享受免費刻字服務。</Co>
               {/* 加入購物袋按鈕 */}
               <AddToBag id="add-to-bag">
                 <Translation>{t => <>{t("product.8")}</>}</Translation>
