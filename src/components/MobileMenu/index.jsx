@@ -57,6 +57,18 @@ class MobileMenu extends Component {
 const Item = styled.div`
   padding: 1.25rem;
   text-align: center;
+  position: relative;
+  &::after {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    top: 50%;
+    right: 0;
+    background: url(/images/down-arrow.png) no-repeat center center;
+    background-size: contain;
+    transform: translateY(-50%) rotate(-90deg);
+  }
 `;
 
 const Log = styled.div`
@@ -76,6 +88,7 @@ const Log2 = styled.div`
   justify-content: center;
   align-items: center;
   border: 1px solid #d9d9d9;
+  margin-bottom: 1rem;
   div {
     color: #8e8e8e;
     width: 50%;
@@ -90,11 +103,6 @@ const Log2 = styled.div`
 const Body = () => {
   return (
     <>
-      <Log>LOGIN / REGISTER</Log>
-      <Log2>
-        <div>LOCATOR</div>
-        <div>GOLD PRICE</div>
-      </Log2>
       <Item>ABOUT</Item>
       <Item>COLLECTIONS</Item>
       <Item>All JEWELLERY</Item>
@@ -104,6 +112,11 @@ const Body = () => {
       <Item>GIFTS</Item>
       <Item>ROLEX</Item>
       <Item>STAR SHOPPER</Item>
+      <Log>LOGIN / REGISTER</Log>
+      <Log2>
+        <div>LOCATOR</div>
+        <div>GOLD PRICE</div>
+      </Log2>
       <Log>
         CONTACT US <span>+886 2789 6809</span>
       </Log>

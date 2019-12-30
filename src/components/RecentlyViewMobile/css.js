@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { HOST_URL } from "../../constants";
 
 export const Content = styled.div`
   margin-bottom: 3rem;
@@ -41,7 +42,7 @@ export const Body = styled.div`
 
   .custom-button-prev,
   .custom-button-next {
-    background-image: url("/images/arrow-left.svg");
+    background-image: url(${HOST_URL}/images/arrow-left.svg);
     background-position: center;
     background-repeat: no-repeat;
     outline: 0;

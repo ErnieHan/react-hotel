@@ -17,7 +17,7 @@ export const Tab = styled.div`
 export const Button = styled.button`
   width: 100%;
   padding: 1rem;
-  background: #fff;
+  background: ${props => (props.active ? "#fdfdfd" : "#fff")};
   position: relative;
   cursor: pointer;
   color: ${props => (props.active ? "#1a1a1a" : "#8e8e8e")};
@@ -38,8 +38,7 @@ export const Plus = styled.div`
   position: absolute;
   width: 30px;
   height: 100%;
-  background-image: ${props =>
-    props.active ? `url(${minusImage})` : `url(${addImage})`};
+  background-image: ${props => (props.active ? `url(${minusImage})` : `url(${addImage})`)};
   background-size: 10px auto;
   background-position: center;
   background-repeat: no-repeat;

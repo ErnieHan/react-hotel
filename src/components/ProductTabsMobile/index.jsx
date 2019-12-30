@@ -21,14 +21,27 @@ class ProductTabsMobile extends Component {
       this.setState({
         active: index,
       });
-      setTimeout(() => {
-        const offsetTop = $(`#product-tabs-mobile-${index}`).offset().top;
-        console.log(offsetTop, "offsetTop");
-        // window.scrollTo({
-        //   top: offsetTop - 100,
-        //   behavior: "smooth"
-        // });
-      }, 800);
+      const offsetTop = $(`#product-tabs-mobile-${index}`).offset().top;
+      if (index - 1 >= 0) {
+        if (this.state.active !== null && this.state.active < index) {
+          // 前一個元素
+          const b = document.getElementById(`product-tabs-mobile-content-${this.state.active}`);
+          window.scrollTo({
+            top: offsetTop - b.offsetHeight - 100,
+            behavior: "smooth",
+          });
+        } else {
+          window.scrollTo({
+            top: offsetTop - 100,
+            behavior: "smooth",
+          });
+        }
+      } else {
+        window.scrollTo({
+          top: offsetTop - 100,
+          behavior: "smooth",
+        });
+      }
     }
   };
   render() {
@@ -45,7 +58,7 @@ class ProductTabsMobile extends Component {
       // {
       //   name: <Translation>{t => <>{t("barndStory.explore")}</>}</Translation>,
       //   body: <BrandStoryContent />,
-      // }
+      // },
     ];
     // const tabBodyLists = [
     //   { body: <Information /> },
@@ -59,7 +72,7 @@ class ProductTabsMobile extends Component {
               {data.name}
               <Plus active={active === index} />
             </Button>
-            <TabLayout active={active === index}>
+            <TabLayout active={active === index} id={`product-tabs-mobile-content-${index}`}>
               <TabContent>{data.body}</TabContent>
             </TabLayout>
           </Tab>
