@@ -1,12 +1,12 @@
 {
   "files": {
-    "main.css": "/react-hotel/static/css/main.35e21c31.chunk.css",
-    "main.js": "/react-hotel/static/js/main.735f4c6a.chunk.js",
+    "main.css": "/react-hotel/static/css/main.8bac5a91.chunk.css",
+    "main.js": "/react-hotel/static/js/main.3d99286d.chunk.js",
     "runtime-main.js": "/react-hotel/static/js/runtime-main.1553406b.js",
-    "static/js/2.c5d7060c.chunk.js": "/react-hotel/static/js/2.c5d7060c.chunk.js",
+    "static/js/2.1e5d9143.chunk.js": "/react-hotel/static/js/2.1e5d9143.chunk.js",
     "static/js/3.ae3b880b.chunk.js": "/react-hotel/static/js/3.ae3b880b.chunk.js",
     "index.html": "/react-hotel/index.html",
-    "precache-manifest.4903652c531f6c95c03733096610144a.js": "/react-hotel/precache-manifest.4903652c531f6c95c03733096610144a.js",
+    "precache-manifest.1c78fdda57afe6484257f59bbdc7236a.js": "/react-hotel/precache-manifest.1c78fdda57afe6484257f59bbdc7236a.js",
     "service-worker.js": "/react-hotel/service-worker.js",
     "static/media/arrow-left.svg": "/react-hotel/static/media/arrow-left.72db753e.svg",
     "static/media/arrow-up-new.svg": "/react-hotel/static/media/arrow-up-new.d9720405.svg",
@@ -30,8 +30,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.1553406b.js",
-    "static/js/2.c5d7060c.chunk.js",
-    "static/css/main.35e21c31.chunk.css",
-    "static/js/main.735f4c6a.chunk.js"
+    "static/js/2.1e5d9143.chunk.js",
+    "static/css/main.8bac5a91.chunk.css",
+    "static/js/main.3d99286d.chunk.js"
   ]
 }
