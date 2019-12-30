@@ -21,7 +21,7 @@ class index extends Component {
                   },{
                     "@type": "ListItem",
                     "position": 2,
-                    "name": "Marco Bicego",
+                    "name": "Embrace",
                     "item": "https://tw.chowsangsang.com/tc/product/Jewellery"
                   },{
                     "@type": "ListItem",
@@ -39,7 +39,7 @@ class index extends Component {
             </Link>
           </List>
           <List>
-            <Link to="/collections/embrace">Marco Bicego</Link>
+            <Link to="/collections/embrace">Embrace</Link>
           </List>
           <List>
             <Link to="/products/bracelet">

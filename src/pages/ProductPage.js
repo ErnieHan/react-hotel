@@ -14,12 +14,12 @@ import ProductTabsMobile from "../components/ProductTabsMobile";
 import { Media } from "react-breakpoints";
 import { Translation } from "react-i18next";
 
-const Content = styled.div`
+export const Content = styled.div`
   max-width: 1420px;
   margin: 0 auto;
 `;
 
-const Layout = styled.div`
+export const Layout = styled.div`
   padding: 0 40px;
   @media screen and (max-width: 1023px) {
     padding: 0 15px;

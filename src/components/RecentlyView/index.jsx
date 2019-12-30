@@ -49,15 +49,13 @@ export class RecentlyView extends Component {
                 </div>
                 <div className="swiper-slide">
                   <div className="recent-product-content">
-                    <div className="recent-product-content">
-                      <div className="recent-product-img">
-                        <img src={`${HOST_URL}/images/recent03.png`} alt="" />
-                      </div>
-                      <div className="recent-product-desc">
-                        <div className="collection-name">Symphony</div>
-                        <div className="product-name">18K Red Gold Lapis Lazuli Double-sided Ring</div>
-                        <div className="price">HK$13000.00</div>
-                      </div>
+                    <div className="recent-product-img">
+                      <img src={`${HOST_URL}/images/recent03.png`} alt="" />
+                    </div>
+                    <div className="recent-product-desc">
+                      <div className="collection-name">Symphony</div>
+                      <div className="product-name">18K Red Gold Lapis Lazuli Double-sided Ring</div>
+                      <div className="price">HK$13000.00</div>
                     </div>
                   </div>
                 </div>

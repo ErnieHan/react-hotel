@@ -10,7 +10,7 @@ export const Title = styled.p`
 
 export const FlexBody = styled.div`
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   margin-bottom: 1rem;
 `;
 

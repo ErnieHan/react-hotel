@@ -17,11 +17,11 @@ class Footer extends Component {
   render() {
     return (
       <Content>
-        <Media>
+        {/* <Media>
           {({ breakpoints, currentBreakpoint }) =>
             breakpoints[currentBreakpoint] > 767 ? <RecentlyView /> : <RecentlyViewMobile />
           }
-        </Media>
+        </Media> */}
         <Body>
           <img data-src={`${HOST_URL}/images/footer-icon.svg`} className="lazyload" alt="" />
           <Row1>

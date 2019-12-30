@@ -28,6 +28,7 @@ import TicketPage from "./pages/TicketPage";
 import ListPage from "./pages/ListPage";
 import GoogleAPIPage from "./pages/GoogleAPIPage";
 import API from "./pages/API";
+import ProductsPage from "./pages/ProductsPage";
 
 const Content = styled.div`
   padding: 0 40px;
@@ -97,6 +98,9 @@ class App extends React.Component {
               </Route>
               <Route path="/my-account">
                 <MyAccountPage />
+              </Route>
+              <Route path="/products">
+                <ProductsPage />
               </Route>
               <Route path="/:lang/product">
                 <ProductPage />

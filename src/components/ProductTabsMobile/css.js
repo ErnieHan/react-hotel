@@ -17,7 +17,7 @@ export const Tab = styled.div`
 export const Button = styled.button`
   width: 100%;
   padding: 1rem;
-  background: ${props => (props.active ? "#fdfdfd" : "#fff")};
+  background: #fff;
   position: relative;
   cursor: pointer;
   color: ${props => (props.active ? "#1a1a1a" : "#8e8e8e")};
