@@ -15,6 +15,7 @@ class SwiperPhotoMobile extends Component {
     });
   }
   closeVideo = () => {
+    console.log("aaa");
     this.props.startPlayingVideo(false);
     const video = document.getElementById("product-video");
     video.currentTime = 0;
