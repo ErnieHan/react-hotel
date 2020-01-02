@@ -1,12 +1,12 @@
 {
   "files": {
     "main.css": "/react-hotel/static/css/main.f8b84ab9.chunk.css",
-    "main.js": "/react-hotel/static/js/main.acbedcbc.chunk.js",
+    "main.js": "/react-hotel/static/js/main.928db3df.chunk.js",
     "runtime-main.js": "/react-hotel/static/js/runtime-main.11462019.js",
     "static/js/2.1874b999.chunk.js": "/react-hotel/static/js/2.1874b999.chunk.js",
     "static/js/3.4d5cbd27.chunk.js": "/react-hotel/static/js/3.4d5cbd27.chunk.js",
     "index.html": "/react-hotel/index.html",
-    "precache-manifest.36d7134bac93cc7a8200577ab67dace8.js": "/react-hotel/precache-manifest.36d7134bac93cc7a8200577ab67dace8.js",
+    "precache-manifest.634cc0cc8ab4a140b00dfeae45b160f1.js": "/react-hotel/precache-manifest.634cc0cc8ab4a140b00dfeae45b160f1.js",
     "service-worker.js": "/react-hotel/service-worker.js",
     "static/media/arrow-up-new.svg": "/react-hotel/static/media/arrow-up-new.d9720405.svg",
     "static/media/close.png": "/react-hotel/static/media/close.4618bc82.png",
@@ -31,6 +31,6 @@
     "static/js/runtime-main.11462019.js",
     "static/js/2.1874b999.chunk.js",
     "static/css/main.f8b84ab9.chunk.css",
-    "static/js/main.acbedcbc.chunk.js"
+    "static/js/main.928db3df.chunk.js"
   ]
 }
