@@ -17,9 +17,7 @@ export class FilterBarMobile extends Component {
   };
   toggleFilter = () => {
     if (this.state.active === "filter") {
-      this.setState({
-        active: null,
-      });
+      this.closeFilterBar();
     } else {
       this.setState({
         active: "filter",
@@ -28,14 +26,17 @@ export class FilterBarMobile extends Component {
   };
   toggleSort = () => {
     if (this.state.active === "sort") {
-      this.setState({
-        active: null,
-      });
+      this.closeFilterBar();
     } else {
       this.setState({
         active: "sort",
       });
     }
+  };
+  closeFilterBar = () => {
+    this.setState({
+      active: null,
+    });
   };
   render() {
     return (
@@ -56,7 +57,7 @@ export class FilterBarMobile extends Component {
             <Option>Designers & Collections 設計師 & 系列</Option>
             <HadSelection>
               <div>
-                <CancelAllButton>Cancel All 取消</CancelAllButton>
+                <CancelAllButton onClick={this.closeFilterBar}>Cancel All 取消</CancelAllButton>
               </div>
               <div>
                 <SelectedOption>Bangles & Bracelets</SelectedOption>
@@ -66,7 +67,7 @@ export class FilterBarMobile extends Component {
                 <SelectedOption>Earrings</SelectedOption>
               </div>
             </HadSelection>
-            <SubmitButton>Apply All 套用全部</SubmitButton>
+            <SubmitButton onClick={this.closeFilterBar}>Apply All 套用全部</SubmitButton>
           </ModalContent>
         </Modal>
         <Modal active={this.state.active === "sort"}>

@@ -6,15 +6,8 @@ import { withRouter } from "react-router-dom";
 
 class LanguageSwitch extends Component {
   state = {
-    active: false
+    active: false,
   };
-
-  componentDidMount() {
-    const url = window.location.hash;
-    const pattern = "en";
-    const replace = "jp";
-    let urlChange = url.replace(new RegExp(pattern), replace);
-  }
 
   changeEN = () => {
     const { language } = this.props;
@@ -35,13 +28,13 @@ class LanguageSwitch extends Component {
 
   openLanguage = () => {
     this.setState({
-      active: true
+      active: true,
     });
   };
 
   closeLanguage = () => {
     this.setState({
-      active: false
+      active: false,
     });
   };
 
@@ -49,10 +42,7 @@ class LanguageSwitch extends Component {
     const { language } = this.props;
     const { active } = this.state;
     return (
-      <Content
-        onMouseOver={this.openLanguage}
-        onMouseLeave={this.closeLanguage}
-      >
+      <Content onMouseOver={this.openLanguage} onMouseLeave={this.closeLanguage}>
         {language === "tc" ? "繁" : language === "jp" ? "日" : "EN"}
         <SelectContent active={active}>
           <p onClick={language !== "en" ? this.changeEN : null}>EN</p>
@@ -65,7 +55,7 @@ class LanguageSwitch extends Component {
 }
 
 const mapStateToProps = state => ({
-  language: state.app.language.language
+  language: state.app.language.language,
 });
 
 const mapDispatchToProps = dispatch => {
@@ -75,7 +65,7 @@ const mapDispatchToProps = dispatch => {
     },
     showLoading: bool => {
       dispatch(showLoading(bool));
-    }
+    },
   };
 };
 

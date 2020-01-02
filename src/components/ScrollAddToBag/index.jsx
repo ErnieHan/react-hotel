@@ -124,6 +124,7 @@ export class index extends Component {
             </AddToBag>
           </div>
         </Content>
+        <ScrollTopButton />
         <ScrollTopButton active={this.state.active} onClick={this.scrollToTop}></ScrollTopButton>
       </>
     );

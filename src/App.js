@@ -3,9 +3,6 @@ import PropTypes from "prop-types";
 // Redux
 import { connect } from "react-redux";
 import { login, fetchMember, changeLanguage } from "./store/actions";
-// i18n
-// import { Translation } from "react-i18next";
-// import i18n from "i18next";
 // Router
 import { HashRouter as Router, Switch, Route } from "react-router-dom";
 // Pages
@@ -18,10 +15,6 @@ import ProductPage from "./pages/ProductPage";
 // Components
 import Header from "./components/Header";
 import Footer from "./components/Footer";
-import styled from "styled-components";
-// import i18n from "i18next";
-// import getCookie from "./function/getCookie";
-// import writeCookie from "./function/writeCookie";
 import Loading from "./components/Loading";
 import OpenedPage from "./pages/OpenedPage";
 import TicketPage from "./pages/TicketPage";
@@ -29,57 +22,36 @@ import ListPage from "./pages/ListPage";
 import GoogleAPIPage from "./pages/GoogleAPIPage";
 import API from "./pages/API";
 import ProductsPage from "./pages/ProductsPage";
-
-const Content = styled.div`
-  padding: 0 40px;
-  @media screen and (max-width: 1023px) {
-    padding: 0 15px;
-  }
-  @media screen and (max-width: 767px) {
-    padding: 60px 15px 0px 15px;
-  }
-`;
+import getCookie from "./function/getCookie";
+import RenderApp from "./pages/RenderApp";
+import writeCookie from "./function/writeCookie";
 
 class App extends React.Component {
+  state = {
+    renderApp: false
+  };
+
   async componentDidMount() {
     // 加載滑動效果
     if (!("scrollBehavior" in document.documentElement.style)) {
       await import("scroll-behavior-polyfill");
     }
-
-    const getUserId = localStorage.getItem("user");
-    if (getUserId) {
-      // 瀏覽器中有userID 執行登入
-      this.props.fetchMember(getUserId);
+    const renderApp = getCookie("renderApp");
+    if (renderApp === "true") {
+      this.setState({
+        renderApp: true
+      });
     } else {
-      // 沒有則 執行未登入
-      this.props.login(false);
+      writeCookie("renderApp", "false");
     }
-    // const cookie_language = getCookie("language");
-    // const { changeLanguage } = this.props;
-    // if (!cookie_language) {
-    //   // 初始時先預設語系為中文
-    //   writeCookie("language", "tc");
-    // } else {
-    //   // 如果Cookie有語系的話 則判斷要切換為哪一個語系
-    //   if (cookie_language === "tc") {
-    //     i18n.changeLanguage("tc");
-    //     changeLanguage("tc");
-    //   } else if (cookie_language === "jp") {
-    //     i18n.changeLanguage("jp");
-    //     changeLanguage("jp");
-    //   } else {
-    //     i18n.changeLanguage("en");
-    //     changeLanguage("en");
-    //   }
-    // }
   }
 
   render() {
-    const { getLoginSuccessfully, isLoading } = this.props;
+    const { isLoading } = this.props;
+    const { renderApp } = this.state;
     return (
       <>
-        {getLoginSuccessfully && (
+        {renderApp ? (
           <Router>
             <Header />
             {isLoading && <Loading />}
@@ -126,6 +98,8 @@ class App extends React.Component {
             </Switch>
             <Footer />
           </Router>
+        ) : (
+          <RenderApp />
         )}
       </>
     );
@@ -133,13 +107,13 @@ class App extends React.Component {
 }
 
 App.propTypes = {
-  setApp: PropTypes.func,
+  setApp: PropTypes.func
 };
 
 const mapStateToProps = state => ({
   isLogin: state.app.login.isLogin,
   getLoginSuccessfully: state.app.login.getLoginSuccessfully,
-  isLoading: state.app.loading.isLoading,
+  isLoading: state.app.loading.isLoading
 });
 
 const mapDispatchToProps = dispatch => {
@@ -152,7 +126,7 @@ const mapDispatchToProps = dispatch => {
     },
     changeLanguage: language => {
       dispatch(changeLanguage(language));
-    },
+    }
   };
 };
 

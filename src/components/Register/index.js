@@ -1,13 +1,5 @@
 import React, { Component } from "react";
-import {
-  Content,
-  Title,
-  SubTitle,
-  Grid,
-  SignupButton,
-  WarningText,
-  SuccessfullyText
-} from "./Register-css";
+import { Content, Title, SubTitle, Grid, SignupButton, WarningText, SuccessfullyText } from "./Register-css";
 import base64 from "base-64";
 import { Translation } from "react-i18next";
 import { withTranslation } from "react-i18next";
@@ -22,12 +14,12 @@ class Register extends Component {
       gender: "female",
       phoneNumber: "",
       mail: "",
-      password: ""
+      password: "",
     },
     startLoading: false,
     warning: false,
     success: false,
-    sec: 3
+    sec: 3,
   };
 
   counting;
@@ -51,10 +43,10 @@ class Register extends Component {
     const { name, value } = e.target;
     const editedData = {
       ...this.state.memberData,
-      [name]: value
+      [name]: value,
     };
     this.setState({
-      memberData: editedData
+      memberData: editedData,
     });
   };
 
@@ -63,16 +55,10 @@ class Register extends Component {
     const checked = list.every(data => this.state.memberData[data] !== "");
     this.setState({
       startLoading: true,
-      warning: false
+      warning: false,
     });
     if (checked) {
-      const {
-        name,
-        gender,
-        password,
-        mail,
-        phoneNumber
-      } = this.state.memberData;
+      const { name, gender, password, mail, phoneNumber } = this.state.memberData;
       const securityPassword = base64.encode(password);
       const date = new Date();
       const id = date.getTime();
@@ -83,15 +69,15 @@ class Register extends Component {
         await fetch(newData, {
           credentials: "include",
           headers: {
-            "content-type": "application/json"
+            "content-type": "application/json",
           },
           method: "GET",
-          mode: "no-cors"
+          mode: "no-cors",
         }).then(() => {
           // 註冊成功
           this.setState({
             success: true,
-            startLoading: false
+            startLoading: false,
           });
           // 倒數三秒
           this.countingStart();
@@ -108,7 +94,7 @@ class Register extends Component {
     } else {
       this.setState({
         warning: true,
-        startLoading: false
+        startLoading: false,
       });
     }
   };
@@ -117,7 +103,7 @@ class Register extends Component {
     // 每經過一秒便減去一秒
     this.counting = setInterval(() => {
       this.setState({
-        sec: this.state.sec - 1
+        sec: this.state.sec - 1,
       });
     }, 1000);
   };
@@ -127,7 +113,7 @@ class Register extends Component {
   };
 
   render() {
-    const { gender, name, phoneNumber, password, mail } = this.state.memberData;
+    const { name, phoneNumber, password, mail } = this.state.memberData;
     const { t } = this.props;
     const { startLoading, warning, success } = this.state;
     return (
@@ -141,9 +127,7 @@ class Register extends Component {
         <form onChange={this.handleChangeMemberData}>
           <Grid>
             <div>
-              <Translation>
-                {t => <>{t("signUpPage.salutation")}</>}
-              </Translation>
+              <Translation>{t => <>{t("signUpPage.salutation")}</>}</Translation>
             </div>
             {/* <select name="gender" value={gender}>
               <option value="female">{t("signUpPage.miss")}</option>
@@ -153,11 +137,7 @@ class Register extends Component {
             <div>
               <Translation>{t => <>{t("signUpPage.name")}</>}</Translation>
             </div>
-            <input
-              placeholder={t("signUpPage.profile")}
-              name="name"
-              value={name}
-            />
+            <input placeholder={t("signUpPage.profile")} name="name" value={name} />
             <div>
               <Translation>{t => <>{t("signUpPage.mobile")}</>}</Translation>
             </div>
@@ -169,12 +149,7 @@ class Register extends Component {
             <div>
               <Translation>{t => <>{t("signUpPage.password")}</>}</Translation>
             </div>
-            <input
-              placeholder={t("signUpPage.format")}
-              name="password"
-              type="password"
-              value={password}
-            ></input>
+            <input placeholder={t("signUpPage.format")} name="password" type="password" value={password}></input>
           </Grid>
         </form>
         {success ? (
@@ -185,11 +160,7 @@ class Register extends Component {
         ) : null}
         {warning ? <WarningText>請填寫完整的資訊！</WarningText> : null}
         <SignupButton onClick={this.submitMemberData}>
-          {startLoading ? (
-            <CircleLoading />
-          ) : (
-            <Translation>{t => <>{t("signUpPage.submit")}</>}</Translation>
-          )}
+          {startLoading ? <CircleLoading /> : <Translation>{t => <>{t("signUpPage.submit")}</>}</Translation>}
         </SignupButton>
       </Content>
     );

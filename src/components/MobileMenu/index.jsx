@@ -55,7 +55,6 @@ class MobileMenu extends Component {
 }
 
 const Item = styled.div`
-  font-size: 15px;
   padding: 1.25rem;
   text-align: center;
   position: relative;
@@ -73,7 +72,6 @@ const Item = styled.div`
 `;
 
 const Log = styled.div`
-  font-size: 15px;
   padding: 1rem;
   border: 1px solid #d9d9d9;
   text-align: center;
@@ -86,7 +84,6 @@ const Log = styled.div`
 `;
 
 const Log2 = styled.div`
-  font-size: 15px;
   display: flex;
   justify-content: center;
   align-items: center;

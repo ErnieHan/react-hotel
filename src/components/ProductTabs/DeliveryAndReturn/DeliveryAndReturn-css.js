@@ -52,3 +52,10 @@ export const List = styled.li`
     transform: translateY(-50%);
   }
 `;
+
+export const SelectContent = styled.div`
+  margin-top: 1rem;
+  @media (max-width: 767px) {
+    margin-left: -40px;
+  }
+`;

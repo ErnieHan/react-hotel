@@ -76,6 +76,9 @@ class ProductsPage extends Component {
   state = {
     scale: "50%",
   };
+  componentDidMount() {
+    
+  }
   scale50 = () => {
     this.setState({
       scale: "50%",

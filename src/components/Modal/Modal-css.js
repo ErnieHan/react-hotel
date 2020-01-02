@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import closeImage from "../../images/close.png";
-import arrowImage from "../../images/arrow-left.svg";
 import { HOST_URL } from "../../constants";
 
 export const ModalBackground = styled.div`

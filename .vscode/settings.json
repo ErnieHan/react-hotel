@@ -6,7 +6,6 @@
   "javascript.updateImportsOnFileMove.enabled": "always",
   "prettier.singleQuote": false,
   "prettier.semi": true,
-  "prettier.printWidth": 120,
-  "prettier.trailingComma": "es5",
+  "prettier.trailingComma": "none",
   "prettier.tabWidth": 2
 }

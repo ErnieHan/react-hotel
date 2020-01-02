@@ -53,14 +53,14 @@ export const SubmitButton = styled.button`
 `;
 
 export const Option = styled.div`
-  margin-bottom: 1rem;
-  font-size: 15px;
+  margin-bottom: 0.5rem;
+  font-size: 14px;
   cursor: pointer;
 `;
 
 export const HadSelection = styled.div`
   border-top: 1px solid #d1d1d1;
-  padding: 1rem 0;
+  padding-top: 0.5rem;
 `;
 
 export const CancelAllButton = styled.button`
@@ -72,8 +72,10 @@ export const CancelAllButton = styled.button`
 export const SelectedOption = styled.div`
   display: inline-block;
   margin-right: 1rem;
+  margin-bottom: 0.5rem;
   padding-left: 1.25rem;
   position: relative;
+  cursor: pointer;
   &::before {
     content: "";
     position: absolute;

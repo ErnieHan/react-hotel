@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Content, Title, FlexBody, Icon, Text, Section, List } from "./DeliveryAndReturn-css";
+import { Content, Title, FlexBody, Icon, Text, Section, List, SelectContent } from "./DeliveryAndReturn-css";
 import storeImage from "../../../images/icon-instore.5fcffbbd.svg";
 import carImage from "../../../images/icon-local-delivery.541c81ff.svg";
 import flatImage from "../../../images/icon-global-delivery.6306a5c7.svg";
@@ -51,9 +51,9 @@ class DeliveryAndReturn extends Component {
               </b>
               <br />
               <Translation>{t => <>{t("tabs.2-13")}</>}</Translation>
-              <div style={{ marginTop: "1rem" }}>
+              <SelectContent>
                 <Select />
-              </div>
+              </SelectContent>
             </Text>
           </FlexBody>
         </Section>

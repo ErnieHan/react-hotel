@@ -1,25 +1,15 @@
 import React, { Component } from "react";
-import {
-  Content,
-  Table,
-  Question,
-  NextButton,
-  DisableButton,
-  Answer
-} from "./css";
+import { Content, Table, Question, NextButton, DisableButton, Answer } from "./css";
 
-let opitions1; // 問題一
-let opitions2; // 問題二
-let answer; // 正確解答
 let apple;
 
 class index extends Component {
   state = {
-    answer: ""
+    answer: "",
   };
   hanldeChange = e => {
     this.setState({
-      answer: e.target.value
+      answer: e.target.value,
     });
   };
   checkAnswer = () => {
@@ -113,11 +103,7 @@ class index extends Component {
             (4) 皮皮剉
           </div>
           <Answer>
-            <input
-              type="text"
-              placeholder="請在此輸入答案"
-              onChange={this.hanldeChange}
-            />
+            <input type="text" placeholder="請在此輸入答案" onChange={this.hanldeChange} />
           </Answer>
         </Question>
         {this.state.answer !== "" ? (

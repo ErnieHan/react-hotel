@@ -79,7 +79,8 @@ export const NavbarContent = styled.div`
   z-index: 99;
   padding: ${props => (props.sticky ? "0 40px" : "")};
   background: #fff;
-  border-bottom: ${props => (props.sticky ? "1px solid #f1f1f1" : "1px solid transparent")};
+  border-bottom: ${props =>
+    props.sticky ? "1px solid #f1f1f1" : "1px solid transparent"};
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -97,7 +98,8 @@ export const NavLeft = styled.div`
   opacity: ${props => (props.sticky ? "1" : "0")};
   img {
     height: 1.5rem;
-    transform: ${props => (props.sticky ? "translateY(0)" : "translateY(-50px)")};
+    transform: ${props =>
+      props.sticky ? "translateY(0)" : "translateY(-50px)"};
     transition: ${props => (props.sticky ? "all 350ms ease" : "")};
   }
 `;
@@ -127,6 +129,7 @@ export const NavItem = styled.div`
   align-items: center;
   position: relative;
   cursor: pointer;
+  font-size: 15px;
   &:hover {
     &::after {
       opacity: 1;
