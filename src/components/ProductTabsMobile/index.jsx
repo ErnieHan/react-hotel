@@ -10,6 +10,9 @@ class ProductTabsMobile extends Component {
   state = {
     active: 0
   };
+  componentDidMount() {
+    console.log("test");
+  }
   handleClick = index => {
     if (this.state.active === index) {
       // 全部關閉
@@ -21,28 +24,6 @@ class ProductTabsMobile extends Component {
       this.setState({
         active: index
       });
-      const offsetTop = $(`#product-tabs-mobile-${index}`).offset().top;
-      if (index - 1 >= 0) {
-        if (this.state.active !== null && this.state.active < index) {
-          // 前一個元素
-          const b = document.getElementById(
-            `product-tabs-mobile-content-${this.state.active}`
-          );
-          window.scrollTo({
-            top: offsetTop - b.offsetHeight - 100,
-            behavior: "smooth"
-          });
-        } else {
-          window.scrollTo({
-            top: offsetTop - 100,
-            behavior: "smooth"
-          });
-        }
-      } else {
-        window.scrollTo({
-          top: offsetTop - 100
-        });
-      }
     }
   };
   render() {
@@ -66,7 +47,7 @@ class ProductTabsMobile extends Component {
     //   { body: <DeliveryAndReturn /> }
     // ];
     return (
-      <Content>
+      <Content id="product-tabs-mobile">
         {tabLists.map((data, index) => (
           <Tab key={index} id={`product-tabs-mobile-${index}`}>
             <Button

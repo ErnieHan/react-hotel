@@ -17,11 +17,23 @@ import ProductTabs from "../ProductTabs";
 import { Translation } from "react-i18next";
 import i18next from "i18next";
 import SwiperPhotoMobile from "../SwiperPhotoMobile";
-// import SoldoutButton from "../SoldoutButton";
+import SoldoutButton from "../SoldoutButton";
 import Quantity from "../Quantity";
 import LevelOption from "../LevelOption";
 import VideoPlayButtonMobile from "../VideoPlayButtonMobile";
 import { Media } from "react-breakpoints";
+import EventText from "../EventText";
+import Modal from "../Modal";
+import LockProduct from "../LockProduct";
+import {
+  disableBodyScroll,
+  enableBodyScroll,
+  clearAllBodyScrollLocks
+} from "body-scroll-lock";
+// Redux
+import { connect } from "react-redux";
+import { showLockProductModal } from "../../store/actions";
+import { getParams } from "../../function/getParams";
 
 const Content = styled.div`
   display: flex;
@@ -95,6 +107,8 @@ const Co = styled.div`
   }
   span {
     color: #c69667;
+    border-bottom: 1px solid #c69667;
+    cursor: pointer;
   }
 `;
 
@@ -106,6 +120,7 @@ class LR extends Component {
   };
 
   componentDidMount() {
+    getParams();
     //
     window.addEventListener("message", this.receiveMessage);
     const maxWidth = document.body.offsetWidth;
@@ -182,6 +197,12 @@ class LR extends Component {
     }
   };
 
+  closeLockProductModal = () => {
+    const targetElement = document.querySelector("#lock-product-modal");
+    this.props.showLockProductModal(false);
+    enableBodyScroll(targetElement);
+  };
+
   render() {
     const lang = i18next.language;
     return (
@@ -237,17 +258,27 @@ class LR extends Component {
                   ) : null}
                 </Price>
               </PriceSection>
+
+              {/* 活動文字 */}
+              {/* <EventText /> */}
+
               {/* 產品規格選項 */}
               <LevelOption />
+
               {/* 購買數量 */}
               <Quantity />
               <Co>本商品攜帶銷貨保單可至所有門市，享受免費刻字服務。</Co>
+              <Co>
+                首次購物即享有 95 折優惠 | <span>了解更多</span>
+              </Co>
               {/* 加入購物袋按鈕 */}
               <AddToBag id="add-to-bag">
                 <Translation>{t => <>{t("product.8")}</>}</Translation>
               </AddToBag>
               {/* 補貨中按鈕 */}
-              {/* <SoldoutButton /> */}
+              <>
+                <SoldoutButton />
+              </>
               <NeedsHelp>
                 <Translation>{t => <>{t("product.11")}</>}</Translation>
                 <a href="tel:85221923228">+852 2192 3228</a>
@@ -265,9 +296,28 @@ class LR extends Component {
             </Sticky>
           </Right>
         </Content>
+        <Modal
+          title="缺貨商品預留服務"
+          body={<LockProduct />}
+          active={this.props.lockProductModalActive}
+          closeModal={this.closeLockProductModal}
+          id="lock-product-modal"
+        />
       </>
     );
   }
 }
 
-export default LR;
+const mapStateToProps = state => ({
+  lockProductModalActive: state.app.lockProductModal.active
+});
+
+const mapDispatchToProps = dispatch => {
+  return {
+    showLockProductModal: bool => {
+      dispatch(showLockProductModal(bool));
+    }
+  };
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(LR);

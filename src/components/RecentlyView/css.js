@@ -6,7 +6,7 @@ export const Content = styled.div`
 `;
 
 export const Title = styled.h3`
-  font-size: 2rem;
+  font-size: 2.25rem;
   font-weight: normal;
   letter-spacing: 4px;
   text-align: center;
@@ -14,13 +14,13 @@ export const Title = styled.h3`
 `;
 
 export const Body = styled.div`
-  max-width: 1200px;
+  max-width: 1420px;
   margin: 0 auto;
   .swiper-layout {
     position: relative;
   }
   .swiper-container-recently-view {
-    max-width: 1000px;
+    max-width: 90%;
     margin: 0 auto;
   }
   .swiper-slide {
@@ -64,6 +64,6 @@ export const Body = styled.div`
     margin-bottom: 0.5rem;
   }
   .price {
-    color: tan;
+    color: #c69967;
   }
 `;

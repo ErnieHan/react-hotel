@@ -9,18 +9,20 @@ import {
   HadSelection,
   CancelAllButton,
   SelectedOption,
+  OptionTitle,
+  Circle
 } from "./css";
 
 export class FilterBarMobile extends Component {
   state = {
-    active: null,
+    active: null
   };
   toggleFilter = () => {
     if (this.state.active === "filter") {
       this.closeFilterBar();
     } else {
       this.setState({
-        active: "filter",
+        active: "filter"
       });
     }
   };
@@ -29,13 +31,13 @@ export class FilterBarMobile extends Component {
       this.closeFilterBar();
     } else {
       this.setState({
-        active: "sort",
+        active: "sort"
       });
     }
   };
   closeFilterBar = () => {
     this.setState({
-      active: null,
+      active: null
     });
   };
   render() {
@@ -46,18 +48,36 @@ export class FilterBarMobile extends Component {
         <Modal active={this.state.active === "filter"}>
           <ModalContent>
             <Option>
-              Category 配戴
-              <div>
-                <span>手鍊</span>
-                <span>手鐲</span>
-              </div>
+              <OptionTitle>
+                <div>Category</div>
+                <div>+</div>
+              </OptionTitle>
+              <Circle>Ring</Circle>
+              <Circle>Braclet</Circle>
             </Option>
-            <Option>Metal 金屬</Option>
-            <Option>Gemstone 寶石</Option>
-            <Option>Designers & Collections 設計師 & 系列</Option>
+            <Option>
+              <OptionTitle>
+                <div>Metal 金屬</div>
+                <div>+</div>
+              </OptionTitle>
+            </Option>
+            <Option>
+              <OptionTitle>
+                <div>Gemstone 寶石</div>
+                <div>+</div>
+              </OptionTitle>
+            </Option>
+            <Option>
+              <OptionTitle>
+                <div>Designers & Collections 設計師 & 系列</div>
+                <div>+</div>
+              </OptionTitle>
+            </Option>
             <HadSelection>
               <div>
-                <CancelAllButton onClick={this.closeFilterBar}>Cancel All 取消</CancelAllButton>
+                <CancelAllButton onClick={this.closeFilterBar}>
+                  Cancel All 取消
+                </CancelAllButton>
               </div>
               <div>
                 <SelectedOption>Bangles & Bracelets</SelectedOption>
@@ -67,7 +87,9 @@ export class FilterBarMobile extends Component {
                 <SelectedOption>Earrings</SelectedOption>
               </div>
             </HadSelection>
-            <SubmitButton onClick={this.closeFilterBar}>Apply All 套用全部</SubmitButton>
+            <SubmitButton onClick={this.closeFilterBar}>
+              Apply All 套用全部
+            </SubmitButton>
           </ModalContent>
         </Modal>
         <Modal active={this.state.active === "sort"}>

@@ -1,58 +1,45 @@
 import React, { Component } from "react";
 import { Button } from "./css";
 import { Translation } from "react-i18next";
-import Modal from "../Modal";
-// import { lockBody, unlockBody } from "../../function/bodyLockStatus";
 import {
   disableBodyScroll,
   enableBodyScroll,
   clearAllBodyScrollLocks
 } from "body-scroll-lock";
+// Redux
+import { connect } from "react-redux";
+import { showLockProductModal } from "../../store/actions";
 
 class SoldoutButton extends Component {
   targetElement = null;
-  state = {
-    active: false
-  };
-
   componentDidMount() {
-    this.targetElement = document.querySelector("#test-modal");
+    this.targetElement = document.querySelector("#lock-product-modal");
   }
-
-  componentWillMount() {
-    clearAllBodyScrollLocks();
-  }
-
   openModal = () => {
     disableBodyScroll(this.targetElement);
-    this.setState({
-      active: true
-    });
+    this.props.showLockProductModal(true);
   };
-
-  closeModal = () => {
-    enableBodyScroll(this.targetElement);
-    this.setState({
-      active: false
-    });
-  };
-
   render() {
     return (
       <>
         <Button onClick={this.openModal}>
           <Translation>{t => <>{t("product.9")}</>}</Translation>
         </Button>
-        <Modal
-          title="TESTING"
-          body="body content"
-          active={this.state.active}
-          closeModal={this.closeModal.bind(this)}
-          id="test-modal"
-        />
       </>
     );
   }
 }
 
-export default SoldoutButton;
+const mapStateToProps = state => ({
+  lockProductModalActive: state.app.lockProductModal.active
+});
+
+const mapDispatchToProps = dispatch => {
+  return {
+    showLockProductModal: bool => {
+      dispatch(showLockProductModal(bool));
+    }
+  };
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(SoldoutButton);

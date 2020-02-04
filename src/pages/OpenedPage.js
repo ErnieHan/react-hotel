@@ -3,14 +3,18 @@ import styled from "styled-components";
 
 const Button = styled.button``;
 
+const Content = styled.div`
+  padding: 60px 15px 0px 15px;
+`;
+
 export class OpenedPage extends Component {
   state = {
-    getWindowOpener: false,
+    getWindowOpener: false
   };
   componentDidMount() {
     if (window.opener) {
       this.setState({
-        getWindowOpener: true,
+        getWindowOpener: true
       });
       console.log("opener", window.opener.ernie);
       console.log("parent", window.parent.ernie);
@@ -32,9 +36,13 @@ export class OpenedPage extends Component {
     }
   };
   render() {
-    const data = window.opener ? (window.opener.ernie ? JSON.parse(window.opener.ernie) : null) : null;
+    const data = window.opener
+      ? window.opener.ernie
+        ? JSON.parse(window.opener.ernie)
+        : null
+      : null;
     return (
-      <div>
+      <Content>
         {this.state.getWindowOpener && (
           <div>
             <h1>OpenedPage</h1>
@@ -51,7 +59,7 @@ export class OpenedPage extends Component {
         )}
         <input type="text" />
         Error Page
-      </div>
+      </Content>
     );
   }
 }

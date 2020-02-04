@@ -40,6 +40,7 @@ export class LevelOption extends Component {
       { name: <Translation>{t => <>{t("leveloptions.19")}</>}</Translation> },
       { name: <Translation>{t => <>{t("leveloptions.21")}</>}</Translation> }
     ];
+
     return (
       <>
         <Content>

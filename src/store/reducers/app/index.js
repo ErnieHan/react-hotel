@@ -6,9 +6,10 @@ import language from "./language";
 import loading from "./loading";
 import miniBag from "./miniBag";
 import video from "./video";
+import lockProductModal from "./lockProductModal";
 
 const initialState = {
-  active: true,
+  active: true
 };
 
 const index = (state = initialState, action) => {
@@ -16,7 +17,7 @@ const index = (state = initialState, action) => {
     case "SET_APP":
       return {
         ...state,
-        active: false,
+        active: false
       };
 
     default:
@@ -33,6 +34,7 @@ const reducers = combineReducers({
   loading,
   miniBag,
   video,
+  lockProductModal
 });
 
 export default reducers;

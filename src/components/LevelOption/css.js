@@ -15,12 +15,13 @@ export const FlexContent = styled.div`
 `;
 
 export const OpitionButton = styled.div`
-  padding: 0.5rem 1rem;
+  padding: 12px;
   min-width: 72px;
   text-align: center;
   margin-right: 0.5rem;
   margin-bottom: 0.5rem;
-  background: ${props => (props.active ? "rgba(198,153,103,0.2)" : "")};
+  background: ${props => (props.active ? "#c69967" : "")};
+  color: ${props => (props.active ? "#fff" : "")};
   border: ${props =>
     props.active ? "1px solid #c69967" : "1px solid #d1d1d1"};
   cursor: pointer;

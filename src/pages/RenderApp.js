@@ -3,6 +3,12 @@ import styled from "styled-components";
 import { HOST_URL } from "../constants";
 import writeCookie from "../function/writeCookie";
 
+const Layout = styled.div`
+  min-height: 100vh;
+  width: 100%;
+  background: #f9f9f9;
+`;
+
 const Content = styled.div`
   max-width: 1230px;
   padding: 0 40px;
@@ -28,8 +34,9 @@ const LoginContent = styled.div`
   max-width: 340px;
   margin: 0 auto;
   border: 1px solid #d1d1d1;
-  padding: 15px;
+  padding: 25px;
   border-radius: 5px;
+  background: #fff;
 `;
 
 const SubTitle = styled.div`
@@ -43,6 +50,8 @@ const Input = styled.input`
   border: 1px solid #d1d1d1;
   margin-bottom: 1rem;
   padding: 0.5rem;
+  box-shadow: none;
+  appearance: none;
 `;
 
 const SigninButton = styled.button`
@@ -52,6 +61,7 @@ const SigninButton = styled.button`
   padding: 0.7rem;
   border-radius: 5px;
   font-size: 15px;
+  margin-top: 1rem;
 `;
 
 const ErrorText = styled.div`
@@ -72,41 +82,51 @@ class RenderApp extends Component {
   };
   handleClick = () => {
     const { user, password } = this.state;
-    if (user === "Ernie" && password === "han19941024") {
+    if (user === "Ernie" && password === "ernie") {
       writeCookie("renderApp", "true");
       this.setState({
         error: false
       });
+      window.location.reload();
     } else {
       this.setState({
         error: true
       });
     }
   };
+  handleEnter = e => {
+    if (e.key === "Enter") {
+      this.handleClick();
+    }
+  };
   render() {
     return (
-      <Content>
-        <img src={`${HOST_URL}/images/logo-black.25b6dfd5.svg`} alt="" />
-        <Title>Sign in to EMPHASIS</Title>
-        <LoginContent>
-          <SubTitle>Username or email address</SubTitle>
-          <Input
-            type="text"
-            value={this.state.user}
-            name="user"
-            onChange={this.handleChange}
-          />
-          <SubTitle>Password</SubTitle>
-          <Input
-            type="password"
-            value={this.state.password}
-            name="password"
-            onChange={this.handleChange}
-          />
-          {this.state.error && <ErrorText>Please try it again!</ErrorText>}
-          <SigninButton onClick={this.handleClick}>Sign in</SigninButton>
-        </LoginContent>
-      </Content>
+      <Layout>
+        <Content>
+          <img src={`${HOST_URL}/images/logo-black.25b6dfd5.svg`} alt="" />
+          <Title>Sign in to EMPHASIS</Title>
+          <LoginContent>
+            <SubTitle>Username or email address</SubTitle>
+            <Input
+              type="text"
+              value={this.state.user}
+              name="user"
+              onChange={this.handleChange}
+              onKeyPress={this.handleEnter}
+            />
+            <SubTitle>Password</SubTitle>
+            <Input
+              type="password"
+              value={this.state.password}
+              name="password"
+              onChange={this.handleChange}
+              onKeyPress={this.handleEnter}
+            />
+            {this.state.error && <ErrorText>Please try it again!</ErrorText>}
+            <SigninButton onClick={this.handleClick}>Sign in</SigninButton>
+          </LoginContent>
+        </Content>
+      </Layout>
     );
   }
 }

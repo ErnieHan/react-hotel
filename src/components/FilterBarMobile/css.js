@@ -88,3 +88,24 @@ export const SelectedOption = styled.div`
     transform: translateY(-50%);
   }
 `;
+
+export const OptionTitle = styled.div`
+  display: flex;
+  justify-content: space-between;
+  font-size: 15px;
+`;
+
+export const Circle = styled.div`
+  position: relative;
+  display: inline-block;
+  margin-right: 8px;
+  margin-bottom: 8px;
+  &::before {
+    content: "";
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    border: 1px solid tan;
+    margin-right: 3px;
+  }
+`;

@@ -2,6 +2,7 @@ import styled from "styled-components";
 import arrowImage from "../../images/sort-down.png";
 
 export const Content = styled.div`
+  width: 100%;
   display: inline-block;
   padding: 8px;
   border: 1px solid #d1d1d1;
@@ -21,12 +22,12 @@ export const Content = styled.div`
 
 export const OptionSection = styled.div`
   position: absolute;
-  min-width: 250px;
+  width: 100%;
   height: 250px;
   overflow-y: auto;
   background: #fff;
   top: 100%;
-  left: -1px;
+  left: 0;
   border: 1px solid #d1d1d1;
   display: ${props => (props.active ? "block" : "none")};
   z-index: 5;

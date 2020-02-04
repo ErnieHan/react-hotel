@@ -20,12 +20,16 @@ export const Body = styled.div`
   }
 `;
 
-export const Row1 = styled.div`
+export const Row = styled.div`
+  margin-bottom: 1.25rem;
+`;
+
+export const RowFlex = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 1rem;
   flex-wrap: wrap;
+  margin-bottom: 0.5rem;
 `;
 
 export const Item = styled.div`
@@ -36,8 +40,8 @@ export const Item = styled.div`
   &::after {
     content: "";
     position: absolute;
-    width: 3px;
-    height: 3px;
+    width: 2px;
+    height: 2px;
     border-radius: 50%;
     background: #d1d1d1;
     top: 48%;

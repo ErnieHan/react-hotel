@@ -13,10 +13,13 @@ import BrandStory from "../components/BrandStory";
 import ProductTabsMobile from "../components/ProductTabsMobile";
 import { Media } from "react-breakpoints";
 import { Translation } from "react-i18next";
+import RecentlyView from "../components/RecentlyView";
+import RecentlyViewMobile from "../components/RecentlyViewMobile";
 
 export const Content = styled.div`
   max-width: 1420px;
   margin: 0 auto;
+  margin-bottom: 3rem;
 `;
 
 export const Layout = styled.div`
@@ -50,10 +53,13 @@ class ProductPage extends Component {
         <Layout>
           <Content>
             <Helmet>
-              <title>Boltenstern 18K 黃金綠石髓手鍊 &nbsp;|&nbsp; EMPHASIS</title>
+              <title>
+                Boltenstern 18K 黃金綠石髓手鍊 &nbsp;|&nbsp; EMPHASIS
+                官方網站商城
+              </title>
               <meta
                 name="description"
-                content="少年漫畫是指以青少年為主要讀者對象的漫畫，另外讀者組別甚廣，有許多的兒童和少女、甚至成人也是忠實讀者。題材一般以打鬥、懸疑、冒險、科幻為主。"
+                content="手鍊由奧地利工匠精心打造，配以3D打印技術，以18K黃金絲線包裹紅石榴石，造型立體出眾。3顆綠玉髓同時閃亮耀目動人的光芒，猶如現代女性閃爍綻放的內在美。"
               />
             </Helmet>
             {/* 麵包屑 */}
@@ -73,6 +79,16 @@ class ProductPage extends Component {
             {/* 捲動至較下方的加入購物車、快速返上鍵 */}
             <ScrollAddToBag />
           </Content>
+          {/* 最近瀏覽紀錄 */}
+          <Media>
+            {({ breakpoints, currentBreakpoint }) =>
+              breakpoints[currentBreakpoint] > 767 ? (
+                <RecentlyView />
+              ) : (
+                <RecentlyViewMobile />
+              )
+            }
+          </Media>
         </Layout>
         <Media>
           {({ breakpoints, currentBreakpoint }) =>
@@ -90,14 +106,14 @@ class ProductPage extends Component {
 }
 
 const mapStateToProps = state => ({
-  language: state.app.language.language,
+  language: state.app.language.language
 });
 
 const mapDispatchToProps = dispatch => {
   return {
     changeLanguage: language => {
       dispatch(changeLanguage(language));
-    },
+    }
   };
 };
 

@@ -17,7 +17,8 @@ export const ModalBackground = styled.div`
   visibility: ${props => (props.active ? "visible" : "hidden")};
   transition: all 350ms ease-out;
   @media (max-width: 767px) {
-    transform: ${props => (props.active ? "translateX(0)" : "translateX(100%)")};
+    transform: ${props =>
+      props.active ? "translateX(0)" : "translateX(100%)"};
     opacity: 1;
   }
 `;
@@ -26,7 +27,8 @@ export const ModalContent = styled.div`
   width: 980px;
   background: #fff;
   padding: 30px;
-  transform: ${props => (props.active ? "translateY(0px)" : "translateY(-50px)")};
+  transform: ${props =>
+    props.active ? "translateY(0px)" : "translateY(-50px)"};
   transition: transform 350ms ease-out;
   @media (max-width: 1240px) {
     width: 780px;
@@ -75,9 +77,6 @@ export const ModalBody = styled.div`
     left: 0;
     height: 100%;
     overflow-y: auto;
-    h1 {
-      font-size: 72px;
-    }
   }
 `;
 

@@ -129,7 +129,7 @@ export const NavItem = styled.div`
   align-items: center;
   position: relative;
   cursor: pointer;
-  font-size: 15px;
+  font-size: 13px;
   &:hover {
     &::after {
       opacity: 1;
