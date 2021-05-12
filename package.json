@@ -35,7 +35,7 @@
     "redux-thunk": "^2.3.0",
     "scroll-behavior-polyfill": "^2.0.13",
     "styled-components": "^4.4.0",
-    "swiper": "^5.2.1",
+    "swiper": "^6.5.1",
     "tua-body-scroll-lock": "^1.0.0"
   },
   "scripts": {
